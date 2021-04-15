@@ -4,11 +4,13 @@ Agent-based modelling (ABM) has in recent years developed into an important meth
 
 The Network for Agent-based modelling of Socio-ecological Systems in Archaeology (NASA) is a research network with the goal to gather an international, interdisciplinary group of researchers to collect and compile ABM elements (implementation modules, techniques, approaches, etc.) and organise them as an open modelling library. The targets of this network are:
 
+
 1) identify and compile crucial modelling topics for the library;
 2) collect and develop best practices and modelling guidelines;
 3) develop tools for interoperability following the FAIR principles;
 4) guarantee sustainability of the library;
 5) create a structure for international collaboration resulting in joint publications within the network.
+
 
 ## Who are we?
 
