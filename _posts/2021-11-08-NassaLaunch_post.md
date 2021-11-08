@@ -1,5 +1,5 @@
 ---
-title: "NASSA launch"
+title: "NAS²A launch"
 date: 2021-11-08
 description: "To complexity... And beyond!"
 ---
