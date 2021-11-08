@@ -4,3 +4,13 @@
 @import "{{ site.theme }}";
 
 #forkme_banner{ display: none !important; }
+
+#header_wrap > header > nav > a {
+color: white;
+  text-decoration: underline;
+  font-size: larger;
+}
+
+#header_wrap > header > nav > a:hover {
+color: gray;
+}
