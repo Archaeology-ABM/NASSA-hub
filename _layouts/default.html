@@ -31,17 +31,13 @@
           {% endif %}
           
           <nav>
-            <a href="/NASA/">Home</a>
-            <a href="/NASA/blog/">Blog</a>
+            <a href="{{ site.url }}">Home</a>
+            <a href="{{ site.url }}/blog.html">Blog</a>
           </nav> 
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
-    <pre>
-    Look here!
-    {{ site.url }}
-    </pre>
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         {{ content }}
