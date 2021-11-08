@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/assets/Logo.png" width = 200>
+  <img src="assets/Logo.png" width = 200>
 </p>
 
 # NASSA
