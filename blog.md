@@ -1,4 +1,6 @@
-Here goes the blog...
+<h1>Welcome to the NASSA blog!</h1><br><br>
+Visit here often to stay up-to-date on the latest contributions to the modelling library, <br>
+interesting publications, announcements and all things NASSA. <br><br>
 
 <ul>
   {% for post in site.posts %}
