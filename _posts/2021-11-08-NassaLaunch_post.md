@@ -1,6 +1,6 @@
 ---
 title: "NAS²A launch"
-date: 2021-11-08
+date: 2020-01-01
 description: "To complexity... And beyond!"
 ---
 # NAS²A Launch
