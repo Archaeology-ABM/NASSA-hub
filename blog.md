@@ -4,7 +4,7 @@ Here goes the blog...
   {% for post in site.posts %}
     <li>
       <h2><a href="/NASA/{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
+      {{ post.description }}
     </li>
   {% endfor %}
 </ul>
