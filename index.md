@@ -12,15 +12,6 @@ The Network for Agent-based modelling of Socio-ecological Systems in Archaeology
 4) guarantee sustainability of the library;
 5) create a structure for international collaboration resulting in joint publications within the network.
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="/NASA/{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
-
 ## Who are we?
 
 Research units currently active in NASA are:
