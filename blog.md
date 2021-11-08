@@ -1,4 +1,4 @@
-<h1>Welcome to the NAS²A blog!</h1><br><br>
+<h1>Welcome to the NAS²A blog!</h1><br>
 Visit here often to stay up-to-date on the latest contributions to the modelling library, <br>
 interesting publications, announcements and all things NASSA. <br><br>
 
