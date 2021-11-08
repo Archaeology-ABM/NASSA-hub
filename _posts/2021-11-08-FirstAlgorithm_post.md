@@ -1,7 +1,7 @@
 ---
 title: "First Algorithm added"
 date: 2021-11-08
-description: "Random walks: the aim is to wander aimlessly"
+description: "Random walks: the aim is to wander aimlessly."
 ---
 # First Algorithm added
 Not all those who wander are lost. But these agents definitely are. <br><br>
