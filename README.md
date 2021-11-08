@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/Logo.png" width = 200>
+  <img src="https://github.com/Archaeology-ABM/NASA/raw/main/assets/css/Logo.png" width = 200>
 </p>
 
 # NASSA
