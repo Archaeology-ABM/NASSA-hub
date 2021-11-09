@@ -23,8 +23,8 @@ Research units currently active in NASA are:
 * Research Centre for the Roman Period and the Migration Period, Institute of Archaeology of the Czech Academy of Sciences, Brno
 * Cultures and Environments. Prehistory, Antiquity and Middle Ages (CEPAM), French National Centre for Scientific Research (CNRS), University Côte d’Azur
 * Computational and Digital Archaeology Laboratory (CDAL), McDonald Institute for Archaeological Research-Department of Archaeology, University of Cambridge
-* Complexity Lab Barcelona (CLB), University of Barcelona
-* Computational Social Sciences and Digital Humanities Research Group (CSSDH), Barcelona Supercomputing Center
+* Classical Archaeology and Centre for Urban Network Evolutions (UrbNet), Aarhus University
+* Aarhus Institute of Advanced Studies (AIAS), Aarhus University
 * Analytical Sociology and Institutional Design (GSADI Group), Autònoma University of Barcelona
 * Institute for Archaeological Sciences, Departement for Prehistoric Archaeology, Bern University
 * Science, The Santa Fe Institute (SFI)
