@@ -15,7 +15,10 @@ NAS²A members Iza Romanowska and Stephani Crabtree, together with Colin Wren, h
 From the start, the book takes a hands-on approach to teaching the basics - and later on, the finesses - of ABM in an archaeological context. 
 The programming language used throughout is NetLogo, but the concepts conveyed are applicable to any alternative of your choosing.
 Each chapter is accompanied by a dedicated repository on GitHub, so anyone interested can learn at their own pace.
-Congratulations to the authors on their publication and may the synergy between ABM and archaeology thrive and survive! And trade and move around on a GIS map and...
+Congratulations to the authors on their publication and may the synergy between ABM and archaeology thrive and survive! And trade and move around on a GIS map and... <br><br>
+
+In case you want to jump right into the action: the *Young & Bettinger* model presented in chapter one and coded [here](https://github.com/SantaFeInstitute/ABMA/tree/master/ch1)
+is an excellent first introduction and will definitely whet your appetite.
 
 
 
