@@ -31,4 +31,6 @@ Research units currently active in NASA are:
 * Institute of Archaeology (IoA), University College London
 * GIO - Grupo de Ingeniería de Organización, Universidad de Burgos
 * Computational Research on the Ancient Near East (CRANE) Project, University of Toronto
-* Water Resources / CEG (WRM Group), Delft University of Technology 
+* Water Resources / CEG (WRM Group), Delft University of Technology
+* School of Culture and Society and CLIOARCH, Aarhus University
+* Faculté des Sciences Humaines, des Sciences de l'Éducation et des Sciences Sociales, University of Luxembourg 
