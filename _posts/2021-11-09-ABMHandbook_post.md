@@ -8,7 +8,7 @@ NAS²A members Iza Romanowska and Stephani Crabtree, together with Colin Wren, h
 *Agent-Based Modeling for Archaeology: Simulating the Complexity of Societies* is out via the Santa Fe Institute Press and can be downloaded in its entirety [here](https://www.sfipress.org/books/agent-based-modeling-archaeology).<br><br>
 
 <p align="center">
-  <img src="https://archaeology-abm.github.io/NASA/assets/ABM_handbook.png" alt="Front cover" width="400"/>
+  <img src="https://archaeology-abm.github.io/NASSA-hub/assets/ABM_handbook.png" alt="Front cover" width="400"/>
 </p>  
 <br>
 
