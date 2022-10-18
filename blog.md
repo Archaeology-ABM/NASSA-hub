@@ -2,11 +2,15 @@
 Visit here often to stay up-to-date on the latest contributions to the modelling library, <br>
 interesting publications, announcements and all things NASSA. <br><br>
 
-<ul>
+<table style="border-collapse: collapse; width: 100%;">
+  <colgroup>
+    <col span="1" style="color: darkgray; width: 20%; text-align: right">
+    <col span="1" style="width: 70%">
+  </colgroup>
   {% for post in site.posts %}
-    <li>
-      <h2><a href="/NASSA-hub/{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.description }}
-    </li>
+    <tr style="border: none;">
+      <td style="border-right: 5px #03989E;">{{ post.date }}</td>
+      <td><h2><a href="/NASSA-hub/{{ post.url }}">{{ post.title }}</a></h2>{{ post.description }}</td>
+    </tr>
   {% endfor %}
-</ul>
+</table>
