@@ -10,7 +10,7 @@ interesting publications, announcements and all things NASSA. <br><br>
   {% for post in site.posts %}
     <tr>
       <td style="border-right: 5px solid; border-left: none;border-top: none; border-bottom: none; border-color: #03989E; text-align: right;">{{ page.date | date_to_string }}</td>
-      <td><h2><a href="/NASSA-hub/{{ post.url }}">{{ post.title }}</a></h2>{{ post.description }}</td>
+      <td style="border-collapse: collapse;"><h2><a href="/NASSA-hub/{{ post.url }}">{{ post.title }}</a></h2>{{ post.description }}</td>
     </tr>
   {% endfor %}
 </table>
