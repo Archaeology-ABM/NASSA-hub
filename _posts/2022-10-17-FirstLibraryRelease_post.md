@@ -1,6 +1,6 @@
 ---
 title: "First module library release"
-date: 2021-06-01
+date: 2022-10-17
 description: "NASSA module library is now on!"
 ---
 # NASSA module library is now on!
