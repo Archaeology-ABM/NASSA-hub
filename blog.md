@@ -8,8 +8,8 @@ interesting publications, announcements and all things NASSA. <br><br>
     <col span="1" style="width: 70%;">
   </colgroup>
   {% for post in site.posts %}
-    <tr style="border: none;">
-      <td style="border-right: 5px solid; border-color: #03989E; text-align: right;">{{ page.date | date: '%-d %B %Y' }}</td>
+    <tr>
+      <td style="border-right: 5px solid; border-left: none;border-top: none; border-bottom: none; border-color: #03989E; text-align: right;">{{ page.date | date_to_string }}</td>
       <td><h2><a href="/NASSA-hub/{{ post.url }}">{{ post.title }}</a></h2>{{ post.description }}</td>
     </tr>
   {% endfor %}
