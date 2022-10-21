@@ -24,6 +24,6 @@ ABM focuses on the dynamics and actions of individual agents as computational en
     - <p><a href="https://github.com/Archaeology-ABM/EAA-NASSA-Angourakis-et-al-2022" target="_blank">EAA 2022 - A. Angourakis, F. Riede, I. Romanowska, P. Verhagen, M. Saqalli, D. Taelman, M. Vlach, K. Sikk, J.M. Galán Ordax, T. Brughmans<br>Developing best practices for an open library of archaeological ABM modules: lessons learned from other initiatives</a></p>
     - <p><a href="https://github.com/Archaeology-ABM/CAA-DE-NL-FL-Angourakis-et-al-2022" target="_blank">CAA 2022 DE/NL/FL - A. Angourakis, D. Daems, P. Verhagen <br>NASSA’s open library of archaeological ABM modules: overview and examples</a></p>
 - Publications:
-    - Romanowska, I., Wren, C. D., & Crabtree, S. A. (2021). Agent-Based Modeling for Archaeology (Electronic). SFI Press. https://doi.org/10.37911/9781947864382
+    - Romanowska, I., Wren, C. D., & Crabtree, S. A. (2021). Agent-Based Modeling for Archaeology. SFI Press. [https://doi.org/10.37911/9781947864382](https://doi.org/10.37911/9781947864382)
 
 See [NASSA organisation page in GitHub](https://github.com/Archaeology-ABM) for more  full overview.
