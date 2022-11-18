@@ -15,8 +15,8 @@ interesting publications, announcements and all things NASSA. <br><br>
       <td style="border: none;">
         <h2><a href="/NASSA-hub/{{ post.url }}">{{ post.title }}</a></h2>
         {{ post.description }}<br>
-        {% if post.image_src %}
-          <img src="{{site.baseurl}}/assets/{{post.image_src}}">
+        {% if post.thumbnail_src %}
+          <img src="{{site.baseurl}}/assets/{{post.thumbnail_src}}">
         {% endif %}
       </td>
     </tr>
