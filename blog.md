@@ -12,7 +12,15 @@ interesting publications, announcements and all things NASSA. <br><br>
       <td style="border-right: 5px solid; border-left: none;border-top: none; border-bottom: none; border-color: #03989E; text-align: right;">
       <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
       </td>
-      <td style="border: none;"><h2><a href="/NASSA-hub/{{ post.url }}">{{ post.title }}</a></h2>{{ post.description }}</td>
+      <td style="border: none;">
+        <h2><a href="/NASSA-hub/{{ post.url }}">{{ post.title }}</a></h2>
+        {{ post.description }}<br>
+        {% if post.image_src %}
+          <img src="
+            [{{site.baseurl}}/assets/{{post.image_src}}]
+            ">
+        {% endif %}
+      </td>
     </tr>
   {% endfor %}
 </table>

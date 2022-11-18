@@ -2,6 +2,7 @@
 title: "Working Days"
 date: 2021-11-08
 description: "Rome wasn't built in a day. It took, like, at least two."
+image_src: "attendance_plenary_final.jpg"
 ---
 # Working Days
 NASSA continues to fire on all engines. 
