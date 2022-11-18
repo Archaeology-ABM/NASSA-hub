@@ -2,7 +2,7 @@
 title: "New ABM handbook out!"
 date: 2021-07-30
 description: "An emergent property from the Santa Fe Institute Press."
-thumbnail_src: "ABM_handbook_thumbnail.png"
+image_src: "ABM_handbook.png"
 ---
 # New ABM handbook out!
 NAS²A members Iza Romanowska and Stephani Crabtree, together with Colin Wren, have just published a new handbook on ABM for archaeologists.

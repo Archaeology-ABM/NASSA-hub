@@ -2,7 +2,7 @@
 title: "NASSA launch"
 date: 2020-01-01
 description: "To complexity... And beyond!"
-thumbnail_src: "Logo_thumbnail.png"
+image_src: "Logo.png"
 ---
 # NASSA Launch
 The Flemish Fund for Scientific Research (FWO) has granted the Network for Agent-Based Modelling in Socio-Ecological Systems and Archaeology - NASSA or NAS²A for short - 
