@@ -4,8 +4,8 @@ interesting publications, announcements and all things NASSA. <br><br>
 
 <table style="border: none; width: 100%;">
   <colgroup>
-    <col span="1" style="width: 20%;">
-    <col span="1" style="width: 70%;">
+    <col span="1" style="width: 10%;">
+    <col span="1" style="width: 90%;">
   </colgroup>
   {% for post in site.posts %}
     <tr>
