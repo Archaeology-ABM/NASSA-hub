@@ -2,7 +2,7 @@
 title: "First algorithm added"
 date: 2021-06-01
 description: "Random walks: the aim is to wander aimlessly."
-image_src: "ch2.1_pedestrian%20interface.png"
+image_src: "2021-Romanowska-001-output.png"
 ---
 # First algorithm added to library
 Not all those who wander are lost. But these agents definitely are.
