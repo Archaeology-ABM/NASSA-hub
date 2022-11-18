@@ -2,7 +2,7 @@
 title: "First module library release"
 date: 2022-10-17
 description: "NASSA module library is now on!"
-image_src: "library-index.png"
+thumbnail_src: "library-index_thumbnail.png"
 ---
 # NASSA module library is now on!
 
