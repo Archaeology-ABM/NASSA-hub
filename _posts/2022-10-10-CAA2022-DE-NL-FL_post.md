@@ -2,7 +2,7 @@
 title: "NASSA goes to CAA DE/NL/FL 2022"
 date: 2022-10-17
 description: "We presented at the CAA DE/NL/FL 2022 Joint Chapter Meeting in Cologne"
-thumbnail_src: "csm_Banner_Website_9057076bc6.png"
+image_src: "csm_Banner_Website_9057076bc6.png"
 ---
 # NASSA goes to CAA DE/NL/FL 2022
 
