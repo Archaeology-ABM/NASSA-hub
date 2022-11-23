@@ -1,8 +1,11 @@
 ---
 title: "NASSA launch"
 date: 2020-01-01
+author: "Stef Boogers"
+author_github: "Stef-Boogers"
 description: "To complexity... And beyond!"
 image_src: "Logo.png"
+layout: post
 ---
 # NASSA Launch
 The Flemish Fund for Scientific Research (FWO) has granted the Network for Agent-Based Modelling in Socio-Ecological Systems and Archaeology - NASSA or NAS²A for short - 

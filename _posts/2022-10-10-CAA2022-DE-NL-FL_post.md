@@ -1,8 +1,11 @@
 ---
 title: "NASSA goes to CAA DE/NL/FL 2022"
 date: 2022-10-10
+author: "Andreas Angourakis"
+author_github: "Andros-Spica"
 description: "We presented at the CAA DE/NL/FL 2022 Joint Chapter Meeting in Cologne"
 image_src: "csm_Banner_Website_9057076bc6.png"
+layout: post
 ---
 # NASSA goes to CAA DE/NL/FL 2022
 

@@ -1,8 +1,11 @@
 ---
 title: "First module library release"
 date: 2022-10-17
+author: "Andreas Angourakis"
+author_github: "Andros-Spica"
 description: "NASSA module library is now on!"
 image_src: "library-index.png"
+layout: post
 ---
 # NASSA module library is now on!
 

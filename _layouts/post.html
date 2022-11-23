@@ -42,21 +42,24 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p style="font-size=80%; text-align: right; color: #a9a9a9; margin: 0;">
+        <!-- DATE -->
+        <p style="font-size: 80%; text-align: right; color: #a9a9a9; margin: 0;">
           <time datetime="{{ page.date | date: "%Y-%m-%d" }}">
             {{ page.date | date_to_long_string }}
           </time>
-          <br>
-          by: &nbsp;
+        </p>
+
+        {{ content }}
+        
+        <!-- AUTHOR -->
+        <p style="font-size: 80%; text-align: right; color: #a9a9a9; margin: 0;">
+          by &nbsp; {{ page.author }} &nbsp;
           {% if page.author_github %}
-          <a href="https://github.com/{{ author_github }}" class="" data-hovercard-type="user" data-hovercard-url="/users/{{ author_github }}/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self">
-            <img src="https://github.com/{{ author_github }}.png?s=64&amp;v=4" alt="@{{ author_github }}" size="32" height="32" width="32" data-view-component="true" class="avatar circle">
+          <a href="https://github.com/{{ page.author_github }}" class="" data-hovercard-type="user" data-hovercard-url="/users/{{ page.author_github }}/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self">
+            <img src="https://github.com/{{ page.author_github }}.png?s=64&amp;v=4" alt="@{{ page.author_github }}" size="32" height="32" width="32" data-view-component="true" class="avatar circle">
           </a>
           {% endif %}
-          &nbsp;
-          {{ page.author }}
         </p>
-        {{ content }}
       </section>
     </div>
 

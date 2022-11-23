@@ -1,8 +1,11 @@
 ---
 title: "First algorithm added"
 date: 2021-06-01
+author: "Andreas Angourakis"
+author_github: "Andros-Spica"
 description: "Random walks: the aim is to wander aimlessly."
 image_src: "2021-Romanowska-001-output.png"
+layout: post
 ---
 # First algorithm added to library
 Not all those who wander are lost. But these agents definitely are.
