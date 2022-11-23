@@ -5,7 +5,7 @@ description: "After the COVID-pandemic hiatus, NASSA finally assembles to better
 image_src: "20210131-whiteboard.png"
 ---
 # NASSA library concept
-<emp><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_long_string }}</time></emp>
+<p style="font-size=80%; text-align: right; color: #a9a9a9;"><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_long_string }}</time></p>
 
 Creating an open-source library for agent-based modelling of socio-ecological systems in archaeology has eluded NASSA for the entirety of 2020. As in many other instances, our meetings have been postponed repeatedly due to the COVID epidemic and its effects.
 
