@@ -2,7 +2,7 @@
 title: "Community consultation"
 date: 2022-10-10
 description: "Summary of a live community consultation during session 06 at the CAA 2022 in Oxford"
-image_src: "summary-keywords.png"
+image_src: "keywords.png"
 ---
 # NASSA at CAA 2022 Oxford
 
