@@ -26,4 +26,3 @@ We didn't miss the opportunity, of course, and presented there the recently-cons
 Besides updating those already aware of NASSA, we trust to have also reached a share of the European CAA community not present at the sessions in  the CAA (Oxford) and EAA (Budapest) annual meetings earlier this year.
 <br><br>
 Among several interesting feedbacks, we have been called out to think not only about ABM modellers but also about the GIS developers as a potential authors and users. Can we envisage, for example, a module to perform viewshed analysis to aide agents' decision-making? Yes, we can! 	&#129299;
-<br><br>

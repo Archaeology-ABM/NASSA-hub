@@ -20,5 +20,3 @@ It was a meeting crucial for defining what we want and can do regarding a future
 <br><br>
 
 Some relatively novel highlights of this discussion were the idea of **differentiating modules as "algorithm" and "submodel"** and the necessity of preparing **hands-on tutorials**, keeping in mind the three roles we foresee (author, reviewer, user).
-
-<br><br>

@@ -23,6 +23,3 @@ Congratulations to the authors on their publication and may the synergy between 
 
 In case you want to jump right into the action: the *Young & Bettinger* model presented in chapter one and coded [here](https://github.com/SantaFeInstitute/ABMA/tree/master/ch1)
 is an excellent first introduction and will definitely whet your appetite.
-
-
-

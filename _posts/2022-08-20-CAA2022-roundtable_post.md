@@ -48,5 +48,3 @@ Here is a summary:
 <br><br>
 
 The data and the source code for the plots above can be found at the dedicated [repository](https://github.com/Archaeology-ABM/CAA2022-session06-consultation) or directly at its [web version](https://archaeology-abm.github.io/CAA2022-session06-consultation/).
-
-<br><br>

@@ -23,4 +23,4 @@ We are also working on materials such as instructions and tutorials to help both
 
 The library is under development with much space for improvements. To help us with that, NASSA remains open feedback and new recruits.
 
-Feel free to contact me ([Andreas Angourakis](https://github.com/Andros-Spica)) or any other NASSA member for more information!<br><br>
+Feel free to contact me ([Andreas Angourakis](https://github.com/Andros-Spica)) or any other NASSA member for more information!
