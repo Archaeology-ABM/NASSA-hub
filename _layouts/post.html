@@ -51,14 +51,14 @@
 
         {{ content }}
         <br>
-        
+
         <!-- AUTHOR -->
         <p style="font-size: 80%; font-style: italic; text-align: right; color: #a9a9a9; margin: 0;">
           by &nbsp; {{ page.author }} &nbsp;
           {% if page.author_github %}
           <div class="image-cropper">
             <a href="https://github.com/{{ page.author_github }}" target="_blank">
-              <img src="https://github.com/{{ page.author_github }}.png?s=64&amp;v=4" alt="@{{ page.author_github }}" size="32" height="32" width="32" data-view-component="true" class="rounded" style="display: inline; margin: 0 auto; height: 100%; width: auto;">
+              <img src="https://github.com/{{ page.author_github }}.png?s=64&amp;v=4" alt="@{{ page.author_github }}" class="authorimg">
             </a>
           </div>
           {% endif %}
