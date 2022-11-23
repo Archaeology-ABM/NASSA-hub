@@ -1,6 +1,7 @@
 ---
 title: "NASSA library concept"
 date: 2021-01-30
+author: "Andreas Angourakis"
 author_github: "Andros-Spica"
 description: "After the COVID-pandemic hiatus, NASSA finally assembles to better define a modular library concept"
 image_src: "20210131-whiteboard.png"
