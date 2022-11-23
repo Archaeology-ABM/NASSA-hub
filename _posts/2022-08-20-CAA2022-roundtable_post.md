@@ -17,7 +17,7 @@ Here is a summary:
 > We're creating a library of modules, intended as bricks from which you can construct your model. But how to find the module that's right for you? If you were looking for a module to add to your ABM what kind of categories would you find useful? Write all that you can think of.
 
 <br>
-<img src="https://archaeology-abm.github.io/NASSA-hub/assets/summary-keywords.png" alt="Results question on keyword/category">
+<img src="https://archaeology-abm.github.io/NASSA-hub/assets/keywords.png" alt="Results question on keyword/category">
 <br><br>
 
 ## Question 2: modules
@@ -25,7 +25,7 @@ Here is a summary:
 > What kind of modules should each of these categories include? Use the dropdown menu to see the categories. If the model is already listed, press on the heart to vote for it. You can add as many suggestions as you want.
 
 <br>
-<img src="https://archaeology-abm.github.io/NASSA-hub/assets/summary-modules.png" alt="Results question on modules">
+<img src="https://archaeology-abm.github.io/NASSA-hub/assets/modules.png" alt="Results question on modules">
 <br><br>
 
 ## Question 3: instruction materials
@@ -33,7 +33,7 @@ Here is a summary:
 > What instruction materials would you use?
 
 <br>
-<img src="https://archaeology-abm.github.io/NASSA-hub/assets/summary-instructions.png" alt="Results question on instruction materials">
+<img src="https://archaeology-abm.github.io/NASSA-hub/assets/instructions.png" alt="Results question on instruction materials">
 <br><br>
 
 ## Question 4: diffusion channels
@@ -41,7 +41,9 @@ Here is a summary:
 > How would you inform others about the library?
 
 <br>
-<img src="https://archaeology-abm.github.io/NASSA-hub/assets/summary-diffusion.png" alt="Results question on diffusion channels">
+<img src="https://archaeology-abm.github.io/NASSA-hub/assets/diffusion.png" alt="Results question on diffusion channels">
 <br><br>
+
+The data and the source code for the plots above can be found at the dedicated [repository](https://github.com/Archaeology-ABM/CAA2022-session06-consultation) or directly at its [web version](https://archaeology-abm.github.io/CAA2022-session06-consultation/).
 
 <br><br>
