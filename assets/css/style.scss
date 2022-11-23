@@ -18,3 +18,11 @@ color: gray;
 nav {
   margin-bottom: 20px;
 }
+
+.image-cropper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
