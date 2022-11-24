@@ -1,3 +1,40 @@
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <style>
+    .grid-container{
+      display: grid;
+      grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+      grid-gap: 10px;
+    }
+    .grid-element{
+      background-color: #F2F2F2;
+      border: 1px solid;
+      border-color: grey;
+      text-align: left;
+      padding: 15px;
+    }
+    .grid-symbol {
+      text-align: center;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<div class="grid-container">
+  <div class="grid-element">
+    <div class="grid-symbol"><i class="fas fa-code" aria-hidden="true"></i></div>
+    NASSA provides a standardized <a href="https://github.com/Archaeology-ABM/NASSA-schema">module format</a> for ABM models and model components
+  </div>
+  <div class="grid-element">
+    <div class="grid-symbol"><i class="fas fa-hammer" aria-hidden="true"></i></div>
+    NASSA develops a <a href="https://github.com/Archaeology-ABM/nassa-hs">software tool</a> to validate NASSA modules
+  </div>
+  <div class="grid-element">
+    <div class="grid-symbol"><i class="fas fa-database" aria-hidden="true"></i></div>
+    NASSA maintains a publicly hosted and curated <a href="https://archaeology-abm.github.io/NASSA-modules">module repository</a> of published ABM models
+  </div>
+</div>
+
 The **N**etwork for **A**gent-based modelling of **S**ocio-ecological **S**ystems in **A**rchaeology (**NASSA**) is a research network with the goal to gather an international, interdisciplinary group of researchers to collect and compile agent-based modelling (ABM) elements (implementation modules, techniques, approaches, etc.) and organise them as an open modelling library.
 
 The targets of this network are:
@@ -16,10 +53,6 @@ ABM focuses on the dynamics and actions of individual agents as computational en
 
 ## Resources
 
-- [Module library (Web interface)](https://archaeology-abm.github.io/NASSA-modules)
-- [Module library (Repository)](https://github.com/Archaeology-ABM/NASSA-modules)
-- [Schema](https://github.com/Archaeology-ABM/NASSA-schema)
-- [Validation software](https://github.com/Archaeology-ABM/nassa-hs)
 - Presentations:
     - <p><a href="https://github.com/Archaeology-ABM/EAA-NASSA-Angourakis-et-al-2022" target="_blank">EAA 2022 - A. Angourakis, F. Riede, I. Romanowska, P. Verhagen, M. Saqalli, D. Taelman, M. Vlach, K. Sikk, J.M. Galán Ordax, T. Brughmans<br>Developing best practices for an open library of archaeological ABM modules: lessons learned from other initiatives</a></p>
     - <p><a href="https://github.com/Archaeology-ABM/CAA-DE-NL-FL-Angourakis-et-al-2022" target="_blank">CAA 2022 DE/NL/FL - A. Angourakis, D. Daems, P. Verhagen <br>NASSA’s open library of archaeological ABM modules: overview and examples</a></p>
