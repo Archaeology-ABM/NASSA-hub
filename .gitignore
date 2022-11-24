@@ -1,0 +1,6 @@
+# ignore .lock file, because we're working on different platforms
+Gemfile.lock
+
+# ignore generated website
+_site/
+
