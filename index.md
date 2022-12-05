@@ -7,10 +7,10 @@
       grid-gap: 10px;
     }
     .grid-element{
-      background-color: #F2F2F2;
+      background-color: #ddd;
       border: 1px solid;
-      border-color: grey;
-      text-align: left;
+      border-color: #666;
+      text-align: center;
       padding: 15px;
     }
     .grid-symbol {
@@ -20,22 +20,31 @@
   </style>
 </head>
 
+The **N**etwork for **A**gent-based modelling of **S**ocio-ecological **S**ystems in **A**rchaeology (**NASSA**) is a research network with the goal to gather an international, interdisciplinary group of researchers to collect and compile agent-based modelling (ABM) elements (implementation modules, techniques, approaches, etc.) and organise them as an open modelling library.
+
 <div class="grid-container">
   <div class="grid-element">
+    <a href="https://archaeology-abm.github.io/NASSA-modules" style="color: #03989E;">
+    <h2>LIBRARY</h2>
     <div class="grid-symbol"><i class="fas fa-database" aria-hidden="true"></i></div>
-    NASSA maintains a publicly hosted and curated <a href="https://archaeology-abm.github.io/NASSA-modules">module repository</a> of published ABM models
+    NASSA maintains a publicly hosted and curated repository of ABM-related algorithms
+    </a>
   </div>
   <div class="grid-element">
+    <a href="https://github.com/Archaeology-ABM/NASSA-schema" style="color: #03989E;">
+    <h2>SCHEMA</h2>
     <div class="grid-symbol"><i class="fas fa-code" aria-hidden="true"></i></div>
-    NASSA provides a standardized <a href="https://github.com/Archaeology-ABM/NASSA-schema">module format</a> for ABM models and model components
+    NASSA provides a standardized format to store and document NASSA modules
+    </a>
   </div>
   <div class="grid-element">
+    <a href="https://github.com/Archaeology-ABM/nassa-hs" style="color: #03989E;">
+    <h2>VALIDATION</h2>
     <div class="grid-symbol"><i class="fas fa-hammer" aria-hidden="true"></i></div>
-    NASSA develops a <a href="https://github.com/Archaeology-ABM/nassa-hs">software tool</a> to validate NASSA modules
+    NASSA develops a software tool to validate NASSA modules based on the NASSA schema
+    </a>
   </div>
 </div>
-
-The **N**etwork for **A**gent-based modelling of **S**ocio-ecological **S**ystems in **A**rchaeology (**NASSA**) is a research network with the goal to gather an international, interdisciplinary group of researchers to collect and compile agent-based modelling (ABM) elements (implementation modules, techniques, approaches, etc.) and organise them as an open modelling library.
 
 The targets of this network are:
 
