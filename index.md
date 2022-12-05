@@ -22,16 +22,16 @@
 
 <div class="grid-container">
   <div class="grid-element">
+    <div class="grid-symbol"><i class="fas fa-database" aria-hidden="true"></i></div>
+    NASSA maintains a publicly hosted and curated <a href="https://archaeology-abm.github.io/NASSA-modules">module repository</a> of published ABM models
+  </div>
+  <div class="grid-element">
     <div class="grid-symbol"><i class="fas fa-code" aria-hidden="true"></i></div>
     NASSA provides a standardized <a href="https://github.com/Archaeology-ABM/NASSA-schema">module format</a> for ABM models and model components
   </div>
   <div class="grid-element">
     <div class="grid-symbol"><i class="fas fa-hammer" aria-hidden="true"></i></div>
     NASSA develops a <a href="https://github.com/Archaeology-ABM/nassa-hs">software tool</a> to validate NASSA modules
-  </div>
-  <div class="grid-element">
-    <div class="grid-symbol"><i class="fas fa-database" aria-hidden="true"></i></div>
-    NASSA maintains a publicly hosted and curated <a href="https://archaeology-abm.github.io/NASSA-modules">module repository</a> of published ABM models
   </div>
 </div>
 
