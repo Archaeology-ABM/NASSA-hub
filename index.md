@@ -24,7 +24,7 @@ The **N**etwork for **A**gent-based modelling of **S**ocio-ecological **S**ystem
 
 <div class="grid-container">
   <div class="grid-element">
-    <a href="https://archaeology-abm.github.io/NASSA-modules" style="color: #03989E;">
+    <a href="{{ site.url }}/library.html" style="color: #03989E;">
     <h2>LIBRARY</h2>
     <div class="grid-symbol"><i class="fas fa-database" aria-hidden="true"></i></div>
     NASSA maintains a publicly hosted and curated repository of ABM-related algorithms
