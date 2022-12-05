@@ -9,6 +9,29 @@
 
 {% seo %}
     {% include head-custom.html %}
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    /* Create two equal columns that floats next to each other */
+    .headerColumn {
+      float: left;
+      width: 45%;
+      padding: 10px;
+    }
+    /* Clear floats after the columns */
+    .headerRow:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .headerColumn {
+        width: 100%;
+      }
+    }
+    </style>
   </head>
 
   <body>
@@ -20,9 +43,22 @@
             <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
           {% endif %}
 
-          <img style="margin-right: 20px;padding: 0px;border: 0px" align="left" src="{{ site.url }}/assets/Logo_noText.png" width="33%">
-          <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
-          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+          <div class="headerRow">
+            <div class="headerColumn">
+              <span class="faded faded-wide faded-all">
+              <img style="width: 100%; padding: 0px;border: 0px;" src="{{ site.url }}/assets/Logo_noText.png" width="33%">
+              </span>
+            </div>
+            <div class="headerColumn" style="color:lightcyan; font-size: 120%;">
+              <strong style="color: #03989E; font-size: 150%;">N</strong>etwork for<br>
+              <strong style="color: #03989E; font-size: 150%;">A</strong>gent-based modelling of<br>
+              <strong style="color: #03989E; font-size: 150%;">S</strong>ocio-ecological<br>
+              <strong style="color: #03989E; font-size: 150%;">S</strong>ystems in<br>
+              <strong style="color: #03989E; font-size: 150%;">A</strong>rchaeology
+            </div>
+          </div>
+          <!-- <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
+          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2> -->
 
           {% if site.show_downloads %}
             <section id="downloads">
