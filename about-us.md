@@ -1,5 +1,15 @@
 # Who are we?
 
+The **N**etwork for **A**gent-based modelling of **S**ocio-ecological **S**ystems in **A**rchaeology (**NASSA**) is a research network with the goal to gather an international, interdisciplinary group of researchers to collect and compile agent-based modelling (ABM) elements (implementation modules, techniques, approaches, etc.) and organise them as an open modelling library.
+
+The targets of this network are:
+
+1. identify and compile crucial modelling topics for the library;
+2. collect and develop best practices and modelling guidelines;
+3. develop tools for interoperability following the FAIR principles;
+4. guarantee sustainability of the library;
+5. create a structure for international collaboration resulting in joint publications within the network.
+
 Research units currently active in NASSA are:
 
 * Sagalassos Archaeological Research Project (SARP), University of Leuven

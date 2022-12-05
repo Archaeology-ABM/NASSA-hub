@@ -20,41 +20,31 @@
   </style>
 </head>
 
-The **N**etwork for **A**gent-based modelling of **S**ocio-ecological **S**ystems in **A**rchaeology (**NASSA**) is a research network with the goal to gather an international, interdisciplinary group of researchers to collect and compile agent-based modelling (ABM) elements (implementation modules, techniques, approaches, etc.) and organise them as an open modelling library.
-
 <div class="grid-container">
   <div class="grid-element">
     <a href="{{ site.url }}/library.html" style="color: #03989E;">
-    <h2>LIBRARY</h2>
+    <strong style="font-size:200%">LIBRARY</strong>
     <div class="grid-symbol"><i class="fas fa-database" aria-hidden="true"></i></div>
     NASSA maintains a publicly hosted and curated repository of ABM-related algorithms
     </a>
   </div>
   <div class="grid-element">
     <a href="https://github.com/Archaeology-ABM/NASSA-schema" style="color: #03989E;">
-    <h2>SCHEMA</h2>
+    <strong style="font-size:200%">SCHEMA</strong>
     <div class="grid-symbol"><i class="fas fa-code" aria-hidden="true"></i></div>
     NASSA provides a standardized format to store and document NASSA modules
     </a>
   </div>
   <div class="grid-element">
     <a href="https://github.com/Archaeology-ABM/nassa-hs" style="color: #03989E;">
-    <h2>VALIDATION</h2>
+    <strong style="font-size:200%">VALIDATION</strong>
     <div class="grid-symbol"><i class="fas fa-hammer" aria-hidden="true"></i></div>
     NASSA develops a software tool to validate NASSA modules based on the NASSA schema
     </a>
   </div>
 </div>
 
-The targets of this network are:
-
-1. identify and compile crucial modelling topics for the library;
-2. collect and develop best practices and modelling guidelines;
-3. develop tools for interoperability following the FAIR principles;
-4. guarantee sustainability of the library;
-5. create a structure for international collaboration resulting in joint publications within the network.
-
-See [NASSA organisation page in GitHub](https://github.com/Archaeology-ABM) for more  full overview.
+See [NASSA organisation page in GitHub](https://github.com/Archaeology-ABM).
 
 ## What is ABM of SES in archaeology?
 
