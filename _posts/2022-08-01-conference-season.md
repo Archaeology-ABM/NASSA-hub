@@ -1,8 +1,8 @@
 ---
 title: "The (conference) season is upon us"
 date: 2022-08-01
-author: “Dries Daems”
-author_github: “driesdaems10”
+author: "Dries Daems"
+author_github: "driesdaems10"
 description: "The pandemic is maybe not fully over, but the first conferences are coming up and we can’t wait to start presenting NASSA"
 layout: post
 ---
