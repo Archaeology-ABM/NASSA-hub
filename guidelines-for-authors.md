@@ -145,6 +145,20 @@ YYYY-SURNAME-001 (module root)
     └   moduleShortTitle.<LANGUAGE EXTENSION>
 ```
 
+Following the example above:
+
+```
+1870-Schliemann-001 (module root)
+│   CHANGELOG.md
+│   LICENSE
+|   NASSA.yml
+│   README.md
+│   references.bib
+│   
+└───netlogo_implementation
+    └   TroyDestroyed.nlogo
+```
+
 ### Implementation(s)
 
 !TO-DO
@@ -201,25 +215,31 @@ There are, however, a few general points to consider when filling up "NASSA.yml"
 
 ### README.md
 
-The most generic documentation is the "README.md" file, which aims to present the module and is assumed to be the users' first contact with the module. It is written in GitHub-flavoured [markdown](https://www.markdownguide.org/) and may include images and external links.
+The most generic documentation file is "README.md", which aims to present the module with a brief overview and is assumed to be the users' first contact with the module. It is written in GitHub-flavoured [markdown](https://www.markdownguide.org/) and may include images and external links.
 
-The following structure must be kept:  
-- Module name  
-- Authors' full name  
-- Description  
-- Further information
+The following section structure must be kept:
+```
+# Module name  
+Authors' full name  
 
-Please use the specific format given in the templates. In "Further information", we recommend the author display some of the visual documentation elements included in the submission, such as diagrams, screenshots, output graphs in demonstrations, etc. Observe the examples in the library.
+Description  
+
+## License
+
+## Further information
+```
+
+In "Further information", we recommend the display of any images included as part of the module documentation, such as diagrams, screenshots, output graphs in demonstrations, etc. Consult other modules as examples or copy the template modules, which are always at the top of the module list, with identifiers starting with "0000-NASSA".
 
 ### Other documentation files
 
-Although not a strict requirement for acceptance, modules should include a minimal set of files dedicated to documentation. Modules offering more documentation materials will be significantly more visible and usable by the community.
+Although not a strict requirement for acceptance, modules should include files dedicated to documentation. Modules offering more documentation materials will be significantly more visible and usable by the community.
 
 Because modules are both program specifications and implementations, we recommend that documentation is prepared at two levels:
 
-- A generic understanding of what the program does and its entities, variables, parameters, etc, as well as any reference or scientific argument to contextualise its design. General documentation will typically involve infographics, diagrams, and text descriptions. We recommend storing the files holding this type of documentation inside a subdirectory directly in the module's root directory (e.g., `1870-Scliemann-001/documentation/`).
+- A generic understanding of what the program does and its entities, variables, parameters, etc, as well as any reference or scientific argument to contextualise its design. General documentation will typically involve infographics, diagrams, and text descriptions. We recommend storing the files holding this type of documentation inside a subdirectory directly in the module's root directory (e.g., `1870-Schliemann-001/documentation/`).
 
-- A description of the terms and design of a single implementation, including practical instructions and specific terminology. This should also include instructions on compiling and running the respective code. We recommend storing these files inside the subdirectory with the corresponding implementation (e.g., `1870-Scliemann-001/python_implementation/documentation/`). Some examples of language-specific documentation materials are:  
+- A description of the terms and design of a single implementation, including practical instructions and specific terminology. This should also include instructions on compiling and running the respective code. We recommend storing these files inside the subdirectory with the corresponding implementation (e.g., `1870-Schliemann-001/python_implementation/documentation/`). Some examples of language-specific documentation materials are:  
   - **Set up instructions**. Instructions on compiling and running the code.  
   - **User reference manual**. Variable and methods/functions lists, entity definitions, etc.  
   - **Screenshots** of graphical interface or output.  
@@ -232,7 +252,7 @@ To boost the visibility of documentation files, we recommend that authors create
 Below is an example of the recommended directory structure for a module containing files in both levels of documentation:
 
 ```
-1870-Scliemann-001 (module root)
+1870-Schliemann-001 (module root)
 │   .gitignore
 │   CHANGELOG.md
 │   LICENSE
@@ -243,28 +263,26 @@ Below is an example of the recommended directory structure for a module containi
 └───documentation
 │   │   tableOfContents.md
 │   │   designDetails.md
-|   │   ...
 │
 └───python_implementation
-    │   moduleShortTitle.py
+    │   TroyDestroyed.py
+    |   theCity.py
+    |   Greeks.py
+    |   Trojans.py
     │   demonstration.ipynb
-    |   ...
     |
     └───documentation
     |   │   tableOfContents.md
     |   │   instructions.md
-    |   │   diagram.png
-    |   │   ...
+    |   │   city-plan.png
+    |   |   social-network.dot
     │
     └───input
-    │   │   aDataset.csv
-    │   │   aRaster.png
-    |   |   ...
+    │   │   warriorData.csv
+    │   │   TroyDEM.png
     │
     └───output (for demonstration purposes)
-        │   aDataset.csv
-        │   aRaster.png
-        |   ...
+        │   events.csv
 ```
 
 ---
