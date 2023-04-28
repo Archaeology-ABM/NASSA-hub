@@ -193,7 +193,7 @@ There are, however, a few general points to consider when filling up "NASSA.yml"
 
 **Authorship**: authors are considered in relation to their roles (Author, Compiler, Contributor, Copyright Holder, Creator, Thesis Advisor, Translator; see definitions [here](https://journal.r-project.org/archive/2012-1/RJournal_2012-1_Hornik~et~al.pdf)). A module must have at least one person listed as an "Author", "Copyright Holder" and "Creator", typically the person preparing and managing the submission, whose surname is represented in the module ID. A submission author, who is not directly responsible for the implementation code, should retain the abovementioned roles and name at least one additional author with an "Author" and "Copyright Holder" role. Later code modifications and documentation modifications can be acknowledged under the "Contributor" role. Individuals involved in formulating the algorithm but not creating the module may be acknowledged as "Author" and "Copyright Holder".
 
-**Domain keywords** (subjects, regions, periods): freestyle categories, open to standardisation to avoid duplicates. NASSA recommends using terms already established in ontologies elsewhere (e.g., [EHRAF](https://ehrafworldcultures.yale.edu/ehrafe/majorSubjects.do) for subjects, [GeoNames](http://www.geonames.org/) for regions, [perio.do](https://perio.do/en/) for periods.
+**Domain keywords** (subjects, regions, periods): freestyle categories, open to standardisation to avoid duplicates. NASSA recommends using terms already established in ontologies elsewhere (e.g., [EHRAF](https://ehrafworldcultures.yale.edu/ehrafe/majorSubjects.do) for subjects, [GeoNames](http://www.geonames.org/) for regions, [perio.do](https://perio.do/en/) for periods).
 
 **Input and output**: to facilitate later use and improve the visualisation of the module functionality, NASSA requests that all input and output variables and parameters are listed and shortly described.
 
@@ -213,26 +213,28 @@ Please use the specific format given in the templates. In "Further information",
 
 ### Other documentation files
 
-Although not a strict requirement for acceptance, modules should include a minimal set of files dedicated to documentation. Modules offering more documentation materials will be significantly more visible and usable by the community.
+Although not a strict requirement for acceptance, module should aspire to include a minimal set of files dedicated to documentation. Modules offering more documentation materials will be significantly more visible and usable by the community.
 
 Because modules are both program specifications and implementations, we recommend that documentation is prepared at two levels:
 
-- A generic understanding of what the program does and its entities, variables, parameters, etc, as well as any reference or scientific argument to contextualise its design. General documentation will typically involve infographics, diagrams, and text descriptions. We recommend storing the files holding this type of documentation inside a subdirectory directly in the module's root directory (e.g., `1870-Scliemann-001/documentation/`).
+- A generic understanding of what the program does and its entities, variables, parameters, etc, as well as any reference or scientific argument to contextualise its design. General documentation will typically involve infographics, diagrams, and text descriptions. We recommend storing the files holding this type of documentation inside a subdirectory directly in the module's root directory (e.g., `1870-Schliemann-001/documentation/`).
 
-- A description of the terms and design of a single implementation, including practical instructions and specific terminology. This should also include instructions on compiling and running the respective code. We recommend storing these files inside the subdirectory with the corresponding implementation (e.g., `1870-Scliemann-001/python_implementation/documentation/`). Some examples of language-specific documentation materials are:  
-  - **Set up instructions**. Instructions on compiling and running the code.  
+- A description of the terms and design of a single implementation, including practical instructions and specific terminology. This should also include instructions on compiling and running the respective code, if necessary. We recommend storing these files inside the subdirectory with the corresponding implementation (e.g., `1870-Schliemann-001/python_implementation/documentation/`). Some examples of language-specific documentation materials are:  
+  - **Set up instructions**. Instructions on compiling and running the code. This is more relevant when using general-purpose programming languages or relying on specific libraries or external software. 
   - **User reference manual**. Variable and methods/functions lists, entity definitions, etc.  
   - **Screenshots** of graphical interface or output.  
   - **Pseudocode**. Representation of code as a sequence of logic steps (i.e., algorithm), using free-text or mathematical notation, or using graphical resources, be it formal (e.g., UML) or informal (e.g., infographics).  
-  - **ODD or similar**, when submitting modules of the type "submodel".  
-  - **Demostrations**. A step-by-step demonstration of the module use and outputs, combining explanations in text and code fragments, typically in a notebook format (e.g., .ipynb, .rmd).
+  - **ODD or similar**, when submitting modules of the type "submodel". To know more about ODD, see Grimm et al. 2013.  
+  - **Demostrations**. A step-by-step demonstration of the module use and outputs, combining explanations in text and code fragments, typically in a interactive notebook format (e.g., .ipynb, .rmd).
 
-To boost the visibility of documentation files, we recommend that authors create a markdown file at each level (e.g., tableOfContents.md) to present a list of the documentation files, with brief descriptions and links (relative paths) to the respective files. Such a file can then be linked from README.md (see examples of how to do it in the templates offered in the library)
+>Grimm, V., Polhill, G., & Touza, J. (2013). Documenting Social Simulation Models: The ODD Protocol as a Standard. In B. Edmonds & R. Meyer (Eds.), Simulating Social Complexity: A Handbook (pp. 117–133). Springer. https://doi.org/10.1007/978-3-540-93813-2_7
+
+To boost the visibility of documentation files, we recommend that authors create a markdown file at both general and implementation levels to present a list of the documentation files (e.g., tableOfContents.md), with brief descriptions and links (relative paths) to the respective files. Such a file can then be linked from README.md (see examples of how to do it in the templates offered in the library)
 
 Below is an example of the recommended directory structure for a module containing files in both levels of documentation:
 
 ```
-1870-Scliemann-001 (module root)
+1870-Schliemann-001 (module root)
 │   .gitignore
 │   CHANGELOG.md
 │   LICENSE
