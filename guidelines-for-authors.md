@@ -94,7 +94,7 @@ Finally, to verify that everything has been set up correctly, we recommend that 
 
 To facilitate the management of submissions, we encourage all changes involving a module to be carried out inside a new branch.
 
-A branch, in Git terms, is a series of versions of a repository where changes are contained until finally accepted and merged back into the main series. 
+A branch, in Git terms, is a series of versions of a repository where changes are contained until finally accepted and merged back into the main series. A Git branch is unlike an literal tree branch, but rather more similar to a river branch catching different sediments and then returning to the main flow, or a thread that diverges from a fabric, receive several knots and is woven together again.
 
 *If using GitHub Desktop*:  
 > Follow the instruction in [GitHub Docs > GitHub Desktop > Make changes in a branch > Managing Branches](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches).
@@ -110,7 +110,7 @@ Navigate to the local copy of the NASSA library. In the root directory of the li
   <div class="column">
     <ol>
         <li><b>Year of submission</b>. The year when the module is submitted to the library repository, never to be changed, even in future versions of the module.</li>
-        <li><b>Submission author surname</b>. The surname of the submission author as a single word spelling and with no special characters. This is strictly for identification purposes, while the module authorship is later detailed, inside NASSA.yml.</li>
+        <li><b>Submission author surname</b>. The surname of the submission author as a single word spelling and with no special characters. This is strictly for identification purposes, while the module authorship  credits are later detailed, inside NASSA.yml.</li>
         <li><b>Index number per each author-year</b>. A unique three-digit number based on how many modules the same author has submitted during a single year. The number is strictly for identification purposes and must be set following an ascending order (i.e., from 001 to 999).</li>
     </ol>
   </div>
@@ -125,9 +125,9 @@ Each element is separated by a hyphen or minus sign ("-"; [Unicode specification
 
 We recommend using a **code editor** or an **integrated development environment** (IDE) to create and edit most module files.
 
-Many code editors and IDE can open the module directory as a "project", which will help ensure no accidental changes are made to the rest of the library. Using such software will make editing more agile (e.g., autocomplete, syntax highlighting), help identify errors, and ease the use of command lines. Most will also offer seamless management of version control with Git.
+Many code editors and IDE can open the module directory as a "project" or "working directory", which will help ensure no accidental changes are made to the rest of the library. Using such software will make editing more agile (e.g., autocomplete, syntax highlighting), help identify errors, and ease the use of command lines. Most will also offer seamless management of version control with Git.
 
-There are many options, but a good example is [Visual Studio Code](https://code.visualstudio.com/) by Microsoft.
+There are many options, but a good example is [Visual Studio Code](https://code.visualstudio.com/) by Microsoft or [RStudio](https://posit.co/download/rstudio-desktop/) by Posit.
 
 ### Planning a directory structure
 
@@ -158,6 +158,8 @@ Following the example above:
 └───netlogo_implementation
     └   TroyDestroyed.nlogo
 ```
+
+To keep the preparation of a new module as short and simple as possible, NASSA strongly recommends using the module templates available at the library, identifiable by the suffix "TEMPLATE" (e.g. "0000-NASSA-001-TEMPLATE").
 
 ### Implementation(s)
 
@@ -201,7 +203,7 @@ Metadata is contained in the "NASSA.yml" file, placed in the module's root direc
 
 To learn more about the YAML format, consult the [language website](https://yaml.org/), [Wikipedia entry](https://en.wikipedia.org/wiki/YAML), or any of the many tutorials available on the Web.
 
-Authors may consult the specifications of each field in the [JSON file at the NASSA schema repository](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/nassa-schema.json) and its [table version](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/README.md#nassayml-fields).
+Authors may consult the detailed specifications of each field in the [NASSA schema repository](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/README.md#nassayml-fields) ([JSON file](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/nassa-schema.json)).
 
 There are, however, a few general points to consider when filling up "NASSA.yml":
 
