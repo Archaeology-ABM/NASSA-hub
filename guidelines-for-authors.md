@@ -46,7 +46,7 @@
 <a class="top-link hide" href="#top" style="font-size: 200%;">↑</a>
 <a name="top"></a>
 
-# Guideline for module submission<!-- omit from toc --> 
+# Guide for module submission<!-- omit from toc --> 
 - [Preparation](#preparation)
   - [NASSA membership](#nassa-membership)
   - [GitHub](#github)
@@ -56,12 +56,13 @@
   - [Creating a new branch](#creating-a-new-branch)
 - [Creating a module](#creating-a-module)
   - [Overview](#overview)
-  - [Download a template](#download-a-template)
+  - [Templates and module examples](#templates-and-module-examples)
   - [Naming the module directory](#naming-the-module-directory)
   - [Code editors or IDEs (optional)](#code-editors-or-ides-optional)
   - [Planning a directory structure](#planning-a-directory-structure)
   - [Implementation(s)](#implementations)
     - [Code style](#code-style)
+  - [".gitignore"](#gitignore)
   - [License](#license)
   - [references.bib](#referencesbib)
   - [CHANGELOG.md](#changelogmd)
@@ -76,11 +77,9 @@
   - [Validation (workflow B)](#validation-workflow-b)
 - [Submitting a module](#submitting-a-module)
   - [Commit the new module directory to branch](#commit-the-new-module-directory-to-branch)
-  - [Publishing the branch](#publishing-the-branch)
   - [Create Pull Request](#create-pull-request)
+- [Automatic check](#automatic-check)
 - [Reviewing a module](#reviewing-a-module)
-  - [Conversation](#conversation)
-  - [Adding changes](#adding-changes)
   - [Merging and final checks](#merging-and-final-checks)
 
 ---
@@ -88,7 +87,7 @@
 
 ### NASSA membership
 
-A submission author might want to become a NASSA member, which is free and only requires registration by contacting our [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html). It will give direct access to the network with all its perks, including an easier developer workflow when contributing to NASSA's repositories.
+A submission author might want to become a NASSA member, which is free and only requires registration by contacting our [core team or to the community (Google Group)](https://archaeology-abm.github.io/NASSA-hub/about-us.html). It will give direct access to the network with all its perks, including an easier developer workflow when contributing to NASSA's repositories.
 
 ### GitHub
 
@@ -123,7 +122,7 @@ To facilitate the management of submissions, we encourage all changes involving 
 
 A *branch*, in Git terms, is a series of versions of a repository where changes are contained until finally accepted and merged back into the main series. A Git branch is unlike a literal tree branch but somewhat similar to a river branch catching different sediments and returning to the main flow or a thread that diverges from a fabric, receives several knots, and is woven together again.
 
-Please, name the new branch with your surname to facilitate the management later.
+Please, name the new branch with your surname to facilitate the management later. You could use something like `yoursurname-modules` so that you can reuse it every time you submit a module.
 
 **_Workflow A_**: using GitHub Web interface:  
 > Follow the instruction in [GitHub Docs > Pull requests > Collaborate with pull requests > Propose changes > Creating and deleting branches within your repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository).
@@ -134,6 +133,8 @@ Please, name the new branch with your surname to facilitate the management later
 >2. [GitHub Docs > Quickstart > Contributing to projects > Creating a branch to work on](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) (Git command lines).
 
 Once a branch has been created, make sure that it is selected, instead of "main", whenever changes are committed (see further below).
+
+Finally, you can "publish" the branch by either following the highlighted suggestion in GitHub Desktop or using command lines (**_Workflow B_**).
 
 ---
 ## Creating a module
@@ -160,9 +161,9 @@ Once a branch has been created, make sure that it is selected, instead of "main"
   </div>
 </div>
 
-### Download a template
+### Templates and module examples
 
-To keep the preparation of a new module as short and simple as possible, we strongly recommend using module templates. The NASSA community aims to offer a variety of templates for types of modules, levels of documentation and programming languages. Once you have already created and submitted a module, you may also use it as your own template for creating other modules.
+To keep the preparation of a new module as short and simple as possible, we strongly recommend using module templates. The NASSA community aims to offer a variety of templates for types of modules, levels of documentation and programming languages. Feel free to use any of the modules already in the library as templates, if it better suits your module. Once you have already created and submitted a module, you may also use it as your own template for creating other modules. We have also included a dummy example of a module, ["1870-Schliemann-001"](https://archaeology-abm.github.io/NASSA-modules/1870-Schliemann-001.html), which will be referenced throughout this guide. Notice that it was carefully prepared before computational archaeology was even a thing!
 
 Visit the [library Web interface](https://archaeology-abm.github.io/NASSA-modules/index.html), search for the term "TEMPLATE" and select the one most adequate for your type of module. Download the template directory by at its view page. The most basic and generic template is ["YEAR-Surname-000"](https://archaeology-abm.github.io/NASSA-modules/0000-NASSA-001-TEMPLATE.html). Once the file has been downloaded, uncompress the module folder into a directory of your choice.
 
@@ -204,61 +205,72 @@ A minimal set of files must be present and structured in a specific manner insid
 
 ```
 YYYY-SURNAME-001 (module root)
-│   CHANGELOG.md
-│   LICENSE
-|   NASSA.yml
-│   README.md
-│   references.bib
 │   
 └───<IMPLEMENTATION LANGUAGE>
     └   moduleShortTitle.<LANGUAGE EXTENSION>
+  CHANGELOG.md
+  LICENSE
+  NASSA.yml
+  README.md
+  references.bib
 ```
 
 All module templates will already contain the minimum set of files, which should then be edited according to your module's specifications. Other modules already integrated to the library can be also observed as examples.
 
-Of course, you should add all other files related specifically to your module, typically placing then inside implementation or documentation folders. As an example, the following structure would correspond to a module implemented in NetLogo and Python:
+Of course, you should add all other files related specifically to your module, typically placing then inside implementation or documentation folders. As an example, the following structure is used in Schliemann's dummy module, which is implemented in NetLogo and Python:
 
 ```
 1870-Schliemann-001 (module root)
-│   CHANGELOG.md
-│   LICENSE
-|   NASSA.yml
-│   README.md
-│   references.bib
 |
 └───documentation
-|   └  diagram.png
+|   └  designDetails.md
+|   └  tableOfContents.md
 │   
 └───netlogo_implementation
+|   └documentation
+|   |  └   instructions.md
+|   |  └   tableOfContents.md
+|   |  └   TroyDestroy interface.png
+|   |  └   TroyDestroy_agents interface.png
 │   └   TroyDestroy.nlogo
+|   └   TroyDestroy_agents.nlogo
+|
 └───python_implementation
-    └   City.py
-    └   Army.py
-    └   main.py
     └documentation
-       └   tableOfContents.md
-           instructions.md
+    |  └   tableOfContents.md
+    └   Army.py
+    └   City.py
+    └   demonstration.ipynb
+    └   main.py
+
+  .gitignore
+  CHANGELOG.md
+  LICENSE
+  NASSA.yml
+  README.md
+  references.bib
 ```
 
 ### Implementation(s)
 
-Modules are ultimately algorithms, i.e., finite sequences of formal instructions that receive an input and generate an output. Each implementation in a NASSA module should produce the intended sequences (i.e., represent the general program specification) while keeping all steps the more explicit and intelligible as possible.
+NASSA modules are pieces of simulation models that are ultimately algorithms, i.e., finite sequences of formal instructions that receive an input and generate an output. Each implementation in a NASSA module should produce the intended sequences (i.e., represent the general program specification) while keeping all steps the more explicit and intelligible as possible.
 
-For example, if our program specification reads:
+For example, in "1870-Schliemann-001", the program specification reads:
 
 >This module takes the strength of two armies, one aggressor and another defender, and calculates the level of destruction of the defenders' city. The destructive effect over the defenders' city is proportional to the two contending strengths and a constant rate per unit of strength of the aggressor matched by the defender.
 
-Then our NetLogo implementation (`TroyDestroy.nlogo`) could be structured as:
+Thus, one NetLogo implementation ("1870-Schliemann-001/netlogo_implementation/TroyDestroy.nlogo") could be:
 
 ```
 globals
-[ 
+[
   ;;; input
   greeks-strength trojans-strength
   destruction-rate
-  
+  init-troy-health
+
   ;;; output
-  troy-health 
+  troy-health
 ]
 
 to setup
@@ -267,26 +279,105 @@ to setup
   set greeks-strength par_greeks-strength
   set trojans-strength par_trojans-strength
   set destruction-rate par_destruction-rate
-  
-  set troy-health 100
+
+  set init-troy-health 100
+
+  set troy-health init-troy-health
 
 end
 
 to resolve-trojan-war
 
+  ;;; Resolve the destruction level based on army strengths and a destruction rate and update city health
   set troy-health (get-effect-of-war troy-health greeks-strength trojans-strength destruction-rate)
 
 end
 
 to-report get-effect-of-war [ cityHealth aggressorStrength defenderStrength destructionRate ]
 
-  report max (list 0 (cityHealth - destructionRate * (aggressorStrength ^ 2) / (defenderStrength)))
+  ;;; Return the destruction level based on army strengths and a destruction rate
+  report max (list 0 (cityHealth - destructionRate * (aggressorStrength ^ 2) / defenderStrength))
 
 end
 
 ```
 
-And the corresponding Python 3 implementation could be:
+Schliemann was feeling generous and decided to also offer another version, properly agent-based, that fits the same specification ("1870-Schliemann-001/netlogo_implementation/TroyDestroy_agents.nlogo"):
+
+```
+globals
+[
+  ;;; input
+  greeks-strength trojans-strength
+  destruction-rate
+  init-troy-health
+
+  ;;; output
+  troy-health
+]
+
+breed [ cities city ]
+breed [ armies army ]
+
+cities-own [ name health ]
+
+armies-own [ name strength ]
+
+to setup
+
+  clear-all
+
+  ;;; load input from interface
+  set greeks-strength par_greeks-strength
+  set trojans-strength par_trojans-strength
+  set destruction-rate par_destruction-rate
+
+  set init-troy-health 100
+
+  ;;; create agents
+  create-cities 1
+  [
+    set name "Troy"
+    set health init-troy-health
+  ]
+
+  create-armies 1
+  [
+    set name "Greeks"
+    set strength par_greeks-strength
+  ]
+
+  create-armies 1
+  [
+    set name "Trojans"
+    set strength par_trojans-strength
+  ]
+
+  reset-ticks
+
+end
+
+to resolve-trojan-war
+
+  ;;; Resolve the destruction level based on army strengths and a destruction rate and update city health
+  ask cities with [ name = "Troy" ]
+  [
+    let greeks-strength-total sum [strength] of armies with [ name = "Greeks" ]
+    let trojans-strength-total sum [strength] of armies with [ name = "Trojans" ]
+    set health (get-effect-of-war health greeks-strength-total trojans-strength-total destruction-rate)
+  ]
+
+end
+
+to-report get-effect-of-war [ cityHealth aggressorStrength defenderStrength destructionRate ]
+
+  ;;; Return the destruction level based on army strengths and a destruction rate
+  report max (list 0 (cityHealth - destructionRate * (aggressorStrength ^ 2) / (defenderStrength)))
+
+end
+```
+
+A few colleagues really pressed him for a Python 3 implementation, so he included the following inside "python_implementation":
 
 "City.py":
 
@@ -299,11 +390,11 @@ class City:
 
     def get_effect_of_war(self, aggressor_strength, defender_strength, destruction_rate):
         """Return the destruction level based on army strengths and a destruction rate"""
-        return max(0, (self.health - destruction_rate * (aggressor_strength ^ 2) / (defender_strength)))
+        return max(0, (self.health - destruction_rate * (aggressor_strength ** 2) / (defender_strength)))
     
     def resolve_war(self, aggressor_strength, defender_strength, destruction_rate):
         """Resolve the destruction level based on army strengths and a destruction rate and update city health"""
-        self.health = self.health - self.get_effect_of_war(aggressor_strength, defender_strength, destruction_rate)
+        self.health = self.get_effect_of_war(aggressor_strength, defender_strength, destruction_rate)
 
 ```
 
@@ -329,22 +420,26 @@ GREEKS_STRENGTH = 100
 TROJANS_STRENGTH = 50
 DESTRUCTION_RATE = 0.42
 
-# output
 TROY_HEALTH = 100
 
+# initialise
 greeks = Army(GREEKS_STRENGTH)
 
 trojans = Army(TROJANS_STRENGTH)
 
 troy = City(TROY_HEALTH)
 
-print("Troy health before war: " + troy.health)
+print("Troy health before war: " + str(troy.health))
 
+# algorithm execution
 troy.resolve_war(GREEKS_STRENGTH, TROJANS_STRENGTH, DESTRUCTION_RATE)
 
-print("Troy health after war: " + troy.health)
+# output
+print("Troy health after war: " + str(troy.health))
 
 ```
+
+<strong>All implementations must fit the generic specification of the module.</strong> Each implementation language included in the module must have at least have one version each that returns the same output for the a given input. Other versions within each implementation, that offer extensions of the core functionality, may escape this requirement according to the nature of the alternative design.
 
 #### Code style
 
@@ -361,6 +456,19 @@ Any final code attached to the submission must be functional and readable. NASSA
 **Minimise dependencies**. Authors should avoid using third-party libraries, packages, etc., as much as possible. It is crucial to avoid any software that is relatively hard to obtain or set up. Dependencies are always a risk for reproducibility and code sustainability in the long run.
 
 **Commentary in code**. Be repetitive and explain language-specific terms (not commonly known or easily searchable) whenever possible. Expand information whenever relevant, e.g., offering a source (preferably a stable URL) or explaining the logic behind a hardcoded or suggested parameter value. Add full references, with URL if available, of the sources used to inform the design of an algorithm or set parameter values. If there are any code fragments "commented-out", use a clear and consistent way to differentiate these from true commentary.
+
+### ".gitignore"
+
+You might want Git/GitHub to ignore certain files or type of files, depending on the programming language used by the module or if there are files generated by demonstrations, etc. In this case, a `.gitignore` file should be added in the main directory of your module, specifying what should be ignored.
+
+See more about this kind of file at [Git documentation](https://git-scm.com/docs/gitignore). Also GitHub offers an an extensive list of suggestions [here](https://github.com/github/gitignore).
+
+For example, "1870-Schliemann-001" includes a Python implementation that will probably be run in place by users and possibly generate cache data. For this reason, its ".gitignore" file reads: 
+
+```
+__pycache__/
+*.pyc
+```
 
 ### License
 
@@ -386,6 +494,8 @@ To learn more about the YAML format, consult the [language website](https://yaml
 
 You may consult the detailed specifications of each field in the [NASSA schema repository](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/README.md#nassayml-fields) ([JSON file](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/nassa-schema.json)).
 
+Notice that the order in which the fields are added to this file will not change its validity as module (it will remain machine-readable). We recommend generally following the order given in NASSA schema and in the templates, to facilitate human readability. However this default order might suffer changes in the future.
+
 The fields in "NASSA.yml" are:
 
 #### Identification and technical details:
@@ -409,7 +519,7 @@ For our dummy example ("1870-Schliemann-001/NASSA.yml"):
 ```
 id: 1870-Schliemann-001
 nassaVersion: 0.5.0
-moduleType: Submodel
+moduleType: Algorithm
 title: (DUMMY EXAMPLE) TroyDestroy. Bronze Age siege and its destructive effect on settlement
 moduleVersion: 1.0.0
 ```
@@ -496,8 +606,12 @@ For our dummy example ("1870-Schliemann-001/NASSA.yml"):
 ```
 contributors:
  - name: Schliemann, Heinrich
-   roles: [ "Author", "Copyright Holder", "Creator" ]
+   roles: [ "Author", "Copyright Holder" ]
    email: schliemann@email.org
+ - name: Angourakis, Andreas
+   roles: [ "Author", "Copyright Holder", "Creator" ]
+   email: andros.spica@gmail.com
+   orcid: 0000-0002-9946-8142
 ```
 
 #### Keywords:
@@ -581,23 +695,27 @@ outputs:
 For our dummy example ("1870-Schliemann-001/NASSA.yml"):
 ```
 inputs:
-  - name: greeks-strength
+  - name: greeks-strength, GREEKS_STRENGTH
     type: integer
     unit: army strength
     description: The strength of the Greek army (attackers), measured in number of soldiers, units, etc.
-  - name: trojans-strength
+  - name: trojans-strength, TROJANS_STRENGTH
     type: integer
     unit: army strength
     description: The strength of the Trojan army (defenders), measured in number of soldiers, units, etc.
-  - name: destruction-rate
+  - name: destruction-rate, DESTRUCTION_RATE
     type: float
     unit: city health / army strength
     description: The rate of destruction per unit of attacker strength
-outputs:
-  - name: troy-health 
+  - name: init-troy-health, TROY_HEALTH
     type: float
     unit: city health
-    description: The general state of the defenders city, measured in proportion of population dead and damaged structures
+    description: The general state of the defenders city, measured in population, structures, etc.
+outputs:
+  - name: troy-health, health, City.health
+    type: float
+    unit: city health
+    description: The general state of the defenders city, measured in population, structures, etc.
 ```
 
 #### Bibliographic information
@@ -627,6 +745,7 @@ references:
 The most generic documentation file is "README.md", which aims to present the module with a brief overview and is assumed to be the users' first contact with the module. It is written in GitHub-flavoured [markdown](https://www.markdownguide.org/) and may include images and external links.
 
 The following section structure must be kept:
+
 ```
 # Module name  
 Authors' full name  
@@ -639,6 +758,37 @@ Description
 ```
 
 In "Further information", we recommend the display of any images included as part of the module documentation, such as diagrams, screenshots, output graphs in demonstrations, etc. Consult other modules as examples.
+
+In case of "1870-Schliemann-001", no significant image is offer to illustrate the algorithm, so the authors chose to display a Wikimedia Commons image related to the subject to make the README file more memorable:
+
+```
+# (DUMMY EXAMPLE) TroyDestroy. Bronze Age siege and its destructive effect on settlement
+
+*by Heinrich "Dummy" Schliemann* (NASSA submission :rocket:)
+
+This module takes the strength of two armies, one aggressor and another defender, and calculates the level of destruction of the defenders' city. The destructive effect over the defenders' city is proportional to the two contending strengths and a constant rate per unit of strength of the aggressor matched by the defender.
+
+## License
+
+**MIT**
+
+## References
+
+Homer. 1865. The Iliad of Homer. J. Murray (trad.).
+
+## Further information
+
+<a title="Unknown Corinthian pottery maker BCE, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Corinthian_aryballos_depicting_the_trojan_war_from_1887_jahrbuchdeskaiserich_1200x500.jpg"><img width="512" alt="Corinthian aryballos depicting the trojan war from 1887 jahrbuchdeskaiserich 1200x500" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Corinthian_aryballos_depicting_the_trojan_war_from_1887_jahrbuchdeskaiserich_1200x500.jpg/512px-Corinthian_aryballos_depicting_the_trojan_war_from_1887_jahrbuchdeskaiserich_1200x500.jpg"></a>
+
+This model is a algorithm implemented in NetLogo and Python 3. Disclaimer: the code might require updates since it was written in the 19th century.
+
+Overview of the algorithm:
+
+$$warEffect=-destructionRate*\frac{(attackerStrength)^2}{defenderStrength} $$
+
+See full list of documentation resources in [`documentation`](documentation/tableOfContents.md).
+
+```
 
 ### Other documentation files
 
@@ -658,46 +808,95 @@ Because modules are both program specifications and implementations, we recommen
 
 >Grimm, V., Polhill, G., & Touza, J. (2013). Documenting Social Simulation Models: The ODD Protocol as a Standard. In B. Edmonds & R. Meyer (Eds.), Simulating Social Complexity: A Handbook (pp. 117–133). Springer. https://doi.org/10.1007/978-3-540-93813-2_7
 
-To boost the visibility of documentation files, we recommend that authors create a markdown file at both general and implementation levels to present a list of the documentation files (e.g., tableOfContents.md), with brief descriptions and links (relative paths) to the respective files. Such a file can then be linked from README.md (see examples of how to do it in the templates offered in the library)
+To boost the visibility of documentation files, we recommend that authors create a markdown file at both general and implementation levels to present a list of the documentation files (e.g., tableOfContents.md), with brief descriptions and links (relative paths) to the respective files. Such a file can then be linked from README.md.
 
-Below is an example of the recommended directory structure for a module containing files in both levels of documentation:
+See examples of how to do it in the templates offered in the library.
+
+In "1870-Schliemann-001", notice how an instruction was included for the NetLogo implementation, a demonstration (.ipynb) for the Python implementation, and a design details file to explain the algorithm in more general terms:
 
 ```
 1870-Schliemann-001 (module root)
-│   .gitignore
-│   CHANGELOG.md
-│   LICENSE
-|   NASSA.yml
-│   README.md
-│   references.bib
-│
+|
 └───documentation
-│   │   tableOfContents.md
-│   │   designDetails.md
-│
+|   └  designDetails.md
+|   └  tableOfContents.md
+│   
+└───netlogo_implementation
+|   └documentation
+|   |  └   instructions.md
+|   |  └   tableOfContents.md
+|   |  └   TroyDestroy interface.png
+|   |  └   TroyDestroy_agents interface.png
+│   └   TroyDestroy.nlogo
+|   └   TroyDestroy_agents.nlogo
+|
 └───python_implementation
-    │   TroyDestroyed.py
-    |   theCity.py
-    |   Greeks.py
-    |   Trojans.py
-    │   demonstration.ipynb
-    |
-    └───documentation
-    |   │   tableOfContents.md
-    |   │   instructions.md
-    |   │   city-plan.png
-    |   |   social-network.dot
-    │
-    └───input
-    │   │   warriorData.csv
-    │   │   TroyDEM.png
-    │
-    └───output (for demonstration purposes)
-        │   events.csv
+    └documentation
+    |  └   tableOfContents.md
+    └   Army.py
+    └   City.py
+    └   demonstration.ipynb
+    └   main.py
+
+  .gitignore
+  CHANGELOG.md
+  LICENSE
+  NASSA.yml
+  README.md
+  references.bib
 ```
+
+In this case, "README.md" links to "documentation/tableOfContents.md", which reads:
+
+```
+(DUMMY EXAMPLE) TroyDestroy. Bronze Age siege and its destructive effect on settlement
+# General documentation
+## Table of contents
+
+- [`designDetails.md`](designDetails.md) : free format document describing the module process, beyond the level of implementation.
+  
+- [NetLogo implementation](/netlogo_implementation/documentation/tableOfContents.md) : documentation specific to the NetLogo implementation.
+  
+- [Python implementation](/python_implementation/documentation/tableOfContents.md) : documentation specific to the Python implementation.
+```
+
+Leading to "netlogo_implementation/documentation/tableOfContents.md":
+
+```
+(DUMMY EXAMPLE) TroyDestroy. Bronze Age siege and its destructive effect on settlement
+# Documentation - NetLogo implementation
+## Table of contents
+
+- [`instructions.md`](instructions.md)
+
+- [`TroyDestroy interface.png`](TroyDestroy%20interface.png)
+
+![`TroyDestroy interface.png`](TroyDestroy%20interface.png)
+
+- [`TroyDestroy_agents interface.png`](TroyDestroy_agents%20interface.png)
+
+![`TroyDestroy_agents interface.png`](TroyDestroy_agents%20interface.png)
+
+```
+
+and to "python_implementation/documentation/tableOfContents.md":
+
+```
+(DUMMY EXAMPLE) TroyDestroy. Bronze Age siege and its destructive effect on settlement
+# Documentation - Python implementation
+## Table of contents
+
+- [`demonstration.ipynb`](demonstration)
+
+```
+
+The golden rules in preparing documentation files here are "nothing is trivial enough to be mentioned" and "do not fear repeating yourself". The point is to facilitate the understanding of the module at different levels and for different backgrounds.
 
 ### Validation (workflow B)
 
+If you are operating over a local copy of the library, you have the option of checking the integrity of your module, that is, if it has all files and metadata necessary for being processed in submission. This check will occur in GitHub after you create the Pull Request with your module (i.e. module submission).
+
+To perform the check, go to [nassa-hs repository](https://github.com/Archaeology-ABM/nassa-hs) and follow the instructions in "README.md".
 
 ---
 ## Submitting a module
@@ -706,24 +905,62 @@ Below is an example of the recommended directory structure for a module containi
 
 In GitHub, navigate to the new branch of your copy of the NASSA library. This should be something like: "https://github.com/your-user-name/NASSA-modules/tree/name-of-your-branch". Click on "+" and select "Upload files". Upload the module folder, naming the commit as "module submission", and commit the changes. 
 
-When working locally (workflow B), open the library directory of your new branch and copy the entire module directory to the library's root directory.
+When working locally (workflow B), open the library directory of your new branch and copy the module folder to the library's root directory. Then create a commit named "module submission: moduleID" (e.g. "module submission: 1870-Schliemann-001").
 
-### Publishing the branch
-
+Remember to publish the branch if you haven't done so already (GitHub Desktop will remind you).
 
 ### Create Pull Request
 
+Once all module files have been committed to your branch, you can create a Pull Request. To facilitate the review and checking of modules, **do NOT commit more than one module per Pull Request**. If you have want to work on two or more submission at a time, do it in by containing each of them in a separate branch of your fork. 
+
+In GitHub Web interface, any number of commits to your branch/fork will trigger a reminder with a green button "Compare & pull request". Alternatively, navigate to Pull requests tab on the top menu area and then "New pull request".
+
+When working locally (**_Workflow B_**), GitHub Desktop will also remember you with a suggestion in the main area of the interface.
+
+The next screen will allow you to name the Pull Request and write a description. If a single commit was done, the title of the Pull Request will be "module submission" with any description text you have added. If not, make sure the title is "module submission: moduleID" (e.g. "module submission: 1870-Schliemann-001").
+
+![](/assets/pull-request-dummy.png)
+
+Lower in this page, it will be listed all new changes of your branch/fork in relation to the main branch of the original NASSA library repository ("Archaeology-ABM/NASSA-modules").
+
+On the side bar on the right, you may also request reviewers among colleagues, including anyone in the NASSA community, or GitHub users you know. By default, the Pull Request will be revised by at least one [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
+
+You can save the Pull Request as a draft or submit it with the green button on the right "Create Pull Request".
+
+## Automatic check
+
+The NASSA library repository will execute the nassa-hs application for every new Pull Request to test if it complies with all minimum requirements. This will take a few seconds.
+
+If you followed all required specifications in the [NASSA schema](https://github.com/Archaeology-ABM/NASSA-schema), particularly regarding the content of "NASSA.yml".
+
+Do not panic if the check fails!
+
+![](/assets/check-fail.png)
+
+In most cases, the problem has a easy solution. When having a fail test, click on "Details". The next screen will show you in "Validation" the console printout of nassa-hs execution and accuse what was found missing.
+
+![](/assets/check-fail-2.png)
+
+ In our case, we realised that Schliemann (i.e. `.contributors[0]`) is a man of his time, thus still not having a valid ORCID. Shame!
+
+ Despite the embarrassing situation, he decided to use a dummy ORCID (0000-0002-1825-0097) instead of creating one. Double shame!
+
+ To solve the problem, go back to your Pull Request page and select the tab "Files changed". Click the three dots in the top right corner of the editor and select “Edit this file”. Make the changes and commit. Click on "Refresh", highlighted on the top, to see the changes integrated in the Pull Request. Go back to the "Conversation" tab and see if the automatic test is now passing. Repeat this process until it does.
+ 
+ If you have any doubts in this stage or the problem is not clear from the printout of nassa-hs, write to one of the our [core team or to the community (Google Group)](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
 
 ## Reviewing a module
 
-To help achieve these principles, one or more NASSA members will review a module submission (Pull Request) and suggest changes to the submission author (GitHub user) through either comments or modifications to the files as they are in the Pull Request. Comments and changes can be assessed, rebutted, or accepted by authors. Alternatively, authors may cancel the Pull Request and prepare a new revised one. For more information, see [Reviewing a module](#reviewing-a-module).
+One or more NASSA members will then review your module submission (Pull Request) and possibly suggest changes through either comments or modifications to the files as they are in the Pull Request.
 
-### Conversation
+Comments and changes can be assessed, rebutted, or accepted by the author who has submitted (created the Pull Request). For more information, see the [GitHub documentation]([#reviewing-a-module](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)).
 
+We expect everyone in the community to be fair and polite when reviewing modules. Modules do not need to be perfect and we do expect many submission will be later revised or expanded by the original authors or other new contributors. If the is a dispute between authors and a reviewer, or an author feels that a reviewer has been unfair, please contact our [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
 
-### Adding changes
-
+Alternatively, if there are many hard or structural problems, authors may want cancel the Pull Request and prepare a new revised one. For this, click on "Close Pull Request" at the bottom of your Pull Request page. After the Pull Request is closed, you may perform the changes and repeat the steps for creating a new submission (Pull Request).
 
 ### Merging and final checks
 
+If a module has passed all automatic tests and reviewers found no major issues, a core member will then merge the Pull Request and your module will became part of the NASSA library.
 
+Beyond GitHub Web interface, you and others will be able to find your module in the [NASSA Library Web App](https://archaeology-abm.github.io/NASSA-modules/) and preview it with its own dedicated page (created automatically after the merge is done). It is time to promote it and cite it!
