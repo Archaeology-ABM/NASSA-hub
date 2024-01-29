@@ -67,11 +67,13 @@
   - [references.bib](#referencesbib)
   - [CHANGELOG.md](#changelogmd)
   - [NASSA.yml (metadata)](#nassayml-metadata)
-    - [Identification and technical details:](#identification-and-technical-details)
+    - [Module identification:](#module-identification)
     - [Authorship:](#authorship)
+    - [Other details:](#other-details)
+    - [Bibliographic information](#bibliographic-information)
+    - [Implementations:](#implementations-1)
     - [Keywords:](#keywords)
     - [Input and output](#input-and-output)
-    - [Bibliographic information](#bibliographic-information)
   - [README.md](#readmemd)
   - [Other documentation files](#other-documentation-files)
   - [Validation (workflow B)](#validation-workflow-b)
@@ -79,8 +81,8 @@
   - [Commit the new module directory to branch](#commit-the-new-module-directory-to-branch)
   - [Create Pull Request](#create-pull-request)
 - [Automatic check](#automatic-check)
-- [Reviewing a module](#reviewing-a-module)
-  - [Merging and final checks](#merging-and-final-checks)
+- [Module review](#module-review)
+  - [Merging or final approval](#merging-or-final-approval)
 
 ---
 ## Preparation
@@ -488,23 +490,23 @@ NASSA encourages the use of [semantic versioning](https://semver.org/), whenever
 
 ### NASSA.yml (metadata)
 
-Metadata is contained in the "NASSA.yml" file, placed in the module's root directory, as exemplified in the templates.
+Metadata is contained in fields stored in the "NASSA.yml" file, placed in the module's root directory, as exemplified in the templates.
 
 To learn more about the YAML format, consult the [language website](https://yaml.org/), [Wikipedia entry](https://en.wikipedia.org/wiki/YAML), or any of the many tutorials available on the Web.
 
-You may consult the detailed specifications of each field in the [NASSA schema repository](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/README.md#nassayml-fields) ([JSON file](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/nassa-schema.json)).
+If new to the YAML format, keep in mind that the content and order of the fields are not prescribed by the format (similar to JSON). Some fields or field content will, however, be required by the validation step during module submission. Regarding the arrangement of fields, we recommend following the order in this guide, but templates or other modules already in the library may diverge from this recommendation.
 
-Notice that the order in which the fields are added to this file will not change its validity as a module (it will remain machine-readable). We recommend generally following the order given in NASSA schema and the templates to facilitate human readability. However, this default order might suffer changes in the future.
+If there are any doubts after following this guide, you can consult the detailed specifications of each field in the [NASSA schema repository](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/README.md#nassayml-fields) ([JSON file](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/nassa-schema.json)). 
 
-The fields in "NASSA.yml" are:
+The fields in "NASSA.yml" are ordered thematically bellow (<b style="color: orange">&#9632;</b>: mandatory field):
 
-#### Identification and technical details:
+#### Module identification:
 
-- **id**: Module identification number. Assigned when opening a submission.
-- **nassaVersion**: Latest version of the NASSA schema that applies to this module (NASSA.yml fields, directory and file structure).
-- **moduleType**: Whether an algorithm or a submodel (contain modules).
-- **title**: Module name or title. It must include a useful description of module.
-- **moduleVersion**: Current version identifier. Defaults to "1.0.0" and should increase after every update.
+- **<b style="color: orange">id</b>**: Module identification number. Assigned when opening a submission.
+- **<b style="color: orange">nassaVersion</b>**: Latest version of the NASSA schema that applies to this module (NASSA.yml fields, directory and file structure).
+- **<b style="color: orange">moduleType</b>**: Whether an algorithm or a submodel (contain modules).
+- **<b style="color: orange">title</b>**: Module name or title. It must include a useful description of module.
+- **<b style="color: orange">moduleVersion</b>**: Current version identifier. Defaults to "1.0.0" and should increase after every update.
 
 From the template "YEAR-Surname-000/NASSA.yml":
 ```
@@ -524,19 +526,48 @@ title: (DUMMY EXAMPLE) TroyDestroy. Bronze Age siege and its destructive effect 
 moduleVersion: 1.0.0
 ```
 
-...
+#### Authorship:
 
-- **license**: Software license for the code in this module.
-- **lastUpdateDate**: Date of the last update submitted.
-- **description**: Description of what the module does. It should expand the information already given in the name/title.
-- **relatedModules**: List of modules (ids) this one is related to (similar, depending on, etc.).
+- **<b style="color: orange">contributors</b>**: List of contributors to the module.
+  - **<b style="color: orange">roles</b>**: How this author contributed to the module (see "Authorship" below).
+  - **<b style="color: orange">name</b>**: Full name of a contributor.
+  - **<b style="color: orange">email</b>**: Stable email of a contributor.
+  - **<b style="color: orange">orcid</b>**: ORCID number of a contributor.
+
+Authors are considered in relation to their roles (Author, Compiler, Contributor, Copyright Holder, Creator, Thesis Advisor, Translator; see definitions [here](https://journal.r-project.org/archive/2012-1/RJournal_2012-1_Hornik~et~al.pdf)). A module must have at least one person listed as an "Author", "Copyright Holder" and "Creator", typically the person preparing and managing the submission, whose surname is represented in the module ID. A submission author, who is not directly responsible for the implementation code, should retain the abovementioned roles and name at least one additional author with an "Author" and "Copyright Holder" role. Later code modifications and documentation modifications can be acknowledged under the "Contributor" role. Individuals involved in formulating the algorithm but not creating the module may be acknowledged as "Author" and "Copyright Holder".
+
+From the template "YEAR-Surname-000/NASSA.yml":
+```
+contributors:
+ - name: Surname, Name (with no accent marks, first upper-case letters, and surname matching the id and root directory name)
+   roles: ["Author", "Compiler", "Contributor", "Copyright Holder", "Creator", "Thesis Advisor", "Translator"]
+   email: nassa@email.org
+   orcid: 0000-0002-1825-0097
+```
+
+For our dummy example ("1870-Schliemann-001/NASSA.yml" ):
+```
+contributors:
+ - name: Schliemann, Heinrich
+   roles: ["Author", "Copyright Holder"]
+   email: schliemann@email.org
+ - name: Angourakis, Andreas
+   roles: ["Author", "Copyright Holder", "Creator"]
+   email: andros.spica@gmail.com
+   orcid: 0000-0002-9946-8142
+```
+
+#### Other details:
+
+- **<b style="color: orange">license</b>**: Software license for the code in this module.
+- **<b style="color: orange">lastUpdateDate</b>**: Date of the last update submitted.
+- **<b style="color: orange">description</b>**: Description of what the module does. It should expand the information already given in the name/title.
 
 From the template "YEAR-Surname-000/NASSA.yml":
 ```
 lastUpdateDate: 1983-04-18
 description: >
   Description of what the module does. It should expand the information already given in the name/title.
-relatedModules: [ 0000-NASSA-002-TEMPLATE ]
 ...
 license: MIT
 ```
@@ -546,16 +577,92 @@ For our dummy example ("1870-Schliemann-001/NASSA.yml" ):
 lastUpdateDate: 1871-10-20
 description: >
   This module takes the strength of two armies, one aggressor and another defender, and calculates the level of destruction of the defenders' city. The destructive effect over the defenders' city is proportional to the two contending strengths and a constant rate per unit of strength of the aggressor matched by the defender.
-relatedModules: [ 1874-NASSA-001 ]
 ...
 license: MIT
 ```
 
-...
+#### Bibliographic information
 
-- **implementations**: List of implementations in different programming languages.
-  - **language**: Programming language.
-  - **softwareDependencies**: Listing any software (libraries, packages, etc), specifying the release version, on which the module implementation relies to properly function.
+- **relatedModules**: List of modules (ids) this one is related to (similar, depending on, etc.). Currently there is no automated check for the validity of the ids given in this field. 
+- **references**: Literature references. Explicit mention of BibTex IDs corresponding to the references in "references.bib".
+  - **moduleReferences**: References that **_describe and explain the module_**, any of its parts, or its original use in a model. This includes public repositories holding models that include the module.
+  - **useExampleReferences**: References **_citing, describing, or using the module_** (only to be entered after the module has been published in the NASSA library).
+
+From the template "YEAR-Surname-000/NASSA.yml":
+
+```
+relatedModules: [ 0000-NASSA-002-TEMPLATE ]
+references:
+  moduleReferences: [ Epstein2008 ]
+  useExampleReferences: [ romanowska_agent-based_2021, Epstein2008 ]
+```
+
+with the "references.bib":
+```
+@book{romanowska_agent-based_2021,
+	edition = {Electronic},
+	title = {Agent-{Based} {Modeling} for {Archaeology}},
+	isbn = {978-1-947864-38-2},
+	url = {https://www.sfipress.org/books/agent-based-modeling-archaeology},
+	abstract = {To fully understand not only the past, but also the trajectories, of human societies, we need a more dynamic view of human social systems. Agent-based modeling (ABM), which can create fine-scale models of behavior over time and space, may reveal important, general patterns of human activity. Agent-Based Modeling for Archaeology is the first ABM textbook designed for researchers studying the human past. Appropriate for scholars from archaeology, the digital humanities, and other social sciences, this book offers novices and more experienced ABM researchers a modular approach to learning ABM and using it effectively.  Readers will find the necessary background, discussion of modeling techniques and traps, references, and algorithms to use ABM in their own work. They will also find engaging examples of how other scholars have applied ABM, ranging from the study of the intercontinental migration pathways of early hominins, to the weather–crop–population cycles of the American Southwest, to the trade networks of Ancient Rome. This textbook provides the foundations needed to simulate the complexity of past human societies, offering researchers a richer understanding of the past—and likely future—of our species.},
+	urldate = {2022-02-01},
+	publisher = {SFI Press},
+	author = {Romanowska, Iza},
+	month = aug,
+	year = {2021},
+	doi = {10.37911/9781947864382},
+},
+
+@article{Epstein2008,
+	title = {Why {Model}?},
+	volume = {11},
+	url = {http://jasss.soc.surrey.ac.uk/11/4/12.html},
+	abstract = {This lecture treats some enduring misconceptions about modeling. One of these is that the goal is always prediction. The lecture distinguishes between explanation and prediction as modeling goals, and offers sixteen reasons other than prediction to build a model. It also challenges the common assumption that scientific theories arise from and 'summarize' data, when often, theories precede and guide data collection; without theory, in other words, it is not clear what data to collect. Among other things, it also argues that the modeling enterprise enforces habits of mind essential to freedom. It is based on the author's 2008 Bastille Day keynote address to the Second World Congress on Social Simulation, George Mason University, and earlier addresses at the Institute of Medicine, the University of Michigan, and the Santa Fe Institute.},
+	number = {4},
+	urldate = {2018-03-09},
+	journal = {Journal of Artificial Societies and Social Simulation},
+	author = {Epstein, Joshua M.},
+	month = oct,
+	year = {2008},
+	note = {Publisher: JASSS},
+	keywords = {ABM, modelling, simulation},
+	pages = {12}
+}
+```
+
+For our dummy example ("1870-Schliemann-001/NASSA.yml" ):
+```
+relatedModules: [ 1874-Schliemann-001 ]
+references:
+  moduleReferences: [ homer_iliad_1865 ]
+  useExampleReferences: [ nassa_guide_submissions ]
+```
+
+And with the "references.bib":
+```
+@book{homer_iliad_1865,
+	title = {The {Iliad} of {Homer}},
+	language = {en},
+	publisher = {J. Murray},
+	author = {Homer},
+	year = {1865},
+	note = {Google-Books-ID: EEYbAAAAYAAJ},
+}
+@misc{nassa_guide_submissions,
+	title = {Guide for submissions | NASSA},
+	url = {https://archaeology-abm.github.io/NASSA-hub/NASSA-hub/guide-for-submissions.html},
+	abstract = {Network for Agent-based modelling of Socio-ecological Systems in Archaeology},
+	language = {en-US},
+	urldate = {2024-01-29},
+	journal = {NASSA},
+}
+```
+
+#### Implementations:
+
+- **<b style="color: orange">implementations</b>**: List of implementations in different programming languages.
+  - **<b style="color: orange">language</b>**: Programming language.
+  - **<b style="color: orange">softwareDependencies</b>**: Listing any software (libraries, packages, etc), specifying the release version, on which the module implementation relies to properly function.
 - **docsDir**: Relative path to the directory containing general module documentation.
 
 From the template "YEAR-Surname-000/NASSA.yml":
@@ -583,45 +690,14 @@ implementations:
 docsDir: documentation/
 ```
 
-#### Authorship:
-
-- **contributors**: List of contributors to the module.
-  - **roles**: How this author contributed to the module (see "Authorship" below).
-  - **name**: Full name of a contributor.
-  - **email**: Stable email of a contributor.
-  - **orcid**: ORCID number of a contributor.
-
-Authors are considered in relation to their roles (Author, Compiler, Contributor, Copyright Holder, Creator, Thesis Advisor, Translator; see definitions [here](https://journal.r-project.org/archive/2012-1/RJournal_2012-1_Hornik~et~al.pdf)). A module must have at least one person listed as an "Author", "Copyright Holder" and "Creator", typically the person preparing and managing the submission, whose surname is represented in the module ID. A submission author, who is not directly responsible for the implementation code, should retain the abovementioned roles and name at least one additional author with an "Author" and "Copyright Holder" role. Later code modifications and documentation modifications can be acknowledged under the "Contributor" role. Individuals involved in formulating the algorithm but not creating the module may be acknowledged as "Author" and "Copyright Holder".
-
-From the template "YEAR-Surname-000/NASSA.yml":
-```
-contributors:
- - name: Surname, Name (with no accent marks, first upper-case letters, and surname matching the id and root directory name)
-   roles: ["Author", "Compiler", "Contributor", "Copyright Holder", "Creator", "Thesis Advisor", "Translator"]
-   email: nassa@email.org
-   orcid: 0000-0002-1825-0097
-```
-
-For our dummy example ("1870-Schliemann-001/NASSA.yml" ):
-```
-contributors:
- - name: Schliemann, Heinrich
-   roles: ["Author", "Copyright Holder"]
-   email: schliemann@email.org
- - name: Angourakis, Andreas
-   roles: ["Author", "Copyright Holder", "Creator"]
-   email: andros.spica@gmail.com
-   orcid: 0000-0002-9946-8142
-```
-
 #### Keywords:
 
 - **domainKeywords**: Domain-related keywords.
   - **subjects**: Subject keyword(s).
   - **regions**: Region keyword(s).
   - **periods**: Period keyword(s).
-- **modellingKeywords**: Modelling-related keyword(s). Using NASSA schema specifications.
-- **programmingKeywords**: Programming-related keyword(s). Using NASSA schema specifications.
+- **<b style="color: orange">modellingKeywords</b>**: Modelling-related keyword(s). Using NASSA schema specifications.
+- **<b style="color: orange">programmingKeywords</b>**: Programming-related keyword(s). Using NASSA schema specifications.
 
 Keywords are freestyle categories, open to future standardisation to avoid duplicates. NASSA recommends using terms already established in ontologies elsewhere (e.g., [EHRAF](https://ehrafworldcultures.yale.edu/ehrafe/majorSubjects.do) for subjects, [GeoNames](http://www.geonames.org/) for regions, [perio.do](https://perio.do/en/) for periods).
 
@@ -716,28 +792,6 @@ outputs:
     type: float
     unit: city health
     description: The general state of the defenders city, measured in population, structures, etc.
-```
-
-#### Bibliographic information
-
-Explicit mention of BibTex IDs corresponding to the references in "references.bib".
-
-- **references**: Literature references.
-  - **moduleReferences**: References that describe and explain the module, any of its parts, or its original use in a model. This includes public repositories holding models that include the module.
-  - **useExampleReferences**: References citing, describing, or using the module, after it has been published in the NASSA library.
-
-From the template "YEAR-Surname-000/NASSA.yml":
-
-```
-references:
-  moduleReferences: [ Epstein2008 ]
-  useExampleReferences: [ romanowska_agent-based_2021, Epstein2008 ]
-```
-
-For our dummy example ("1870-Schliemann-001/NASSA.yml" ):
-```
-references:
-  moduleReferences: [ homers-iliad ]
 ```
 
 ### README.md
@@ -894,7 +948,7 @@ The golden rules in preparing documentation files here are "nothing is trivial e
 
 ### Validation (workflow B)
 
-If you are operating over a local copy of the library, you have the option of checking the integrity of your module, that is, if it has all files and metadata necessary for being processed in submission. This check will occur in GitHub after you create the Pull Request with your module (i.e. module submission).
+If you are operating over a local copy of the library, you have the option of checking the integrity of your module, that is, if it has all files and metadata necessary for being processed in submission. This check will occur in GitHub after you create the Pull Request with your module (i.e. module submission), but performing the test locally before submission might save you time later on.
 
 To perform the check, go to [nassa-hs repository](https://github.com/Archaeology-ABM/nassa-hs) and follow the instructions in "README.md".
 
@@ -925,13 +979,13 @@ Lower on this page, it will list all new changes of your branch/fork compared to
 
 On the right sidebar, you may also request reviewers among colleagues, including anyone in the NASSA community or GitHub users you know. By default, the Pull Request will be revised by at least one [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
 
-You can save the Pull Request as a draft or submit it with the green button on the right, "Create Pull Request".
+You can submit the Pull Request with the green button on the right, "Create Pull Request", or save it as a draft (down arrow symbol in the same button).
 
 ## Automatic check
 
-The NASSA library repository will execute the nassa-hs application for every new Pull Request to test if it complies with all minimum requirements. This will take a few seconds.
+The NASSA library repository will execute the nassa-hs application for every new Pull Request to test if it complies with all minimum requirements (module "validation"). This will take a few seconds.
 
-If you followed all required specifications in the [NASSA schema](https://github.com/Archaeology-ABM/NASSA-schema), particularly regarding the content of "NASSA.yml".
+If you followed all required specifications in the [NASSA schema](https://github.com/Archaeology-ABM/NASSA-schema), particularly regarding the content of "NASSA.yml", your Pull Request should pass.
 
 Do not panic if the check fails!
 
@@ -941,26 +995,34 @@ In most cases, the problem has an easy solution. When having a fail test, click 
 
 ![](/assets/check-fail-2.png)
 
- In our case, we realised that Schliemann (i.e. `.contributors[0]`) is a man of his time, thus still not having a valid ORCID. Shame!
+ In our case, we realised that the first author listed in "NASSA.yml" (i.e. `.contributors[0]`), Schliemann, is a man of his time, thus he does not have a valid ORCID. Shame!
 
- Despite the embarrassing situation, he decided to use a dummy ORCID (0000-0002-1825-0097) instead of creating one. Double shame!
+ Despite the embarrassment, he decided to use a dummy ORCID (0000-0002-1825-0097) instead of creating one. Double shame!
 
  To solve the problem, return to your Pull Request page and select the "Files changed" tab. Click the three dots in the top right corner of the editor and select "Edit this file". Make the changes and commit. Click on "Refresh", highlighted at the top, to see the changes integrated in the Pull Request. Return to the "Conversation" tab and see if the automatic test is passing. Repeat this process until it does.
  
  If you have any doubts in this stage or the problem is not clear from the printout of nassa-hs, write to one of our [core team or to the community (Google Group)](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
 
-## Reviewing a module
+## Module review
 
-One or more NASSA members will then review your module submission (Pull Request) and possibly suggest changes by commenting on or modifying the files as they appear in the Pull Request.
+One or more NASSA members will then review your module submission (Pull Request) and possibly suggest changes by commenting on or modifying the files as they appear in the Pull Request. Until at least one reviewer gives an approval, the submission pull request will not be able to merge into the library repository (i.e. become part of it). 
+
+![](assets/pending-reviwer.png)
 
 Comments and changes can be assessed, rebutted, or accepted by the author who has submitted (created the Pull Request). For more information, see the [GitHub documentation]([#reviewing-a-module](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)).
+
+![]()
 
 We expect everyone in the community to be fair and polite when reviewing modules. Modules do not need to be perfect, and we expect many submissions to be revised or expanded later by the original authors or other new contributors. If there is a dispute between authors and a reviewer, or an author feels that a reviewer has been unfair, please contact our [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
 
 Alternatively, if there are many hard or structural problems, authors may want to cancel the Pull Request and prepare a new revised one. For this, click on "Close Pull Request" at the bottom of your Pull Request page. After the Pull Request is closed, you may perform the changes and repeat the steps for creating a new submission (Pull Request).
 
-### Merging and final checks
+### Merging or final approval
 
 If a module passes all automatic tests and reviewers find no major issues, a core member will merge the Pull Request, and your module will become part of the NASSA library.
 
+![]()
+
 Beyond GitHub Web interface, you and others will be able to find your module in the [NASSA Library Web App](https://archaeology-abm.github.io/NASSA-modules/) and preview it with its dedicated page (created automatically after the merge is done). It is time to promote it and cite it!
+
+![]()
