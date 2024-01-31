@@ -82,7 +82,7 @@
   - [Create Pull Request](#create-pull-request)
 - [Automatic check](#automatic-check)
 - [Module review](#module-review)
-  - [Merging or final approval](#merging-or-final-approval)
+  - [Module publication](#module-publication)
 
 ---
 ## Preparation
@@ -124,15 +124,15 @@ To facilitate the management of submissions, we encourage all changes involving 
 
 A *branch*, in Git terms, is a series of repository versions where changes are contained until finally accepted and merged back into the main series. A Git branch is unlike a literal tree branch but somewhat similar to a river branch catching different sediments and returning to the main flow or a thread that diverges from a fabric, receives several knots, and is woven together again.
 
-Please name the new branch with your surname to facilitate the management later. You could use something like `yoursurname-modules` so that you can reuse it every time you submit a module.
+Please name the new branch with your surname to facilitate the management later. You could use something like `yoursurname-modules` so that you can reuse it every time you submit ()or a module.
 
 **_Workflow A_**: using GitHub Web interface:  
-> Follow the instruction in [GitHub Docs > Pull requests > Collaborate with pull requests > Propose changes > Creating and deleting branches within your repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository).
+Follow the instruction in [GitHub Docs > Pull requests > Collaborate with pull requests > Propose changes > Creating and deleting branches within your repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository).
 
 **_Workflow B_**: using local copy:  
-> Follow the instruction in:
->1. [GitHub Docs > GitHub Desktop > Make changes in a branch > Managing Branches](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches) (GitHub Desktop)
->2. [GitHub Docs > Quickstart > Contributing to projects > Creating a branch to work on](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) (Git command lines).
+Follow the instruction in:
+1. GitHub Desktop: [GitHub Docs > GitHub Desktop > Make changes in a branch > Managing Branches](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches)
+2. Git command lines: [GitHub Docs > Quickstart > Contributing to projects > Creating a branch to work on](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).
 
 Once a branch has been created, make sure that it is selected instead of "main" whenever changes are committed (see further below).
 
@@ -995,9 +995,9 @@ In most cases, the problem has an easy solution. When having a fail test, click 
 
 ![](/assets/check-fail-2.png)
 
- In our case, we realised that the first author listed in "NASSA.yml" (i.e. `.contributors[0]`), Schliemann, is a man of his time, thus he does not have a valid ORCID. Shame!
+ In our case, we realised that the first author listed in "NASSA.yml" (i.e. `.contributors[0]`), Schliemann, is a man of his time, thus he does not have a valid ORCID. *Shame!*
 
- Despite the embarrassment, he decided to use a dummy ORCID (0000-0002-1825-0097) instead of creating one. Double shame!
+ Despite the wake-up call, he decided to use a dummy ORCID (0000-0002-1825-0097) instead of creating one. *Double shame!*
 
  To solve the problem, return to your Pull Request page and select the "Files changed" tab. Click the three dots in the top right corner of the editor and select "Edit this file". Make the changes and commit. Click on "Refresh", highlighted at the top, to see the changes integrated in the Pull Request. Return to the "Conversation" tab and see if the automatic test is passing. Repeat this process until it does.
  
@@ -1007,22 +1007,40 @@ In most cases, the problem has an easy solution. When having a fail test, click 
 
 One or more NASSA members will then review your module submission (Pull Request) and possibly suggest changes by commenting on or modifying the files as they appear in the Pull Request. Until at least one reviewer gives an approval, the submission pull request will not be able to merge into the library repository (i.e. become part of it). 
 
-![](assets/pending-reviwer.png)
+![](assets/pending-reviewer.png)
 
-Comments and changes can be assessed, rebutted, or accepted by the author who has submitted (created the Pull Request). For more information, see the [GitHub documentation]([#reviewing-a-module](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)).
+Both you and reviewers will be able to add comments to your Pull Request in reference to each file that has been changed/added. You may want to add a comment to explain a possible issue, even before a reviewer raises the point. To do this, go to the "Files changed" tab in your Pull Request, search the file in the list and click on "Comment on this file" (the speech bubble on the right side).
+
+![](assets/commenting-on-pr-file.png)
+
+With this, you may also start a review on on your own submission, which is profound, yet completely unnecessary.
+
+During the review process, reviewers will use this same tool for adding comments and change suggestions. We expect everyone in the community to be fair and polite when reviewing modules. Modules do not need to be perfect, and we expect many submissions to be revised or expanded later by the original authors or other new contributors. If you find yourself in a dispute with a reviewer, or thinks that a reviewer has been unfair, please contact our [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
+
+As the submission author (who created the Pull Request), you should read and reply when necessary, while also making a decision if there are any suggested changes. For more information, see the [GitHub documentation]([#reviewing-a-module](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)).
+
+Notice that every change made during the review process will trigger the automatic check or validation. Any new errors must be address before merge.
+
+Alternatively, if there are many hard or structural problems, you may want to cancel the Pull Request entirely and prepare a new revised one. For this, click on "Close Pull Request" at the bottom of your Pull Request page. After the Pull Request is closed, you may perform more drastic changes more freely and repeat the steps for creating a new submission (Pull Request).
+
+A satisfied reviewer will leave an approval that will be part of your Pull Request history. 
+
+![](assets/approving-reviewer.png)
+
+Once one reviewer satisfied, the Pull Request will be unblocked and available for merging into the library main branch.
+
+You can wait further for other pending reviewers or merge it by clicking on the green button at the bottom of the Conversation tab. If left unattended too long, a Pull Request with full green light will be merged eventually by a core member.
+
+![](assets/merge-unblocked.png)
+
+### Module publication
+
+After the Pull Request has been merged, your module will become part of the NASSA library. It will be directly findable by its ID at the [library repository](https://github.com/Archaeology-ABM/NASSA-modules).
 
 ![]()
 
-We expect everyone in the community to be fair and polite when reviewing modules. Modules do not need to be perfect, and we expect many submissions to be revised or expanded later by the original authors or other new contributors. If there is a dispute between authors and a reviewer, or an author feels that a reviewer has been unfair, please contact our [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
-
-Alternatively, if there are many hard or structural problems, authors may want to cancel the Pull Request and prepare a new revised one. For this, click on "Close Pull Request" at the bottom of your Pull Request page. After the Pull Request is closed, you may perform the changes and repeat the steps for creating a new submission (Pull Request).
-
-### Merging or final approval
-
-If a module passes all automatic tests and reviewers find no major issues, a core member will merge the Pull Request, and your module will become part of the NASSA library.
+After a processing time through GitHub Actions, your module will be enlisted at the [NASSA Library Web App](https://archaeology-abm.github.io/NASSA-modules/), where it will be linked to a dedicated webpage displaying most of its metadata and its README.
 
 ![]()
 
-Beyond GitHub Web interface, you and others will be able to find your module in the [NASSA Library Web App](https://archaeology-abm.github.io/NASSA-modules/) and preview it with its dedicated page (created automatically after the merge is done). It is time to promote it and cite it!
-
-![]()
+ It is time to promote it and cite it! 
