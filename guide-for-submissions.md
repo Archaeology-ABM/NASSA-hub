@@ -163,6 +163,8 @@ Finally, you can "publish" the branch by following the highlighted suggestion in
   </div>
 </div>
 
+After publication, NASSA modules remain open for changes by the original authors as well new authors and contributors. We do ask that each change should follow the same guidelines for submission described here.
+
 ### Templates and module examples
 
 We strongly recommend using module templates to keep the preparation of a new module as short and simple as possible. The NASSA community aims to offer a variety of templates for types of modules, levels of documentation, and programming languages. Feel free to use any of the modules already in the library as templates if it better suits your module. Once you have created and submitted a module, you may also use it as your template for creating other modules. We have also included a dummy example of a module, ["1870-Schliemann-001"](https://archaeology-abm.github.io/NASSA-modules/1870-Schliemann-001.html), which will be referenced throughout this guide. Notice that it was carefully prepared before computational archaeology was even a thing!
@@ -995,7 +997,7 @@ In most cases, the problem has an easy solution. When having a fail test, click 
 
 ![](/assets/check-fail-2.png)
 
- In our case, we realised that the first author listed in "NASSA.yml" (i.e. `.contributors[0]`), Schliemann, is a man of his time, thus he does not have a valid ORCID. *Shame!*
+ In this case, we are missing the `orcid` field for the first author (i.e. `.contributors[0]`). Schliemann, as a man of his time, does not have a valid ORCID and decided to skip this mandatory field. *Shame!*
 
  Despite the wake-up call, he decided to use a dummy ORCID (0000-0002-1825-0097) instead of creating one. *Double shame!*
 
@@ -1005,42 +1007,44 @@ In most cases, the problem has an easy solution. When having a fail test, click 
 
 ## Module review
 
-One or more NASSA members will then review your module submission (Pull Request) and possibly suggest changes by commenting on or modifying the files as they appear in the Pull Request. Until at least one reviewer gives an approval, the submission pull request will not be able to merge into the library repository (i.e. become part of it). 
+One or more NASSA members will then review your module submission (Pull Request) and possibly suggest changes by commenting on or modifying the files as they appear in the Pull Request. Until at least one reviewer approves, the submission pull request will not be able to merge into the library repository (i.e. become part of it). 
 
 ![](assets/pending-reviewer.png)
 
-Both you and reviewers will be able to add comments to your Pull Request in reference to each file that has been changed/added. You may want to add a comment to explain a possible issue, even before a reviewer raises the point. To do this, go to the "Files changed" tab in your Pull Request, search the file in the list and click on "Comment on this file" (the speech bubble on the right side).
+Both you and the reviewers can add comments to your Pull Request regarding each file that has been changed/added. You may want to add a comment in advance to explain a possible issue, anticipating a reviewer who might raise the point. To do this, go to the "Files changed" tab in your Pull Request, search for the file in the list, and click on "Comment on this file" (the speech bubble on the right side).
 
 ![](assets/commenting-on-pr-file.png)
 
-With this, you may also start a review on on your own submission, which is profound, yet completely unnecessary.
+With this, you may also start a review on your own submission, which is profound yet completely unnecessary.
 
-During the review process, reviewers will use this same tool for adding comments and change suggestions. We expect everyone in the community to be fair and polite when reviewing modules. Modules do not need to be perfect, and we expect many submissions to be revised or expanded later by the original authors or other new contributors. If you find yourself in a dispute with a reviewer, or thinks that a reviewer has been unfair, please contact our [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
+Reviewers will use this tool to add comments and change suggestions during the review process. We expect everyone in the community to be fair and polite when reviewing modules. Modules do not need to be perfect, and we expect many submissions to be revised or expanded later by the original authors or other new contributors. If you are in a dispute with a reviewer or think that a reviewer has been unfair, don't hesitate to contact our [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
 
-As the submission author (who created the Pull Request), you should read and reply when necessary, while also making a decision if there are any suggested changes. For more information, see the [GitHub documentation]([#reviewing-a-module](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)).
+As the submission author (who created the Pull Request), you should read and reply when necessary while also deciding if there are any suggested changes. For more information, see the [GitHub documentation]([#reviewing-a-module](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)).
 
-Notice that every change made during the review process will trigger the automatic check or validation. Any new errors must be address before merge.
+Notice that every change made during the review process triggers the automatic check or validation. You need to address any new errors before merging.
 
-Alternatively, if there are many hard or structural problems, you may want to cancel the Pull Request entirely and prepare a new revised one. For this, click on "Close Pull Request" at the bottom of your Pull Request page. After the Pull Request is closed, you may perform more drastic changes more freely and repeat the steps for creating a new submission (Pull Request).
+Alternatively, if there are many hard or structural problems, you may want to cancel the Pull Request and prepare a new, revised one. To do this, click on "Close Pull Request" at the bottom of your Pull Request page. After the Pull Request is closed, you may make more drastic changes and repeat the steps for creating a new submission (Pull Request).
 
 A satisfied reviewer will leave an approval that will be part of your Pull Request history. 
 
 ![](assets/approving-reviewer.png)
 
-Once one reviewer satisfied, the Pull Request will be unblocked and available for merging into the library main branch.
+Once one reviewer is satisfied, the Pull Request will be unblocked and available for merging into the library's main branch.
 
-You can wait further for other pending reviewers or merge it by clicking on the green button at the bottom of the Conversation tab. If left unattended too long, a Pull Request with full green light will be merged eventually by a core member.
+You can wait further for other pending reviewers or merge it by clicking on the green button at the bottom of the Conversation tab. If left unattended too long, a Pull Request with a full green light will be merged eventually by a core member.
 
 ![](assets/merge-unblocked.png)
 
 ### Module publication
 
-After the Pull Request has been merged, your module will become part of the NASSA library. It will be directly findable by its ID at the [library repository](https://github.com/Archaeology-ABM/NASSA-modules).
+After merging the Pull Request, your module will become part of the NASSA library. It will be directly findable by its ID at the [library repository](https://github.com/Archaeology-ABM/NASSA-modules).
 
 ![]()
 
-After a processing time through GitHub Actions, your module will be enlisted at the [NASSA Library Web App](https://archaeology-abm.github.io/NASSA-modules/), where it will be linked to a dedicated webpage displaying most of its metadata and its README.
+After processing through GitHub Actions, your module will appear at the [NASSA Library Web App](https://archaeology-abm.github.io/NASSA-modules/) linked to a dedicated webpage ("view") displaying most of its metadata and README.
 
 ![]()
 
- It is time to promote it and cite it! 
+At this point, you might re-think some details of the metadata and documentation, once you preview them in the website. Unlike papers and other publications, NASSA modules remain open indefinitely for new changes by the original authors as well as others in the community. We do ask that each change is submitted through the same process explained here, no matter what it is, from the correction of a typo to major changes in the code. However, take care of raising the module version and noting new contributors accordingly.
+
+ It is time to promote your module and cite it! 
