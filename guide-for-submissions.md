@@ -38,7 +38,7 @@
   padding:          .25em;
   width:            2em;
   height:           2em;
-  background-color: #F8F8F8;
+  background-color: #03989E;
 }
 </style>
 </head>
@@ -67,12 +67,12 @@
   - [references.bib](#referencesbib)
   - [CHANGELOG.md](#changelogmd)
   - [NASSA.yml (metadata)](#nassayml-metadata)
-    - [Module identification:](#module-identification)
-    - [Authorship:](#authorship)
-    - [Other details:](#other-details)
+    - [Module identification](#module-identification)
+    - [Authorship](#authorship)
+    - [Other details](#other-details)
     - [Bibliographic information](#bibliographic-information)
-    - [Implementations:](#implementations-1)
-    - [Keywords:](#keywords)
+    - [Implementations](#implementations-1)
+    - [Keywords](#keywords)
     - [Input and output](#input-and-output)
   - [README.md](#readmemd)
   - [Other documentation files](#other-documentation-files)
@@ -159,7 +159,7 @@ Finally, you can "publish" the branch by following the highlighted suggestion in
     </p>
   </div>
   <div class="column">
-    <img src="assets/module.png" alt="diagram of module elements" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
+    <img src="/assets/module.png" alt="diagram of module elements" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
   </div>
 </div>
 
@@ -186,7 +186,7 @@ The module directory must be named with the **module's unique identifier**, foll
     </ol>
   </div>
   <div class="column">
-    <img src="assets/module-root-name.png" alt="diagram of module root directory name" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
+    <img src="/assets/module-root-name.png" alt="diagram of module root directory name" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
   </div>
 </div>
 
@@ -443,11 +443,13 @@ print("Troy health after war: " + str(troy.health))
 
 ```
 
-<strong>All implementations must fit the generic specification of the module.</strong> Each implementation language included in the module must have at least one version that returns the same output for a given input. Other versions within each implementation that offer extensions of the core functionality may escape this requirement according to the nature of the alternative design.
+**All implementations must fit the generic specification of the module.** Each implementation language included in the module should have at least one version that returns the same output for a given input. Other versions within each implementation that offer variations or extensions of the core functionality may escape this requirement according to the nature of the alternative design.
 
 #### Code style
 
-Any final code attached to the submission must be functional and readable. NASSA recommends authors be attentive to the following points:
+Any final code attached to the submission must be functional (run without errors, produce the expected behaviour) but also readable by most of our community. The module should be understandable for a "good-enough-programmer" that cannot read your mind.
+
+NASSA recommends authors be attentive to the following points:
 
 **Naming**. Use consistent conventions to differentiate variables, parameters, and functions. Enforce exact, self-explanatory names, and avoid names imitating mathematical annotations. Exceptions could be made by compensating name simplification with more detailed commentary and documentation.
 
@@ -502,7 +504,7 @@ If there are any doubts after following this guide, you can consult the detailed
 
 The fields in "NASSA.yml" are ordered thematically bellow (<b style="color: orange">&#9632;</b>: mandatory field):
 
-#### Module identification:
+#### Module identification
 
 - **<b style="color: orange">id</b>**: Module identification number. Assigned when opening a submission.
 - **<b style="color: orange">nassaVersion</b>**: Latest version of the NASSA schema that applies to this module (NASSA.yml fields, directory and file structure).
@@ -528,7 +530,7 @@ title: (DUMMY EXAMPLE) TroyDestroy. Bronze Age siege and its destructive effect 
 moduleVersion: 1.0.0
 ```
 
-#### Authorship:
+#### Authorship
 
 - **<b style="color: orange">contributors</b>**: List of contributors to the module.
   - **<b style="color: orange">roles</b>**: How this author contributed to the module (see "Authorship" below).
@@ -559,7 +561,7 @@ contributors:
    orcid: 0000-0002-9946-8142
 ```
 
-#### Other details:
+#### Other details
 
 - **<b style="color: orange">license</b>**: Software license for the code in this module.
 - **<b style="color: orange">lastUpdateDate</b>**: Date of the last update submitted.
@@ -660,7 +662,7 @@ And with the "references.bib":
 }
 ```
 
-#### Implementations:
+#### Implementations
 
 - **<b style="color: orange">implementations</b>**: List of implementations in different programming languages.
   - **<b style="color: orange">language</b>**: Programming language.
@@ -692,7 +694,7 @@ implementations:
 docsDir: documentation/
 ```
 
-#### Keywords:
+#### Keywords
 
 - **domainKeywords**: Domain-related keywords.
   - **subjects**: Subject keyword(s).
@@ -1039,11 +1041,9 @@ You can wait further for other pending reviewers or merge it by clicking on the 
 
 After merging the Pull Request, your module will become part of the NASSA library. It will be directly findable by its ID at the [library repository](https://github.com/Archaeology-ABM/NASSA-modules).
 
-![]()
+![](assets/module-find.png)
 
-After processing through GitHub Actions, your module will appear at the [NASSA Library Web App](https://archaeology-abm.github.io/NASSA-modules/) linked to a dedicated webpage ("view") displaying most of its metadata and README.
-
-![]()
+After processing through GitHub Actions, your module will appear at the [NASSA Library Web App](https://archaeology-abm.github.io/NASSA-modules/) linked to a dedicated webpage ("view") displaying most of its metadata and README. See the one generated for [1870-Schliemann-001](https://archaeology-abm.github.io/NASSA-modules/1870-Schliemann-001.html).
 
 At this point, you might re-think some details of the metadata and documentation, once you preview them in the website. Unlike papers and other publications, NASSA modules remain open indefinitely for new changes by the original authors as well as others in the community. We do ask that each change is submitted through the same process explained here, no matter what it is, from the correction of a typo to major changes in the code. However, take care of raising the module version and noting new contributors accordingly.
 
