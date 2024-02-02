@@ -10,6 +10,8 @@ The targets of this network are:
 4. guarantee sustainability of the library;
 5. create a structure for international collaboration resulting in joint publications within the network.
 
+Join us at nassaabm@googlegroups.com (Google Groups) or by contacting [Andreas Angourakis](andros.spica@gmail.com).
+
 Research units currently active in NASSA are:
 
 * Sagalassos Archaeological Research Project (SARP), University of Leuven
@@ -22,7 +24,7 @@ Research units currently active in NASSA are:
 * Classical Archaeology and Centre for Urban Network Evolutions (UrbNet), Aarhus University
 * Aarhus Institute of Advanced Studies (AIAS), Aarhus University
 * Analytical Sociology and Institutional Design (GSADI Group), Autònoma University of Barcelona
-* Institute for Archaeological Sciences, Departement for Prehistoric Archaeology, Bern University
+* Institute for Archaeological Sciences, Department for Prehistoric Archaeology, Bern University
 * Science, The Santa Fe Institute (SFI)
 * Institute of Archaeology (IoA), University College London
 * GIO - Grupo de Ingeniería de Organización, Universidad de Burgos
@@ -30,4 +32,5 @@ Research units currently active in NASSA are:
 * Water Resources / CEG (WRM Group), Delft University of Technology
 * School of Culture and Society and CLIOARCH, Aarhus University
 * Faculté des Sciences Humaines, des Sciences de l'Éducation et des Sciences Sociales, University of Luxembourg 
-* Institute of Archaeological Studies, Ruhr-Universität Bochum 
+* Institute of Archaeological Studies, Ruhr-Universität Bochum
+* Archäoinformatik, Institute of Archaeology, University of Cologne
