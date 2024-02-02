@@ -18,7 +18,7 @@ CAA Netherlands/Flanders and CAA Germany have united forces this year to celebra
 We didn't miss the opportunity, of course, and presented there the recently-consolidated NASSA library v.1 amd its brand-new Web interface.
 <br><br>
 <div style="text-align: center;">
-<img src="https://andros-spica.github.io/CAA-DE-NL-FL-Angourakis-et-al-2022/images/NASSA-ecosystem.png" alt="NASSA open-source ecosystem" style="width: 80%;">
+<img src="https://andros-spica.github.io/CAA-DE-NL-FL-Angourakis-et-al-2022/images/NASSA-ecosystem.png" alt="NASSA open-source ecosystem" style="width: 80%; background-color: lightgray;">
 <br>
 <a href="https://github.com/Archaeology-ABM/CAA-DE-NL-FL-Angourakis-et-al-2022" target="_blank">A. Angourakis, D. Daems, P. Verhagen <br>NASSA’s open library of archaeological ABM modules: overview and examples</a>
 </div>
