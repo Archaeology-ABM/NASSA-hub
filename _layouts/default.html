@@ -31,6 +31,18 @@
         width: 100%;
       }
     }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin-right: 10px;
+      text-decoration: none;
+    }
+    nav ul li a {
+      color: #03989E;
+    }
     </style>
   </head>
 
@@ -68,10 +80,11 @@
           {% endif %}
           
           <nav>
-            <a href="{{ site.url }}">Home</a>
-            <a href="{{ site.url }}/about-us.html">About Us</a>
-            <a href="{{ site.url }}/publications.html">Publications</a>
-            <a href="{{ site.url }}/blog.html">Blog</a>
+            <ul>
+              {% for item in site.data.menu %}
+              <li><a href="{{item.link}}">{{item.title}}</a></li>
+              {% endfor %}
+            </ul>
           </nav> 
         </header>
     </div>
