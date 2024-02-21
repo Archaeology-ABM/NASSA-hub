@@ -1,3 +1,8 @@
+---
+layout: default
+title: "NASSA | About"
+permalink: /about
+---
 # Who are we?
 
 The **N**etwork for **A**gent-based modelling of **S**ocio-ecological **S**ystems in **A**rchaeology (**NASSA**) is a research network with the goal to gather an international, interdisciplinary group of researchers to collect and compile agent-based modelling (ABM) elements (implementation modules, techniques, approaches, etc.) and organise them as an open modelling library.

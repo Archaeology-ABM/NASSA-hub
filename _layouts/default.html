@@ -4,90 +4,16 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
-{% seo %}
-    {% include head-custom.html %}
-    <style>
-    * {
-      box-sizing: border-box;
-    }
-    /* Create two equal columns that floats next to each other */
-    .headerColumn {
-      float: left;
-      width: 45%;
-      padding: 10px;
-    }
-    /* Clear floats after the columns */
-    .headerRow:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-      .headerColumn {
-        width: 100%;
-      }
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-    }
-    nav ul li {
-      margin-right: 10px;
-      text-decoration: none;
-    }
-    nav ul li a {
-      color: #03989E;
-    }
-    </style>
+    {% seo %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          {% if site.github.is_project_page %}
-            <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
-          {% endif %}
-
-          <div class="headerRow">
-            <div class="headerColumn">
-              <span class="faded faded-wide faded-all">
-              <img style="width: 100%; padding: 0px;border: 0px;" src="{{ site.url }}/assets/Logo_noText.png" width="33%">
-              </span>
-            </div>
-            <div class="headerColumn" style="color:lightcyan; font-size: 120%;">
-              <strong style="color: #03989E; font-size: 150%;">N</strong>etwork for<br>
-              <strong style="color: #03989E; font-size: 150%;">A</strong>gent-based modelling of<br>
-              <strong style="color: #03989E; font-size: 150%;">S</strong>ocio-ecological<br>
-              <strong style="color: #03989E; font-size: 150%;">S</strong>ystems in<br>
-              <strong style="color: #03989E; font-size: 150%;">A</strong>rchaeology
-            </div>
-          </div>
-          <!-- <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
-          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2> -->
-
-          {% if site.show_downloads %}
-            <section id="downloads">
-              <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
-            </section>
-          {% endif %}
-          
-          <nav>
-            <ul>
-              {% for item in site.data.menu %}
-              <li><a href="{{item.link}}">{{item.title}}</a></li>
-              {% endfor %}
-            </ul>
-          </nav> 
-        </header>
-    </div>
+    {% include header.html %}
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
@@ -96,14 +22,7 @@
       </section>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+    {% include footer.html %}
+    
   </body>
 </html>
