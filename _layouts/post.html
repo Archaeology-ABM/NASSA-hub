@@ -4,46 +4,11 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
-{% seo %}
-    {% include head-custom.html %}
-    <style>
-    * {
-      box-sizing: border-box;
-    }
-    /* Create two equal columns that floats next to each other */
-    .headerColumn {
-      float: left;
-      width: 45%;
-      padding: 10px;
-    }
-    /* Clear floats after the columns */
-    .headerRow:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-      .headerColumn {
-        width: 100%;
-      }
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-    }
-    nav ul li {
-      margin-right: 10px;
-      text-decoration: none;
-    }
-    nav ul li a {
-      color: #03989E;
-    }
-    </style>
+    {% seo %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -76,5 +41,6 @@
     </div>
 
     {% include footer.html %}
+    
   </body>
 </html>

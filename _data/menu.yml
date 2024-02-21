@@ -1,14 +1,17 @@
 - title: Home
-  link: /NASSA-hub/
+  link: /
 
 - title: About us
-  link: /NASSA-hub/about-us.html
+  link: /about
 
 - title: Blog
-  link: /NASSA-hub/blog.html
+  link: /blog
 
+- title: Library 
+  link: /library
+  
 - title: Guide for submissions
-  link: /NASSA-hub/guide-for-submissions.html
+  link: /guide
 
 - title: Publications
-  link: /NASSA-hub/publications.html
+  link: /publications

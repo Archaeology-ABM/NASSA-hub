@@ -1,30 +1,8 @@
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
-</head>
-
+---
+layout: default
+title: "NASSA | Library"
+permalink: /library
+---
 # NASSA library
 
 The NASSA library is an **open-source** repository collecting **stable, version-controlled modules** to be used inside or in connection to **(agent-based) simulation models** that aim at representing **socio-ecological systems** and addressing **archaeological questions**.

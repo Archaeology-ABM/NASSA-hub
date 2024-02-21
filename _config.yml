@@ -2,4 +2,5 @@ title: NASSA
 theme: jekyll-theme-slate
 github:
    is_project_page: false
-url: https://archaeology-abm.github.io/NASSA-hub
+url: https://archaeology-abm.github.io
+baseurl: /NASSA-hub

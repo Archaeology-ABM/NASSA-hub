@@ -1,52 +1,13 @@
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-/* Style the button */
-.top-link {
-  transition:       all .25s ease-in-out;
-  position:         fixed;
-  bottom:           0;
-  right:            0;
-  display:          inline-flex;
-  color:            #000000;
-  cursor:           pointer;
-  align-items:      center;
-  justify-content:  center;
-  margin:           0 2em 2em 0;
-  border-radius:    50%;
-  padding:          .25em;
-  width:            2em;
-  height:           2em;
-  background-color: #03989E;
-}
-</style>
-</head>
-
-<a class="top-link hide" href="#top" style="font-size: 200%;">↑</a>
+---
+layout: default
+title: "NASSA | Guide for submissions"
+permalink: /guide
+---
+<a class="back-to-top-button hide" href="#top" style="font-size: 200%;">↑</a>
 <a name="top"></a>
 
 # Guide for module submission<!-- omit from toc --> 
+{% include text-to-speech/player.html  %}
 - [Preparation](#preparation)
   - [NASSA membership](#nassa-membership)
   - [GitHub](#github)

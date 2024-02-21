@@ -1,3 +1,7 @@
+---
+layout: default
+title: "NASSA | Home"
+---
 {% include home-grid.html %}
 
 See [NASSA organisation page in GitHub](https://github.com/Archaeology-ABM).
