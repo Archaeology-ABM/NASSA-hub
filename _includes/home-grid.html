@@ -1,0 +1,45 @@
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <style>
+      .grid-container{
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(180px, 1fr) );
+        grid-gap: 10px;
+      }
+      .grid-element{
+        background-color: #ddd;
+        border: 1px solid;
+        border-color: #666;
+        text-align: center;
+        padding: 15px;
+      }
+      .grid-symbol {
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+</head>
+  
+<div class="grid-container">
+    <div class="grid-element">
+      <a href="{{ site.url }}/library.html" style="color: #03989E;">
+      <strong style="font-size:200%">LIBRARY</strong>
+      <div class="grid-symbol"><i class="fas fa-database" aria-hidden="true"></i></div>
+      NASSA maintains a publicly hosted and curated repository of ABM-related algorithms
+      </a>
+    </div>
+    <div class="grid-element">
+      <a href="https://github.com/Archaeology-ABM/NASSA-schema" style="color: #03989E;">
+      <strong style="font-size:200%">SCHEMA</strong>
+      <div class="grid-symbol"><i class="fas fa-code" aria-hidden="true"></i></div>
+      NASSA provides a standardized format to store and document NASSA modules
+      </a>
+    </div>
+    <div class="grid-element">
+      <a href="https://github.com/Archaeology-ABM/nassa-hs" style="color: #03989E;">
+      <strong style="font-size:200%">VALIDATION</strong>
+      <div class="grid-symbol"><i class="fas fa-hammer" aria-hidden="true"></i></div>
+      NASSA develops a software tool to validate NASSA modules based on the NASSA schema
+      </a>
+    </div>
+</div>

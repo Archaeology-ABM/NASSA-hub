@@ -1,0 +1,23 @@
+<head>
+    <style>
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin-right: 10px;
+      text-decoration: none;
+    }
+    nav ul li a {
+      color: #03989E;
+    }
+    </style>
+</head>
+
+<nav>
+    <ul>
+      {% for item in site.data.menu %}
+      <li><a href="{{item.link}}">{{item.title}}</a></li>
+      {% endfor %}
+    </ul>
+</nav>
