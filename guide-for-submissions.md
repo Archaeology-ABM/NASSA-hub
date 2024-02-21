@@ -159,7 +159,7 @@ Finally, you can "publish" the branch by following the highlighted suggestion in
     </p>
   </div>
   <div class="column">
-    <img src="/assets/module.png" alt="diagram of module elements" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
+    <img src="assets/module.png" alt="diagram of module elements" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
   </div>
 </div>
 
@@ -186,7 +186,7 @@ The module directory must be named with the **module's unique identifier**, foll
     </ol>
   </div>
   <div class="column">
-    <img src="/assets/module-root-name.png" alt="diagram of module root directory name" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
+    <img src="assets/module-root-name.png" alt="diagram of module root directory name" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
   </div>
 </div>
 
