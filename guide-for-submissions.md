@@ -6,8 +6,7 @@ permalink: /guide
 <a class="back-to-top-button hide" href="#top" style="font-size: 200%;">↑</a>
 <a name="top"></a>
 
-# Guide for module submission<!-- omit from toc --> 
-{% include text-to-speech/player.html  %}
+# Guide for module submission<!-- omit from toc -->
 - [Preparation](#preparation)
   - [NASSA membership](#nassa-membership)
   - [GitHub](#github)
