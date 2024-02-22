@@ -27,6 +27,9 @@ jQuery(function ($) {
     'style': 'cursor: pointer'
   };
 
+  // get the default title of the tab (so we can change it later)
+  let DEFAULT_PAGE_TITLE = document.title;
+
   // Gets the SVG markup for a Feather icon
   function iconSVG(icon) {
     let props = $.extend(iconProps, { id: icon });
@@ -152,6 +155,7 @@ jQuery(function ($) {
             // Speak the utterance
             synthesis.speak(textUtterance);
         }
+        document.title = "🔊 Playing... " + DEFAULT_PAGE_TITLE;
     });
   
     // Click event handler for the pause button
@@ -160,6 +164,7 @@ jQuery(function ($) {
 
         // Pause the utterance if it is not in paused state
         if (VOICE_SPEAKING) synthesis.pause();
+        document.title = DEFAULT_PAGE_TITLE;
         return paused();
     });
 
@@ -175,6 +180,7 @@ jQuery(function ($) {
         // Set the complete status of the voice output
         VOICE_COMPLETE = true;
         updateVoiceControls();
+        document.title = DEFAULT_PAGE_TITLE;
     });
 
     controlsPane.append(instructionToUser);
@@ -237,6 +243,7 @@ jQuery(function ($) {
         SYNTHESIS = window.speechSynthesis;
     
         let timer = setInterval(function () {
+
           let voices = SYNTHESIS.getVoices();
     
           if (voices.length > 0) {
