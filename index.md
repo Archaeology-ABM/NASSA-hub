@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "NASSA | Home"
+title: "Home"
 ---
 {% include home-grid.html %}
 

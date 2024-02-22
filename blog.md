@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "NASSA | Blog"
+title: "Blog"
 permalink: /blog
 ---
 <h1>Welcome to the NASSA blog!</h1><br>

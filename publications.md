@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "NASSA | Publications"
+title: "Publications"
 permalink: /publications
 ---
 # Publications

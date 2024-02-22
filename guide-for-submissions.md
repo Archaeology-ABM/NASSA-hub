@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "NASSA | Guide for submissions"
+title: "Guide for submissions"
 permalink: /guide
 ---
 <a class="back-to-top-button hide" href="#top" style="font-size: 200%;">↑</a>
