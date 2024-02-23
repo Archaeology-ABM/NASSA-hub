@@ -17,7 +17,6 @@ jQuery(function ($) {
 
   let VOICE_SPEAKING = false;
   let VOICE_PAUSED = false;
-  let VOICE_COMPLETE = false;
 
   let iconProps = {
     'stroke-width': 2,
@@ -67,15 +66,10 @@ jQuery(function ($) {
 
   // Reset the variables to the defaults
   function reset() {
-    window.speechSynthesis.cancel();
-
-    // Reset text
-    //TEXT_TO_READ = null;
-  
+    SYNTHESIS.cancel();
     // Reset the voice variables
     VOICE_SPEAKING = false;
     VOICE_PAUSED = false;
-    VOICE_COMPLETE = false;
   }
 
   // get the text from the page
@@ -91,13 +85,69 @@ jQuery(function ($) {
       : null;
 
     // render the voice controls
-    renderVoiceControls(SYNTHESIS, voice || null);
-    //$.get(function () {
-    //  SYNTHESIS && renderVoiceControls(SYNTHESIS, voice || null);
-    //});
+    renderVoiceControls(voice || null);
   }
 
-  function renderVoiceControls(synthesis, voice) {
+  function play(voice) {
+    if (VOICE_SPEAKING) {
+      // If voice is paused, it is resumed when the playButton is clicked
+      if (VOICE_PAUSED) SYNTHESIS.resume();
+          return resumed();
+      } else {
+          // Create utterances for the quote and the person
+          let textUtterance = new SpeechSynthesisUtterance(TEXT_TO_READ);
+
+          // Set the voice for the utterances if available
+          if (voice) {
+              textUtterance.voice = voice.voice;
+          }
+
+          // Set event listeners for the utterance
+          textUtterance.onpause = paused;
+          textUtterance.onresume = resumed;
+          textUtterance.onboundary = updateVoiceControls;
+
+          // Set the listener to activate speaking state when the quote utterance starts
+          textUtterance.onstart = function (evt) {
+              VOICE_SPEAKING = true;
+              updateVoiceControls();
+          };
+
+          textUtterance.onend = stop;
+
+          // Speak the utterance
+          SYNTHESIS.speak(textUtterance);
+      }
+      document.title = "🔊 Playing... " + DEFAULT_PAGE_TITLE;
+  }
+
+  function pause() {
+    // Pause the utterance if it is not in paused state
+    if (VOICE_SPEAKING) SYNTHESIS.pause();
+    document.title = DEFAULT_PAGE_TITLE;
+  }
+
+  // Helper function to enable pause state for the voice output
+  let paused = function () {
+    VOICE_PAUSED = true;
+    updateVoiceControls();
+  };
+
+  // Helper function to disable pause state for the voice output
+  let resumed = function () {
+    VOICE_PAUSED = false;
+    updateVoiceControls();
+  };
+
+  function stop() {
+    // Clear the utterances queue
+    if (VOICE_SPEAKING) reset();
+
+    updateVoiceControls();
+    document.title = DEFAULT_PAGE_TITLE;
+  }
+
+  function renderVoiceControls(voice) {
     let appPane = $('<div id="speech-app-pane" class="d-flex w-40 flex-column align-items-end border-top border-bottom border-info border-1"></div>');
   
     let controlsPane = $('<div id="controls-pane" class="d-flex flex-row w-100"></div>');
@@ -111,76 +161,28 @@ jQuery(function ($) {
     let pauseButton = $(iconSVG('pause-circle'));
     let stopButton = $(iconSVG('stop-circle'));
   
-    // Helper function to enable pause state for the voice output
-    let paused = function () {
-      VOICE_PAUSED = true;
-      updateVoiceControls();
-    };
-  
-    // Helper function to disable pause state for the voice output
-    let resumed = function () {
-      VOICE_PAUSED = false;
-      updateVoiceControls();
-    };
+    
   
     // Click event handler for the play button
     playButton.on('click', function (evt) {
         evt.preventDefault();
 
-        if (VOICE_SPEAKING) {
-        // If voice is paused, it is resumed when the playButton is clicked
-        if (VOICE_PAUSED) synthesis.resume();
-            return resumed();
-        } else {
-            // Create utterances for the quote and the person
-            let textUtterance = new SpeechSynthesisUtterance(TEXT_TO_READ);
-
-            // Set the voice for the utterances if available
-            if (voice) {
-                textUtterance.voice = voice.voice;
-            }
-
-            // Set event listeners for the utterance
-            textUtterance.onpause = paused;
-            textUtterance.onresume = resumed;
-            textUtterance.onboundary = updateVoiceControls;
-
-            // Set the listener to activate speaking state when the quote utterance starts
-            textUtterance.onstart = function (evt) {
-                VOICE_COMPLETE = false;
-                VOICE_SPEAKING = true;
-                updateVoiceControls();
-            };
-
-            // Speak the utterance
-            synthesis.speak(textUtterance);
-        }
-        document.title = "🔊 Playing... " + DEFAULT_PAGE_TITLE;
+        play(voice);
     });
   
     // Click event handler for the pause button
     pauseButton.on('click', function (evt) {
         evt.preventDefault();
 
-        // Pause the utterance if it is not in paused state
-        if (VOICE_SPEAKING) synthesis.pause();
-        document.title = DEFAULT_PAGE_TITLE;
+        pause();
+
         return paused();
     });
-
   
     // Click event handler for the stop button
     stopButton.on('click', function (evt) {
-        evt.preventDefault();
-
-        // Clear the utterances queue
-        if (VOICE_SPEAKING) synthesis.cancel();
-        reset();
-
-        // Set the complete status of the voice output
-        VOICE_COMPLETE = true;
-        updateVoiceControls();
-        document.title = DEFAULT_PAGE_TITLE;
+      evt.preventDefault();
+      stop();
     });
 
     controlsPane.append(instructionToUser);
@@ -238,10 +240,11 @@ jQuery(function ($) {
 
   function initialize() {
       if ('speechSynthesis' in window) {
+        
+        SYNTHESIS = window.speechSynthesis;
+        
         reset();
 
-        SYNTHESIS = window.speechSynthesis;
-    
         let timer = setInterval(function () {
 
           let voices = SYNTHESIS.getVoices();
