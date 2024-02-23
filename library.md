@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "NASSA | Library"
+title: "Library"
 permalink: /library
 ---
 # NASSA library

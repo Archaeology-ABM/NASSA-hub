@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-
     {% seo %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -18,6 +17,7 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+        {% include text-to-speech-player.html  %}
         <!-- DATE -->
         <p style="font-size: 80%; font-style: italic; text-align: right; color: #a9a9a9; margin: 0;">
           <time datetime="{{ page.date | date: "%Y-%m-%d" }}">

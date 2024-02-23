@@ -30,6 +30,23 @@ nav ul li a {
   color: #03989E;
 }
 
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(180px, 1fr) );
+  grid-gap: 10px;
+}
+.grid-element{
+  background-color: #ddd;
+  border: 1px solid;
+  border-color: #666;
+  text-align: center;
+  padding: 15px;
+}
+.grid-symbol {
+  text-align: center;
+  font-size: 30px;
+}
+
 .authorimg{
   display: inline;
   width:32px;

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "NASSA | About"
+title: "About"
 permalink: /about
 ---
 # Who are we?
