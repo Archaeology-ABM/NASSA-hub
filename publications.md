@@ -3,6 +3,12 @@ layout: default
 title: "Publications"
 permalink: /publications
 ---
+
+# Zotero group
+Members are welcome to join our Zotero group and help to compile and curate an extensive public collection of references related to our field.
+
+[https://www.zotero.org/groups/5452452/nassa](https://www.zotero.org/groups/5452452/nassa)
+
 # Publications
 - Angourakis, Andreas. 2023. ‘El lugar de la simulación social en arqueología’. Vegueta: Anuario de la Facultad de Geografía e Historia 23 (1): 15–55. [https://doi.org/10.51349/veg.2023.1.02](https://doi.org/10.51349/veg.2023.1.02)
 - Boogers, Stef, and Dries Daems. 2022. ‘SAGAscape: Simulating Resource Exploitation Strategies in Iron Age to Hellenistic Communities in Southwest Anatolia’. Journal of Computer Applications in Archaeology 5 (1): 169–87. [https://doi.org/10.5334/jcaa.90](https://doi.org/10.5334/jcaa.90)  
