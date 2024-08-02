@@ -117,6 +117,17 @@ jQuery(function ($) {
 
           // Speak the utterance
           SYNTHESIS.speak(textUtterance);
+
+          // workaround problem in Chrome (it will stop audio after 15s)
+          let r = setInterval(() => {
+            console.log(SYNTHESIS.speaking);
+            if (!SYNTHESIS.speaking) {
+              clearInterval(r);
+            } else {
+              SYNTHESIS.pause();
+              SYNTHESIS.resume();
+            }
+          }, 14000);
       }
       document.title = "🔊 Playing... " + DEFAULT_PAGE_TITLE;
   }
