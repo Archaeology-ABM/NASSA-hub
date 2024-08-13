@@ -1,9 +1,21 @@
 <div id="footer_wrap" class="outer">
     <footer class="inner">
-      {% if site.github.is_project_page %}
-      <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-      {% endif %}
-      <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      <div>
+        <div class="flex-container" style="display: flex; align-items: baseline;">
+          <div style="text-align: right; margin-right: 2%;">
+            <a title="Fonds Wetenschappelijk Onderzoek (Public domain, via Wikimedia Commons)" href="https://www.fwo.be/">
+              <img style="width: 120px; border: none; box-shadow: none; margin-bottom: 0%; margin-top: 0%;" alt="Fonds Wetenschappelijk Onderzoek logo 2024" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Fonds_Wetenschappelijk_Onderzoek_logo_2024.svg/64px-Fonds_Wetenschappelijk_Onderzoek_logo_2024.svg.png?20240528123345">
+            </a>
+          </div>
+          <p>NASSA is funded by the Research Foundation Flanders Scientific Research Network Funding (W001220N-3H200066).</p>
+        </div>
+        <div>
+            <p class="copyright">{{ site.title | default: site.github.repository_name }} website maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+          </div>
+          <div>
+            <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+          </div>
+        </div>
     </footer>
   </div>
   
