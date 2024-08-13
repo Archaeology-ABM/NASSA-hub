@@ -42,11 +42,10 @@ $headerheight: 200px;
 
 #header_wrap .inner
 {
-  padding: 10px 0px 0px 30px;
+  padding: 10px 0px 0px 10px;
 }
 
 .headerRow {
-  content: "";
   display: table;
   clear: both;
 }
@@ -148,7 +147,7 @@ nav ul li a .menu-title
 
 #main_content_wrap
 {
-  padding-left: $sidepadclosed;
+  padding-left: $sidepadclosed+50px;
   transition: transform 400ms, opacity 400ms;
 }
 
@@ -196,14 +195,14 @@ nav ul li a .menu-title
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
   .column {
     width: 100%;
   }
   .headerColumn {
     width: 100%;
   }
-}
+}*/
 
 /* Back to top button */
 .back-to-top-button {
