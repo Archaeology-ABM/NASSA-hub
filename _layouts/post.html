@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    
     {% seo %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -16,8 +19,13 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+
+      {% include navigation.html %}
+
+      <div id="main_content" class="inner">
+
         {% include text-to-speech-player.html  %}
+        <br>
         <!-- DATE -->
         <p style="font-size: 80%; font-style: italic; text-align: right; color: #a9a9a9; margin: 0;">
           <time datetime="{{ page.date | date: "%Y-%m-%d" }}">

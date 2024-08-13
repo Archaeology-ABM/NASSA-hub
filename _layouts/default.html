@@ -16,14 +16,17 @@
   <body>
 
     {% include header.html %}
-      
+    
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      
+      {% include navigation.html %}
+      
+      <div id="main_content" class="inner">
         {% include text-to-speech-player.html  %}
-          
+        <br>
         {{ content }}
-      </section>
+      </div>
     </div>
 
     {% include footer.html %}

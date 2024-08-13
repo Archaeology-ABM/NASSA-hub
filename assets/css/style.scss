@@ -3,31 +3,158 @@
 
 @import "{{ site.theme }}";
 
-#forkme_banner{ display: none !important; }
+$headerandsidebackground: #212121;
+$colorhighlight: #03989E;
+$headerandsideborderwidth: 10px;
+$white: #ddd;
+$pad:     0.925rem;
+$sidepadopen: 250px;
+$sidepadclosed: 70px;
+$headerheight: 200px;
 
-#header_wrap > header > nav > a {
-color: white;
-  text-decoration: underline;
-  font-size: larger;
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#header_wrap > header > nav > a:hover {
-color: gray;
+.inner
+{
+  max-width: 80%;
 }
 
-nav {
-  margin-bottom: 20px;
-}
-nav ul {
+/*body
+{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white
+}*/
+
+#header_wrap
+{
+  height: $headerheight;
+  margin-top: 0%;
+  border-bottom: $headerandsideborderwidth solid $colorhighlight;
+}
+
+#header_wrap .inner
+{
+  padding: 10px 0px 0px 30px;
+}
+
+.headerRow {
+  content: "";
+  display: table;
+  clear: both;
+}
+.headerColumn {
+  float: left;
+  width: 45%;
+  padding: 10px;
+}
+
+#footer_wrap
+{
+  padding-left: $sidepadclosed;
+}
+
+nav
+{
+  position: fixed;
+  top: 0%;
+  height: 100%;
+  left: 0%;
+  width: $sidepadclosed;
+  display: flex;
+  background-color: $headerandsidebackground;
+  box-shadow: $headerandsideborderwidth 0 0 $colorhighlight;
+  border-left: 1px solid $colorhighlight;
+  overflow: hidden;
+  transition: width 0.5s;
+  z-index: 1000;
+}
+nav:hover
+{
+  width: $sidepadopen;
+}
+nav ul
+{
+  position: absolute;
+  top: $headerheight;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 30px;
+}
+nav ul li
+{
+  position: relative;
   list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
-nav ul li {
-  margin-right: 10px;
+nav ul li:hover
+{
+  background: $colorhighlight;
+  opacity: 50%;
+}
+nav ul li.list-item.active a {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: $colorhighlight;
+  color: $white;
+}
+nav ul li a
+{
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
   text-decoration: none;
+  color: $colorhighlight;
 }
-nav ul li a {
-  color: #03989E;
+nav ul li a:hover
+{
+  color: $white;
+}
+nav ul li a .icon
+{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+}
+nav ul li a .icon i
+{
+  position: relative;
+  font-size: 1.5em;
+  z-index: 1;
+}
+nav ul li a .menu-title
+{
+  position: relative;
+  display: block;
+  padding-left: 5px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+#main_content_wrap
+{
+  padding-left: $sidepadclosed;
+  transition: transform 400ms, opacity 400ms;
+}
+
+#main_content
+{
+  max-width: 80%;
 }
 
 .grid-container{
@@ -36,9 +163,9 @@ nav ul li a {
   grid-gap: 10px;
 }
 .grid-element{
-  background-color: #ddd;
+  background-color: $white;
   border: 1px solid;
-  border-color: #666;
+  border-color: $headerandsidebackground;
   text-align: center;
   padding: 15px;
 }
@@ -55,19 +182,10 @@ nav ul li a {
   border-radius:50%;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
   width: 50%;
-  padding: 10px;
-}
-.headerColumn {
-  float: left;
-  width: 45%;
   padding: 10px;
 }
 /* Clear floats after the columns */
@@ -76,11 +194,7 @@ nav ul li a {
   display: table;
   clear: both;
 }
-.headerRow:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
@@ -98,7 +212,7 @@ nav ul li a {
   bottom:           0;
   right:            0;
   display:          inline-flex;
-  color:            #000000;
+  color:            $headerandsidebackground;
   cursor:           pointer;
   align-items:      center;
   justify-content:  center;
@@ -107,5 +221,7 @@ nav ul li a {
   padding:          .25em;
   width:            2em;
   height:           2em;
-  background-color: #03989E;
+  background-color: $colorhighlight;
 }
+
+#forkme_banner{ display: none !important; }
