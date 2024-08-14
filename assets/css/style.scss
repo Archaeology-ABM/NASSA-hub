@@ -209,14 +209,16 @@ nav ul li a .menu-title
 /* The grid: Four equal columns that floats next to each other */
 #imageGalleryColumn {
   float: left;
-  width: 25%;
-  padding: 10px;
+  width: 8%;
+  padding: 0px;
 }
 
 /* Style the images inside the grid */
 #imageGalleryColumn img {
+  width: 100%;
   opacity: 0.8;
   cursor: pointer;
+  box-shadow: none;
 }
 
 #imageGalleryColumn img:hover {
@@ -239,8 +241,8 @@ nav ul li a .menu-title
 /* Expanding image text */
 #imgtext {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
+  bottom: 30px;
+  left: 30px;
   color: white;
   font-size: 20px;
 }

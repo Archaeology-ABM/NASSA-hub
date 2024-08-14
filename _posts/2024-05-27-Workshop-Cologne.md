@@ -21,18 +21,6 @@ The outcomes of the workshop will be collected as full articles in the following
 
 For more information, check the workshop programme and abstracts and stay tuned for further announcements!
 
-<!-- The expanding image container -->
-<div class="container" id="mainImageContainer">
-  <!-- Close the image -->
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-
-  <!-- Expanded image -->
-  <img id="expandedImg" style="width:100%">
-
-  <!-- Image text -->
-  <div id="imgtext"></div>
-</div>
-
 <!-- The grid: four columns -->
 <div class="row" id="imageGalleryRow">
   <div class="column" id="imageGalleryColumn">
@@ -73,4 +61,15 @@ For more information, check the workshop programme and abstracts and stay tuned 
   <div class="column" id="imageGalleryColumn">
     <img src="https://archaeology-abm.github.io/NASSA-hub/assets/images/blog/WorkshopCologne2024_IMG-20240523-WA0005.jpg" alt="A. Angourakis (Photo by: A. Nikulina)" onclick="expandImageInGallery(this);">
   </div>
+</div>
+<!-- The expanding image container -->
+<div class="container" id="mainImageContainer">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <!-- Expanded image -->
+  <img id="expandedImg" style="width:100%" src="https://archaeology-abm.github.io/NASSA-hub/assets/images/blog/WorkshopCologne2024_IMG_20240523_095036.jpg">
+
+  <!-- Image text -->
+  <div id="imgtext"></div>
 </div>
