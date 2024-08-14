@@ -14,7 +14,7 @@ We are happy to finally close and release the first consolidated version of our 
 Web interface: <a href="https://archaeology-abm.github.io/NASSA-modules">
     https://archaeology-abm.github.io/NASSA-modules
     <br>
-    <img src="https://archaeology-abm.github.io/NASSA-hub/assets/library-index.png" alt="Web interface screenshot" width="400"/>
+    <img src="https://archaeology-abm.github.io/NASSA-hub/assets/images/blog/library-index.png" alt="Web interface screenshot" width="400"/>
 </a>
 
 Repository: [https://github.com/Archaeology-ABM/NASSA-modules](https://github.com/Archaeology-ABM/NASSA-modules)

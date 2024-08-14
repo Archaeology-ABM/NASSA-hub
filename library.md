@@ -14,7 +14,7 @@ Modules are **authored submissions**, individually **licensed** and **citable** 
 <div style="text-align: center; border: 5px solid #03989E;">
 <a href="https://archaeology-abm.github.io/NASSA-modules" style="color: #03989E;">
     <i style="font-size: 150%;">Browse modules using the NASSA library Web interface</i>
-    <img src="assets/library-index.png" style="width:100%; height: 200px; object-position: -20% 0; top: 0; object-fit: cover; -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0))); mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
+    <img src="assets/images/library-index.png" style="width:100%; height: 200px; object-position: -20% 0; top: 0; object-fit: cover; -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0))); mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));">
 </a>
 </div>
 <br>
@@ -28,7 +28,7 @@ Modules are **authored submissions**, individually **licensed** and **citable** 
     </p>
   </div>
   <div class="column">
-    <img src="assets/module.png" alt="diagram of module elements" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
+    <img src="assets/images/module.png" alt="diagram of module elements" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
   </div>
 </div>
 
@@ -39,6 +39,6 @@ Modules are **authored submissions**, individually **licensed** and **citable** 
     </p>
   </div>
   <div class="column">
-    <img src="assets/module-types.png" alt="diagram of module types" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
+    <img src="assets/images/module-types.png" alt="diagram of module types" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
   </div>
 </div>

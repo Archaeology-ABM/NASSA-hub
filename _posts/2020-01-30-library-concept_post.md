@@ -16,7 +16,7 @@ This year (2021), we were finally able to gather most of our members, even thoug
 It was a meeting crucial for defining what we want and can do regarding a future NASSA library. We used [miro](https://miro.com/) to populate a virtual whiteboard with the main points discussed to aid the brainstorming and document our ideas. With it, we consolidated a few skeletal concepts related to the library, still without committing to specific design decisions. These concepts include the library's internal definitions (modules) and the practicalities of its future use (submission and review processes, target users). Here is a glimpse of this whiteboard:
 
 <br>
-<img src="https://archaeology-abm.github.io/NASSA-hub/assets/20210131-whiteboard.png" alt="Results question on keyword/category">
+<img src="https://archaeology-abm.github.io/NASSA-hub/assets/images/blog/20210131-whiteboard.png" alt="Results question on keyword/category">
 <br><br>
 
 Some relatively novel highlights of this discussion were the idea of **differentiating modules as "algorithm" and "submodel"** and the necessity of preparing **hands-on tutorials**, keeping in mind the three roles we foresee (author, reviewer, user).

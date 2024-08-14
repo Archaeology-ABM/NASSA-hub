@@ -12,7 +12,7 @@ layout: post
 CAA Netherlands/Flanders and CAA Germany have united forces this year to celebrate a joint chapter meeting at the beautiful city of Cologne!
 <br><br>
 <a href="https://caa-de2022.uni-koeln.de" target="_blank" title="CAA DE/NL/FL 2022">
-    <img src="https://archaeology-abm.github.io/NASSA-hub/assets/csm_Banner_Website_9057076bc6.png" alt="CAA DE/NL/FL 2022 banner">
+    <img src="https://archaeology-abm.github.io/NASSA-hub/assets/images/blog/csm_Banner_Website_9057076bc6.png" alt="CAA DE/NL/FL 2022 banner">
 </a>
 <br><br>
 We didn't miss the opportunity, of course, and presented there the recently-consolidated NASSA library v.1 amd its brand-new Web interface.

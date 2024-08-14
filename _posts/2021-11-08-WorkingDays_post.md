@@ -14,4 +14,4 @@ Somehow, the different parties involved found two whole days to work on our back
 The picture below should be a clear indication of the level of enthusiasm (at the start of day one, that is). 
 Visit again soon to admire our progress!<br><br>
 
-<img src="https://archaeology-abm.github.io/NASSA-hub/assets/attendance_plenary_final.jpg" alt="Working days Zoom attendance" width="600"/>
+<img src="https://archaeology-abm.github.io/NASSA-hub/assets/images/blog/attendance_plenary_final.jpg" alt="Working days Zoom attendance" width="600"/>

@@ -104,22 +104,28 @@ Finally, you can "publish" the branch by following the highlighted suggestion in
 ### Overview
 
 <div class="row">
-  <div class="column">
+  <div class="column" style="width: 45%;">
     <p>
     A NASSA module is a <strong>program specification of an algorithm and its implementation</strong> in one or more programming languages, accompanied by its unique <strong>metadata</strong> and <strong>documentation</strong> designed to facilitate its long-term and community-wide understanding and reuse.
+    <br>
+    There are two types of modules: (basic, atomic) <strong>algorithms</strong> and <strong>submodels</strong>, which could be split into two or more algorithms.
     </p>
     <p>
     Therefore, there are four essential aspects that authors must consider:
     <ul>
     <li>File structure: the content of a module must be structured in a certain way in order to be recognised by users and our automated operations.</li>
+    <br>
     <li>Implementation(s): we encourage the addition of multiple implementations within a module. However, these must be kept separated in subdirectories named according to the programming language used.</li>
+    <br>
     <li>Documentation: we allow for different layers of documentation, which are desired but not strictly required for acceptance.</li>
+    <br>
     <li>Metadata: a minimal set of files is required, which hold information on various aspects that must be tracked by NASSA members and users (e.g., authorship, minimal description, license).</li>
     </ul>
     </p>
   </div>
-  <div class="column">
-    <img src="assets/module.png" alt="diagram of module elements" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
+  <div class="column" style="text-align: center;">
+    <img src="assets/images/guide/module.png" alt="diagram of module elements" width="60%" style="border: 0; margin: 0; mix-blend-mode: multiply; box-shadow: none !important;">
+    <img src="assets/images/guide/module-types.png" alt="diagram of module elements" width="60%" style="border: 0; margin: 0; mix-blend-mode: multiply; box-shadow: none !important;">
   </div>
 </div>
 
@@ -135,22 +141,25 @@ When working locally (**_Workflow B_**), you can duplicate a module as a templat
 
 ### Naming the module directory
 
-The module directory must be named with the **module's unique identifier**, following the structure:
-
 <div class="row">
   <div class="column">
+    The module directory must be named with the <strong>module's unique identifier</strong>, following the structure:
+    <br>
     <ol>
         <li><b>Year of submission</b>. The year when the module is submitted to the library repository, never to be changed, even in future versions of the module.</li>
+        <br>
         <li><b>Submission author surname</b>. The surname of the submission author as a single word spelling and with no special characters. This is strictly for identification purposes, while the module authorship  credits are later detailed, inside NASSA.yml.</li>
+        <br>
         <li><b>Index number per each author-year</b>. A unique three-digit number based on how many modules the same author has submitted during a single year. The number is strictly for identification purposes and must be set following an ascending order (i.e., from 001 to 999).</li>
     </ol>
+    <br>
+    Each element is separated by a hyphen or minus sign ("-"; <a href="https://www.fileformat.info/info/unicode/char/2d/index.htm" target="_blank">Unicode specification</a>).
   </div>
   <div class="column">
-    <img src="assets/module-root-name.png" alt="diagram of module root directory name" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
+    <img src="assets/images/guide/module-root-name.png" alt="diagram of module root directory name" width="100%" style="border: 0; mix-blend-mode: multiply; box-shadow: none !important;">
   </div>
 </div>
 
-Each element is separated by a hyphen or minus sign ("-"; [Unicode specification](https://www.fileformat.info/info/unicode/char/2d/index.htm)).
 
 ---
 ### Code editors or IDEs (optional)
@@ -937,7 +946,7 @@ When working locally (**_Workflow B_**), GitHub Desktop will also remember you w
 
 The next screen will allow you to name the Pull Request and write a description. If a single commit was done, the title of the Pull Request will be "module submission" with any description text you have added. If not, make sure the title is "module submission: moduleID" (e.g. "module submission: 1870-Schliemann-001").
 
-![](/assets/pull-request-dummy.png)
+![](/assets/images/guide/pull-request-dummy.png)
 
 Lower on this page, it will list all new changes of your branch/fork compared to the main branch of the original NASSA library repository ("Archaeology-ABM/NASSA-modules").
 
@@ -953,11 +962,11 @@ If you followed all required specifications in the [NASSA schema](https://github
 
 Do not panic if the check fails!
 
-![](/assets/check-fail.png)
+![](/assets/images/guide/check-fail.png)
 
 In most cases, the problem has an easy solution. When having a fail test, click on "Details". The next screen will show you in "Validation" the console printout of nassa-hs execution and accuse what was found missing.
 
-![](/assets/check-fail-2.png)
+![](/assets/images/guide/check-fail-2.png)
 
  In this case, we are missing the `orcid` field for the first author (i.e. `.contributors[0]`). Schliemann, as a man of his time, does not have a valid ORCID and decided to skip this mandatory field. *Shame!*
 
@@ -971,11 +980,11 @@ In most cases, the problem has an easy solution. When having a fail test, click 
 
 One or more NASSA members will then review your module submission (Pull Request) and possibly suggest changes by commenting on or modifying the files as they appear in the Pull Request. Until at least one reviewer approves, the submission pull request will not be able to merge into the library repository (i.e. become part of it). 
 
-![](assets/pending-reviewer.png)
+![](assets/images/guide/pending-reviewer.png)
 
 Both you and the reviewers can add comments to your Pull Request regarding each file that has been changed/added. You may want to add a comment in advance to explain a possible issue, anticipating a reviewer who might raise the point. To do this, go to the "Files changed" tab in your Pull Request, search for the file in the list, and click on "Comment on this file" (the speech bubble on the right side).
 
-![](assets/commenting-on-pr-file.png)
+![](assets/images/guide/commenting-on-pr-file.png)
 
 With this, you may also start a review on your own submission, which is profound yet completely unnecessary.
 
@@ -989,19 +998,19 @@ Alternatively, if there are many hard or structural problems, you may want to ca
 
 A satisfied reviewer will leave an approval that will be part of your Pull Request history. 
 
-![](assets/approving-reviewer.png)
+![](assets/images/guide/approving-reviewer.png)
 
 Once one reviewer is satisfied, the Pull Request will be unblocked and available for merging into the library's main branch.
 
 You can wait further for other pending reviewers or merge it by clicking on the green button at the bottom of the Conversation tab. If left unattended too long, a Pull Request with a full green light will be merged eventually by a core member.
 
-![](assets/merge-unblocked.png)
+![](assets/images/guide/merge-unblocked.png)
 
 ### Module publication
 
 After merging the Pull Request, your module will become part of the NASSA library. It will be directly findable by its ID at the [library repository](https://github.com/Archaeology-ABM/NASSA-modules).
 
-![](assets/module-find.png)
+![](assets/images/guide/module-find.png)
 
 After processing through GitHub Actions, your module will appear at the [NASSA Library Web App](https://archaeology-abm.github.io/NASSA-modules/) linked to a dedicated webpage ("view") displaying most of its metadata and README. See the one generated for [1870-Schliemann-001](https://archaeology-abm.github.io/NASSA-modules/1870-Schliemann-001.html).
 
