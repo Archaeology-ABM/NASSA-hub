@@ -261,6 +261,7 @@ nav ul li a .menu-title
 .back-to-top-button {
   transition:       all .25s ease-in-out;
   position:         fixed;
+  z-index:          1;
   bottom:           0;
   right:            0;
   display:          inline-flex;
