@@ -40,8 +40,8 @@ permalink: /guide
 - [Submitting a module](#submitting-a-module)
   - [Commit the new module directory to branch](#commit-the-new-module-directory-to-branch)
   - [Create Pull Request](#create-pull-request)
-- [Automatic check](#automatic-check)
-- [Module review](#module-review)
+  - [Automatic check](#automatic-check)
+  - [Module review](#module-review)
   - [Module publication](#module-publication)
 
 ---
@@ -954,7 +954,7 @@ On the right sidebar, you may also request reviewers among colleagues, including
 
 You can submit the Pull Request with the green button on the right, "Create Pull Request", or save it as a draft (down arrow symbol in the same button).
 
-## Automatic check
+### Automatic check
 
 The NASSA library repository will execute the nassa-hs application for every new Pull Request to test if it complies with all minimum requirements (module "validation"). This will take a few seconds.
 
@@ -976,7 +976,7 @@ In most cases, the problem has an easy solution. When having a fail test, click 
  
  If you have any doubts in this stage or the problem is not clear from the printout of nassa-hs, write to one of our [core team or to the community (Google Group)](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
 
-## Module review
+### Module review
 
 One or more NASSA members will then review your module submission (Pull Request) and possibly suggest changes by commenting on or modifying the files as they appear in the Pull Request. Until at least one reviewer approves, the submission pull request will not be able to merge into the library repository (i.e. become part of it). 
 
