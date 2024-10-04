@@ -532,7 +532,7 @@ contributors:
 
 #### Other details
 
-- **<b style="color: orange">license</b>**: Software license for the code in this module.
+- **<b style="color: orange">license</b>**: Software license for the code in this module. Please use a valid SPDX identifier (second column at [https://spdx.org/licenses/](https://spdx.org/licenses/)).
 - **<b style="color: orange">lastUpdateDate</b>**: Date of the last update submitted.
 - **<b style="color: orange">description</b>**: Description of what the module does. It should expand the information already given in the name/title.
 
