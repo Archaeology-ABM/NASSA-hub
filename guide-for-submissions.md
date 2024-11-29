@@ -34,6 +34,7 @@ permalink: /guide
     - [Implementations](#implementations-1)
     - [Keywords](#keywords)
     - [Input and output](#input-and-output)
+    - [NASSA.yml *golden rules*](#nassayml-golden-rules)
   - [README.md](#readmemd)
   - [Other documentation files](#other-documentation-files)
   - [Validation (workflow B)](#validation-workflow-b)
@@ -467,7 +468,8 @@ Metadata is contained in fields stored in the "NASSA.yml" file, placed in the mo
 
 To learn more about the YAML format, consult the [language website](https://yaml.org/), [Wikipedia entry](https://en.wikipedia.org/wiki/YAML), or any of the many tutorials available on the Web.
 
-If new to the YAML format, keep in mind that the content and order of the fields are not prescribed by the format (similar to JSON). Some fields or field content will, however, be required by the validation step during module submission. Regarding the arrangement of fields, we recommend following the order in this guide, but templates or other modules already in the library may diverge from this recommendation.
+If new to the YAML format, keep in mind that the content and order of the fields are not prescribed by the format (similar to JSON). Some fields or field content will, however, be required by the validation step during module submission. 
+Regarding the arrangement of fields, we recommend following the order in this guide, but templates or other modules already in the library may diverge from this recommendation.
 
 If there are any doubts after following this guide, you can consult the detailed specifications of each field in the [NASSA schema repository](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/README.md#nassayml-fields) ([JSON file](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/nassa-schema.json)). 
 
@@ -484,7 +486,7 @@ The fields in "NASSA.yml" are ordered thematically bellow (<b style="color: oran
 From the template "YEAR-Surname-000/NASSA.yml":
 ```
 id: YEAR-Surname-000
-nassaVersion: 0.5.0
+nassaVersion: 0.5.1
 moduleType: Algorithm
 title: (TEMPLATE) Module name or title including a useful description of module. Max. 100 characters.
 moduleVersion: 1.0.0
@@ -493,7 +495,7 @@ moduleVersion: 1.0.0
 For our dummy example ("1870-Schliemann-001/NASSA.yml" ):
 ```
 id: 1870-Schliemann-001
-nassaVersion: 0.5.0
+nassaVersion: 0.5.1
 moduleType: Algorithm
 title: (DUMMY EXAMPLE) TroyDestroy. Bronze Age siege and its destructive effect on settlement
 moduleVersion: 1.0.0
@@ -766,6 +768,23 @@ outputs:
     unit: city health
     description: The general state of the defenders city, measured in population, structures, etc.
 ```
+
+#### NASSA.yml *golden rules*
+
+A few general golden rules in filling up NASSA.yml are:
+* Always include and fill the **obligatory fields**, as prescribed here. Missing one obligatory field will cause the automatic check during submission to fail.  
+* Fields that are **not obligatory and not used** by a module should be either deleted (preferable) or deactivated or "commented out" with \# (as placeholders for later use).  
+* Make sure that **indentation** of each line expresses the correct level in the hierarchy. A value or subfield written in a new line should always be one indentation right from the level of the parent field. For example:  
+  ```
+  # incorrect version
+  description: >
+  Description of what the module does. It should expand the information already given in the name/title.
+  
+  # correct version
+  description: >
+    Description of what the module does. It should expand the information already given in the name/title.
+  ```
+* Optional fields asking for **directory or file references** (e.g., `docsDir`, `references`) should not be included if the module does not have such directory or files.
 
 ### README.md
 
