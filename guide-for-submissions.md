@@ -222,6 +222,7 @@ Of course, you should add all other files explicitly related to your module, typ
   LICENSE
   NASSA.yml
   README.md
+  crossSwords.svg
   references.bib
 ```
 
@@ -480,25 +481,25 @@ The fields in "NASSA.yml" are ordered thematically bellow (<b style="color: oran
 - **<b style="color: orange">id</b>**: Module identification number. Assigned when opening a submission.
 - **<b style="color: orange">nassaVersion</b>**: Latest version of the NASSA schema that applies to this module (NASSA.yml fields, directory and file structure).
 - **<b style="color: orange">moduleType</b>**: Whether an algorithm or a submodel (contain modules).
-- **<b style="color: orange">title</b>**: Module name or title. It must include a useful description of module.
+- **<b style="color: orange">title</b>**: Module name or title. Acronyms with no verbs are recommended.
 - **<b style="color: orange">moduleVersion</b>**: Current version identifier. Defaults to "1.0.0" and should increase after every update.
 
 From the template "YEAR-Surname-000/NASSA.yml":
 ```
 id: YEAR-Surname-000
-nassaVersion: 0.5.1
+nassaVersion: 1.0.0
 moduleType: Algorithm
-title: (TEMPLATE) Module name or title including a useful description of module. Max. 100 characters.
-moduleVersion: 1.0.0
+title: TEMPLATE-basic (max. 50 characters)
+moduleVersion: 1.1.0
 ```
 
 For our dummy example ("1870-Schliemann-001/NASSA.yml" ):
 ```
 id: 1870-Schliemann-001
-nassaVersion: 0.5.1
+nassaVersion: 1.0.0
 moduleType: Algorithm
-title: (DUMMY EXAMPLE) TroyDestroy. Bronze Age siege and its destructive effect on settlement
-moduleVersion: 1.0.0
+title: TroyDestroy (DUMMY EXAMPLE)
+moduleVersion: 1.1.0
 ```
 
 #### Authorship
@@ -537,12 +538,14 @@ contributors:
 - **<b style="color: orange">license</b>**: Software license for the code in this module. Please use a valid SPDX identifier (second column at [https://spdx.org/licenses/](https://spdx.org/licenses/)).
 - **<b style="color: orange">lastUpdateDate</b>**: Date of the last update submitted.
 - **<b style="color: orange">description</b>**: Description of what the module does. It should expand the information already given in the name/title.
+- **coverImage**: Path to a image file with a module logo or profile image, preferably in the root of the module. Accepted formats: PNG, JPG, JPEG, SVG. The cover image is currently only used in the module profile page at [Netherland's eScience Center's Research Software Directory](https://research-software-directory.org/).
 
 From the template "YEAR-Surname-000/NASSA.yml":
 ```
 lastUpdateDate: 1983-04-18
 description: >
-  Description of what the module does. It should expand the information already given in the name/title.
+  A concise but informative description of what the module does (max. 300 characters).
+coverImage: Logo_noText.png
 ...
 license: MIT
 ```
@@ -551,7 +554,8 @@ For our dummy example ("1870-Schliemann-001/NASSA.yml" ):
 ```
 lastUpdateDate: 1871-10-20
 description: >
-  This module takes the strength of two armies, one aggressor and another defender, and calculates the level of destruction of the defenders' city. The destructive effect over the defenders' city is proportional to the two contending strengths and a constant rate per unit of strength of the aggressor matched by the defender.
+  This module simulates a Bronze Age siege, calculating city destruction based on the relative strengths of attacker and defender, scaled by a constant rate per unit of matched aggressor strength.
+coverImage: crossSwords.svg
 ...
 license: MIT
 ```
@@ -778,41 +782,61 @@ A few general golden rules in filling up NASSA.yml are:
   ```
   # incorrect version
   description: >
-  Description of what the module does. It should expand the information already given in the name/title.
+  A concise but informative description of what the module does (max. 300 characters).
   
   # correct version
   description: >
-    Description of what the module does. It should expand the information already given in the name/title.
+    A concise but informative description of what the module does (max. 300 characters).
   ```
-* Optional fields asking for **directory or file references** (e.g., `docsDir`, `references`) should not be included if the module does not have such directory or files.
+* Avoid including optional fields asking for **directory or file references** (e.g., `coverImage`, `docsDir`, `references`) if the module does not have such directory or files.
 
 ### README.md
 
 The most generic documentation file is "README.md", which aims to present the module with a brief overview and is assumed to be the users' first contact with it. It is written in GitHub-flavoured [markdown](https://www.markdownguide.org/) and may include images and external links.
 
-The following section structure must be kept:
+**The README.md file is mandatory** and a minimum section structure must be kept:
 
+```{markdown}
+# Title (matching NASSA.yml `title`)
+*by Author(s)*
+
+## Further information
+
+(Free text no longer than 10000 characters)
 ```
-# Module name  
-Authors' full name  
 
-Description  
+In `## Further information`, we recommend displaying any images included as part of the module documentation, such as diagrams, screenshots, output graphs in demonstrations, etc. Consult other modules as examples.
+
+It is important that `## Further information` exists and is no more than 10000 characters long. The text inside this section will be scraped and displayed in the module profile page at [Netherland's eScience Center's Research Software Directory](https://research-software-directory.org/).
+
+We recommend also including a short description and additional sections on License and References (if any):
+
+```{markdown}
+# Title
+*by Author(s)*
+
+(short description)
 
 ## License
 
-## Further information
-```
+(name of the licence)
 
-In "Further information", we recommend displaying any images included as part of the module documentation, such as diagrams, screenshots, output graphs in demonstrations, etc. Consult other modules as examples.
+## References
+
+(reference items)
+
+## Further information
+
+(Free text no longer than 10000 characters)
+
+```
 
 In case of "1870-Schliemann-001", no significant image is offered to illustrate the algorithm, so the authors chose to display a Wikimedia Commons image related to the subject to make the README file more memorable:
 
-```
-# (DUMMY EXAMPLE) TroyDestroy. Bronze Age siege and its destructive effect on settlement
+```{markdown}
+# TroyDestroy (DUMMY EXAMPLE)
 
 *by Heinrich "Dummy" Schliemann* (NASSA submission :rocket:)
-
-This module takes the strength of two armies, one aggressor and another defender, and calculates the level of destruction of the defenders' city. The destructive effect over the defenders' city is proportional to the two contending strengths and a constant rate per unit of strength of the aggressor matched by the defender.
 
 ## License
 
@@ -824,6 +848,8 @@ Homer. 1865. The Iliad of Homer. J. Murray (trad.).
 
 ## Further information
 
+This module represents a Bronze Age siege and its destructive effect on a settlement. It takes the strength of two armies, one aggressor and another defender, and calculates the level of destruction of the defenders' city. The destructive effect over the defenders' city is proportional to the two contending strengths and a constant rate per unit of strength of the aggressor matched by the defender.
+
 <a title="Unknown Corinthian pottery maker BCE, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Corinthian_aryballos_depicting_the_trojan_war_from_1887_jahrbuchdeskaiserich_1200x500.jpg"><img width="512" alt="Corinthian aryballos depicting the trojan war from 1887 jahrbuchdeskaiserich 1200x500" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Corinthian_aryballos_depicting_the_trojan_war_from_1887_jahrbuchdeskaiserich_1200x500.jpg/512px-Corinthian_aryballos_depicting_the_trojan_war_from_1887_jahrbuchdeskaiserich_1200x500.jpg"></a>
 
 This model is an algorithm implemented in NetLogo and Python 3. Disclaimer: the code might require updates since it was written in the 19th century.
@@ -834,6 +860,10 @@ $$warEffect=-destructionRate*\frac{(attackerStrength)^2}{defenderStrength} $$
 
 See full list of documentation resources in [`documentation`](documentation/tableOfContents.md).
 
+### Acknowledgements
+
+The "crossed swords" emoticon (⚔️) used as cover image was sourced at [Twitter Emoji (Twemoji) v14.0](https://github.com/twitter/twemoji) under CC BY 4.0.
+
 ```
 
 ### Other documentation files
@@ -842,7 +872,7 @@ Although not a strict requirement for acceptance, module should aspire to includ
 
 Because modules are both program specifications and implementations, we recommend that documentation is prepared at two levels:
 
-- A generic understanding of what the program does and its entities, variables, parameters, etc., as well as any reference or scientific argument to contextualise its design. General documentation will typically involve infographics, diagrams, and text descriptions. We recommend storing the files holding this type of documentation inside a subdirectory directly in the module's root directory (e.g., `1870-Schliemann-001/documentation/`).
+- A generic understanding of what the program does and its entities, variables, parameters, etc., as well as any reference or scientific argument to contextualise its design. General documentation will typically involve infographics, diagrams, equations, or text descriptions. We recommend storing the files holding this type of documentation inside a subdirectory directly in the module's root directory (e.g., `1870-Schliemann-001/documentation/`). However, these materials can also be displayed in `## Further information` in the README file.
 
 - A description of the terms and design of a single implementation, including practical instructions and specific terminology. This should also include instructions on compiling and running the respective code, if necessary. We recommend storing these files inside the subdirectory with the corresponding implementation (e.g., `1870-Schliemann-001/python_implementation/documentation/`). Some examples of language-specific documentation materials are:  
   - **Set up instructions**. Instructions on compiling and running the code. This is more relevant when using general-purpose programming languages or relying on specific libraries or external software. 
@@ -889,27 +919,28 @@ In "1870-Schliemann-001", notice how an instruction was included for the NetLogo
   LICENSE
   NASSA.yml
   README.md
+  crossSwords.svg
   references.bib
 ```
 
 In this case, "README.md" links to "documentation/tableOfContents.md", which reads:
 
 ```
-(DUMMY EXAMPLE) TroyDestroy. Bronze Age siege and its destructive effect on settlement
+TroyDestroy (DUMMY EXAMPLE)
 # General documentation
 ## Table of contents
 
 - [`designDetails.md`](designDetails.md) : free format document describing the module process, beyond the level of implementation.
   
-- [NetLogo implementation](/netlogo_implementation/documentation/tableOfContents.md) : documentation specific to the NetLogo implementation.
+- [NetLogo implementation](netlogo_implementation/documentation/tableOfContents.md) : documentation specific to the NetLogo implementation.
   
-- [Python implementation](/python_implementation/documentation/tableOfContents.md) : documentation specific to the Python implementation.
+- [Python implementation](python_implementation/documentation/tableOfContents.md) : documentation specific to the Python implementation.
 ```
 
 Leading to "netlogo_implementation/documentation/tableOfContents.md":
 
 ```
-(DUMMY EXAMPLE) TroyDestroy. Bronze Age siege and its destructive effect on settlement
+TroyDestroy (DUMMY EXAMPLE)
 # Documentation - NetLogo implementation
 ## Table of contents
 
@@ -928,7 +959,7 @@ Leading to "netlogo_implementation/documentation/tableOfContents.md":
 and to "python_implementation/documentation/tableOfContents.md":
 
 ```
-(DUMMY EXAMPLE) TroyDestroy. Bronze Age siege and its destructive effect on settlement
+TroyDestroy (DUMMY EXAMPLE)
 # Documentation - Python implementation
 ## Table of contents
 
