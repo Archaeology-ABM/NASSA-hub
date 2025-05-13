@@ -60,7 +60,7 @@ Submission authors who are not already GitHub users can choose any means to lear
 
 Create a personal account in GitHub by going to [https://github.com](https://github.com), select "Sign up", and follow the instructions.
 
-Once a GitHub account is set up, there are a few further preparation steps that are required depending on the workflow chosen to create and manage modules.
+Once a GitHub account is set up, there are a few further preparation steps that are required, depending on the workflow chosen to create and manage modules.
 
 ### Fork the library repository
 
@@ -68,11 +68,11 @@ Create a "fork" of the library repository (i.e. an online parallel copy associat
 
 ### *Workflow A*: using GitHub Web interface only
 
-Virtually every task can be perform in a repository using only a GitHub account and your Web browser. Thus, if you plan to make only a few contributions to the library, we recommend this option. Check the tutorial in [GitHub Docs > Get started > Quickstart > Hello World](https://docs.github.com/en/get-started/quickstart/hello-world) if you are new to the GitHub Web interface.
+Virtually every task can be performed in a repository using only a GitHub account and your Web browser. Thus, if you plan to make only a few contributions to the library, we recommend this option. Check the tutorial in [GitHub Docs > Get started > Quickstart > Hello World](https://docs.github.com/en/get-started/quickstart/hello-world) if you are new to the GitHub Web interface.
 
 ### *Workflow B*: using local copy of repository
 
-Having a version of the library downloaded (cloned) and synchronised in a local disc allows for editing and testing of files and code before committing any changes to the repository online. This workflow is recommended for those who plan to make many contributions (modules, updates of modules, maintenance tasks).
+Having a version of the library downloaded (cloned) and synchronised on a local disc allows for editing and testing of files and code before committing any changes to the repository online. This workflow is recommended for those who plan to make many contributions (modules, updates of modules, maintenance tasks).
 
 Taking this workflow requires the following extra steps:  
 1. **Install and set up Git**. Follow the instructions given in [GitHub Docs > Get started > Quickstart > Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git).  
@@ -81,17 +81,17 @@ Taking this workflow requires the following extra steps:
 
 ### Creating a new branch
 
-To facilitate the management of submissions, we encourage all changes involving a module to be carried out inside a new branch.
+To facilitate the management of submissions, we encourage all changes involving a new module to be carried out inside a new branch.
 
-A *branch*, in Git terms, is a series of repository versions where changes are contained until finally accepted and merged back into the main series. A Git branch is unlike a literal tree branch but somewhat similar to a river branch catching different sediments and returning to the main flow or a thread that diverges from a fabric, receives several knots, and is woven together again.
+A *branch*, in Git terms, is a series of repository versions where changes are contained until finally accepted and merged back into the main series. A Git branch is unlike a literal tree branch but somewhat similar to a river branch catching different sediments and returning to the main flow, or a thread that diverges from a fabric, receives several knots, and is woven together again.
 
-Please name the new branch with your surname to facilitate the management later. You could use something like `yoursurname-modules` so that you can reuse it every time you submit ()or a module.
+Please name the new branch using your surname to facilitate management later. You could use something like `yoursurname-modules` so that you can reuse it every time you submit or change a module.
 
 **_Workflow A_**: using GitHub Web interface:  
-Follow the instruction in [GitHub Docs > Pull requests > Collaborate with pull requests > Propose changes > Creating and deleting branches within your repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository).
+Follow the instructions in [GitHub Docs > Pull requests > Collaborate with pull requests > Propose changes > Creating and deleting branches within your repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository).
 
 **_Workflow B_**: using local copy:  
-Follow the instruction in:
+Follow the instructions in:
 1. GitHub Desktop: [GitHub Docs > GitHub Desktop > Make changes in a branch > Managing Branches](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/managing-branches)
 2. Git command lines: [GitHub Docs > Quickstart > Contributing to projects > Creating a branch to work on](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).
 
@@ -114,13 +114,13 @@ Finally, you can "publish" the branch by following the highlighted suggestion in
     <p>
     Therefore, there are four essential aspects that authors must consider:
     <ul>
-    <li>File structure: the content of a module must be structured in a certain way in order to be recognised by users and our automated operations.</li>
+    <li>File structure: The content of a module must be structured in a certain way in order to be recognised by users and our automated operations.</li>
     <br>
-    <li>Implementation(s): we encourage the addition of multiple implementations within a module. However, these must be kept separated in subdirectories named according to the programming language used.</li>
+    <li>Implementation(s): We encourage the addition of multiple implementations within a module. However, these must be separated into subdirectories according to the programming language used.</li>
     <br>
-    <li>Documentation: we allow for different layers of documentation, which are desired but not strictly required for acceptance.</li>
+    <li>Documentation: We allow for different layers of documentation, which are desired but not strictly required for acceptance.</li>
     <br>
-    <li>Metadata: a minimal set of files is required, which hold information on various aspects that must be tracked by NASSA members and users (e.g., authorship, minimal description, license).</li>
+    <li>Metadata: A minimal set of files is required, which hold information on various aspects that must be tracked by NASSA members and users (e.g., authorship, minimal description, license).</li>
     </ul>
     </p>
   </div>
@@ -130,13 +130,13 @@ Finally, you can "publish" the branch by following the highlighted suggestion in
   </div>
 </div>
 
-After publication, NASSA modules remain open for changes by the original authors as well new authors and contributors. We do ask that each change should follow the same guidelines for submission described here.
+After publication, NASSA modules remain open for changes by the original authors, new authors and contributors. We ask that each change follow the same guidelines for submission described here.
 
 ### Templates and module examples
 
-We strongly recommend using module templates to keep the preparation of a new module as short and simple as possible. The NASSA community aims to offer a variety of templates for types of modules, levels of documentation, and programming languages. Feel free to use any of the modules already in the library as templates if it better suits your module. Once you have created and submitted a module, you may also use it as your template for creating other modules. We have also included a dummy example of a module, ["1870-Schliemann-001"](https://archaeology-abm.github.io/NASSA-modules/1870-Schliemann-001.html), which will be referenced throughout this guide. Notice that it was carefully prepared before computational archaeology was even a thing!
+We strongly recommend using module templates to keep the preparation of a new module as short and straightforward as possible. The NASSA community aims to offer a variety of templates for types of modules, levels of documentation, and programming languages. Feel free to use any modules already in the library as templates if they better suit your module. Once you have created and submitted a module, you may use it as your template for creating other modules. We have also included a dummy example of a module, ["1870-Schliemann-001"](https://archaeology-abm.github.io/NASSA-modules/1870-Schliemann-001.html), which will be referenced throughout this guide. Notice that it was carefully prepared before computational archaeology was even a thing!
 
-Visit the [library Web interface](https://archaeology-abm.github.io/NASSA-modules/index.html), search for the term "TEMPLATE", and select the one most suitable for your type of module. Download the template directory at its view page. The most basic and generic template is ["YEAR-Surname-000"](https://archaeology-abm.github.io/NASSA-modules/0000-NASSA-001-TEMPLATE.html). Once the file has been downloaded, uncompress the module folder into a directory of your choice.
+Visit the [library Web interface](https://archaeology-abm.github.io/NASSA-modules/index.html), search for the term "TEMPLATE", and select the one most suitable for your type of module. Download the template directory from its view page. The most basic and generic template is ["YEAR-Surname-000"](https://archaeology-abm.github.io/NASSA-modules/0000-NASSA-001-TEMPLATE.html). Once the file has been downloaded, uncompress the module folder and place it into a directory of your choice.
 
 When working locally (**_Workflow B_**), you can duplicate a module as a template, rename it, and then delete, create, or modify files accordingly.  
 
@@ -147,9 +147,9 @@ When working locally (**_Workflow B_**), you can duplicate a module as a templat
     The module directory must be named with the <strong>module's unique identifier</strong>, following the structure:
     <br>
     <ol>
-        <li><b>Year of submission</b>. The year when the module is submitted to the library repository, never to be changed, even in future versions of the module.</li>
+        <li><b>Year of submission</b>. The year when the module is submitted to the library repository is never to be changed, even in future versions of the module.</li>
         <br>
-        <li><b>Submission author surname</b>. The surname of the submission author as a single word spelling and with no special characters. This is strictly for identification purposes, while the module authorship  credits are later detailed, inside NASSA.yml.</li>
+        <li><b>Submission author surname</b>. The surname of the submission author is a single word spelling, with no special characters. This is strictly for identification purposes, while the module authorship  credits are later detailed, inside NASSA.yml.</li>
         <br>
         <li><b>Index number per each author-year</b>. A unique three-digit number based on how many modules the same author has submitted during a single year. The number is strictly for identification purposes and must be set following an ascending order (i.e., from 001 to 999).</li>
     </ol>
@@ -167,7 +167,7 @@ When working locally (**_Workflow B_**), you can duplicate a module as a templat
 
 We recommend using a **code editor** or an **integrated development environment** (IDE) to create and edit most module files.
 
-When working locally on the library (**workflow B**), many code editors and IDE can open a module directory as a "project" or "working directory", which will help ensure no accidental changes are made outside the new module . Using such software will make editing more agile (e.g., autocomplete, syntax highlighting), help identify errors, and ease the use of command lines. Most will also offer seamless management of version control with Git.
+When working locally on the library (**workflow B**), many code editors and IDEs can open a module directory as a "project" or "working directory", which will help ensure no accidental changes are made outside the new module. Using such software will make editing more agile (e.g., autocomplete, syntax highlighting), help identify errors, and ease the use of command lines. Most will also offer seamless management of version control with Git.
 
 There are many options, but a good example is [Visual Studio Code](https://code.visualstudio.com/) by Microsoft or [RStudio](https://posit.co/download/rstudio-desktop/) by Posit.
 
@@ -175,7 +175,7 @@ There are many options, but a good example is [Visual Studio Code](https://code.
 
 ### Planning a directory structure
 
-A minimal set of files must be present and structured in a specific manner inside the directory to be considered a NASSA module. These files must be named following exactly [NASSA schema](https://github.com/Archaeology-ABM/NASSA-schema). The minimal set is:
+A minimal set of files must be present and structured in a specific manner inside the directory to be considered a NASSA module. These files must be named following the [NASSA schema](https://github.com/Archaeology-ABM/NASSA-schema) exactly. The minimal set is:
 
 ```
 YYYY-SURNAME-001 (module root)
@@ -191,7 +191,7 @@ YYYY-SURNAME-001 (module root)
 
 All module templates will already contain the minimum set of files, which should then be edited according to your module's specifications. Other modules already integrated into the library can also be observed as examples.
 
-Of course, you should add all other files explicitly related to your module, typically placing them inside implementation or documentation folders. As an example, the following structure is used in Schliemann's dummy module, which is implemented in NetLogo and Python:
+Of course, you should add all other files explicitly related to your module, typically placing them inside the implementation or documentation folders. As an example, the following structure is used in Schliemann's dummy module, which is implemented in NetLogo and Python:
 
 ```
 1870-Schliemann-001 (module root)
@@ -232,7 +232,7 @@ NASSA modules are pieces of simulation models that are ultimately algorithms, i.
 
 For example, in "1870-Schliemann-001", the program specification reads:
 
->This module takes the strength of two armies, one aggressor and another defender, and calculates the level of destruction of the defenders' city. The destructive effect over the defenders' city is proportional to the two contending strengths and a constant rate per unit of strength of the aggressor matched by the defender.
+>This module takes the strength of two armies, one aggressor and another defender, and calculates the level of destruction of the defender's city. The destructive effect on the defenders' city is proportional to the two contending strengths and a constant rate per unit of strength of the aggressor matched by the defender.
 
 Thus, one NetLogo implementation ("1870-Schliemann-001/netlogo_implementation/TroyDestroy.nlogo") could be:
 
@@ -414,17 +414,17 @@ print("Troy health after war: " + str(troy.health))
 
 ```
 
-**All implementations must fit the generic specification of the module.** Each implementation language included in the module should have at least one version that returns the same output for a given input. Other versions within each implementation that offer variations or extensions of the core functionality may escape this requirement according to the nature of the alternative design.
+**All implementations must fit the generic specification of the module.** Each implementation language in the module should have at least one version that returns the same output for a given input. Other versions within each implementation that offer variations or extensions of the core functionality may escape this requirement according to the nature of the alternative design.
 
 #### Code style
 
-Any final code attached to the submission must be functional (run without errors, produce the expected behaviour) but also readable by most of our community. The module should be understandable for a "good-enough-programmer" that cannot read your mind.
+Any final code attached to the submission must be functional (run without errors, produce the expected behaviour) and readable by most of our community. The module should be understandable for a "good-enough programmer" who cannot read your mind.
 
-NASSA recommends authors be attentive to the following points:
+NASSA recommends that authors be attentive to the following points:
 
-**Naming**. Use consistent conventions to differentiate variables, parameters, and functions. Enforce exact, self-explanatory names, and avoid names imitating mathematical annotations. Exceptions could be made by compensating name simplification with more detailed commentary and documentation.
+**Naming**. Use consistent conventions to differentiate variables, parameters, and functions. Enforce exact, self-explanatory names, and avoid names imitating mathematical annotations. Exceptions could be made by compensating for name simplification with more detailed commentary and documentation.
 
-**Single-responsibility principle**. The code should be modular to the best of the authors' (programming) ability, mainly if the contribution is relatively complex (e.g., if the module involves several types of entities or represents a process in several steps). See more information at [Wikipedia](https://en.wikipedia.org/wiki/Single-responsibility_principle).
+**Single-responsibility principle**. The code should be modular to the best of the authors' (programming) ability, especially if the contribution is relatively complex (e.g., if the module involves several types of entities or represents a process in several steps). See more information at [Wikipedia](https://en.wikipedia.org/wiki/Single-responsibility_principle).
 
 **No magic numbers**. Magic numbers occur in code without an explicit meaning and are not adjustable without altering the code. They should preferably be replaced by named variables to be set during initialisation, even if kept as constants. (https://en.wikipedia.org/wiki/Magic_number_(programming))
 
@@ -432,13 +432,13 @@ NASSA recommends authors be attentive to the following points:
 
 **Minimise dependencies**. Authors should avoid using third-party libraries, packages, etc., as much as possible. It is crucial to avoid any software that is relatively hard to obtain or set up. Dependencies are always a risk for reproducibility and code sustainability in the long run.
 
-**Commentary in code**. Be repetitive and explain language-specific terms (not commonly known or easily searchable) whenever possible. Expand information whenever relevant, e.g., offering a source (preferably a stable URL) or explaining the logic behind a hardcoded or suggested parameter value. Add full references, with URL if available, of the sources used to inform the design of an algorithm or set parameter values. If there are any code fragments "commented-out", use a clear and consistent way to differentiate these from true commentary.
+**Commentary in code**. Be repetitive and explain language-specific terms (not commonly known or easily searchable) whenever possible. Expand information whenever relevant, e.g., offering a source (preferably a stable URL) or explaining the logic behind a hardcoded or suggested parameter value. Add full references, with URL if available, of the sources used to inform the design of an algorithm or set parameter values. If there are any code fragments "commented out", use a clear and consistent way to differentiate these from true commentary.
 
 ### ".gitignore"
 
-You might want Git/GitHub to ignore certain files or type of files, depending on the programming language used by the module or if there are files generated by demonstrations, etc. In this case, a `.gitignore` file should be added to your module's main directory, specifying what should be ignored.
+You might want Git/GitHub to ignore specific files or types of files, depending on the programming language used by the module or if demonstrations, etc, generate files. In this case, a `.gitignore` file should be added to your module's main directory, specifying what should be ignored.
 
-You can learn more about this kind of file at [Git documentation](https://git-scm.com/docs/gitignore). GitHub offers an extensive list of suggestions [here](https://github.com/github/gitignore).
+You can learn more about this file at [Git documentation](https://git-scm.com/docs/gitignore). GitHub offers an extensive list of suggestions [here](https://github.com/github/gitignore).
 
 For example, "1870-Schliemann-001" includes a Python implementation that will probably be run in place by users and possibly generate cache data. For this reason, its ".gitignore" file reads: 
 
@@ -469,18 +469,18 @@ Metadata is contained in fields stored in the "NASSA.yml" file, placed in the mo
 
 To learn more about the YAML format, consult the [language website](https://yaml.org/), [Wikipedia entry](https://en.wikipedia.org/wiki/YAML), or any of the many tutorials available on the Web.
 
-If new to the YAML format, keep in mind that the content and order of the fields are not prescribed by the format (similar to JSON). Some fields or field content will, however, be required by the validation step during module submission. 
-Regarding the arrangement of fields, we recommend following the order in this guide, but templates or other modules already in the library may diverge from this recommendation.
+If new to the YAML format, remember that the content and order of the fields are not prescribed by the format (similar to JSON). Some fields or field content will, however, be required by the validation step during module submission. 
+About the arrangement of fields, we recommend following the order in this guide, but templates or other modules already in the library may be different from this recommendation.
 
 If there are any doubts after following this guide, you can consult the detailed specifications of each field in the [NASSA schema repository](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/README.md#nassayml-fields) ([JSON file](https://github.com/Archaeology-ABM/NASSA-schema/blob/main/nassa-schema.json)). 
 
-The fields in "NASSA.yml" are ordered thematically bellow (<b style="color: orange">&#9632;</b>: mandatory field):
+The fields in "NASSA.yml" are ordered thematically below (<b style="color: orange">&#9632;</b>: mandatory field):
 
 #### Module identification
 
 - **<b style="color: orange">id</b>**: Module identification number. Assigned when opening a submission.
 - **<b style="color: orange">nassaVersion</b>**: Latest version of the NASSA schema that applies to this module (NASSA.yml fields, directory and file structure).
-- **<b style="color: orange">moduleType</b>**: Whether an algorithm or a submodel (contain modules).
+- **<b style="color: orange">moduleType</b>**: Whether an algorithm or a submodel (contains modules).
 - **<b style="color: orange">title</b>**: Module name or title. Acronyms with no verbs are recommended.
 - **<b style="color: orange">moduleVersion</b>**: Current version identifier. Defaults to "1.0.0" and should increase after every update.
 
@@ -510,7 +510,7 @@ moduleVersion: 1.1.0
   - **<b style="color: orange">email</b>**: Stable email of a contributor.
   - **<b style="color: orange">orcid</b>**: ORCID number of a contributor.
 
-Authors are considered in relation to their roles (Author, Compiler, Contributor, Copyright Holder, Creator, Thesis Advisor, Translator; see definitions [here](https://journal.r-project.org/archive/2012-1/RJournal_2012-1_Hornik~et~al.pdf)). A module must have at least one person listed as an "Author", "Copyright Holder" and "Creator", typically the person preparing and managing the submission, whose surname is represented in the module ID. A submission author, who is not directly responsible for the implementation code, should retain the abovementioned roles and name at least one additional author with an "Author" and "Copyright Holder" role. Later code modifications and documentation modifications can be acknowledged under the "Contributor" role. Individuals involved in formulating the algorithm but not creating the module may be acknowledged as "Author" and "Copyright Holder".
+Authors are considered in relation to their roles (Author, Compiler, Contributor, Copyright Holder, Creator, Thesis Advisor, Translator; see definitions [here](https://journal.r-project.org/archive/2012-1/RJournal_2012-1_Hornik~et~al.pdf)). A module must have at least one person listed as an "Author", "Copyright Holder" and "Creator", typically the person preparing and managing the submission, whose surname is represented in the module ID. A submission author, who is not directly responsible for the implementation code, should retain the abovementioned roles and name at least one additional author with an "Author" and "Copyright Holder" role. Later code and documentation modifications can be acknowledged under the "Contributor" role. Individuals involved in formulating the algorithm but not creating the module may be acknowledged as "Author" and "Copyright Holder".
 
 From the template "YEAR-Surname-000/NASSA.yml":
 ```
@@ -538,7 +538,7 @@ contributors:
 - **<b style="color: orange">license</b>**: Software license for the code in this module. Please use a valid SPDX identifier (second column at [https://spdx.org/licenses/](https://spdx.org/licenses/)).
 - **<b style="color: orange">lastUpdateDate</b>**: Date of the last update submitted.
 - **<b style="color: orange">description</b>**: Description of what the module does. It should expand the information already given in the name/title.
-- **coverImage**: Path to a image file with a module logo or profile image, preferably in the root of the module. Accepted formats: PNG, JPG, JPEG, SVG. The cover image is currently only used in the module profile page at [Netherland's eScience Center's Research Software Directory](https://research-software-directory.org/).
+- **coverImage**: Path to an image file with a module logo or profile image, preferably in the root of the module. Accepted formats: PNG, JPG, JPEG, SVG. The cover image is currently only used in the module profile page at [Netherland's eScience Center's Research Software Directory](https://research-software-directory.org/).
 
 From the template "YEAR-Surname-000/NASSA.yml":
 ```
@@ -562,7 +562,7 @@ license: MIT
 
 #### Bibliographic information
 
-- **relatedModules**: List of modules (ids) this one is related to (similar, depending on, etc.). Currently there is no automated check for the validity of the ids given in this field. 
+- **relatedModules**: List of modules (IDs) this one is related to (similar, depending on, etc.). Currently, there is no automated check for the validity of the IDs in this field. 
 - **references**: Literature references. Explicit mention of BibTex IDs corresponding to the references in "references.bib".
   - **moduleReferences**: References that **_describe and explain the module_**, any of its parts, or its original use in a model. This includes public repositories holding models that include the module.
   - **useExampleReferences**: References **_citing, describing, or using the module_** (only to be entered after the module has been published in the NASSA library).
@@ -641,7 +641,7 @@ And with the "references.bib":
 
 - **<b style="color: orange">implementations</b>**: List of implementations in different programming languages.
   - **<b style="color: orange">language</b>**: Programming language.
-  - **<b style="color: orange">softwareDependencies</b>**: Listing any software (libraries, packages, etc), specifying the release version, on which the module implementation relies to properly function.
+  - **<b style="color: orange">softwareDependencies</b>**: Listing any software (libraries, packages, etc), specifying the release version, on which the module implementation relies to function properly.
 - **docsDir**: Relative path to the directory containing general module documentation.
 
 From the template "YEAR-Surname-000/NASSA.yml":
@@ -777,7 +777,7 @@ outputs:
 
 A few general golden rules in filling up NASSA.yml are:
 * Always include and fill the **obligatory fields**, as prescribed here. Missing one obligatory field will cause the automatic check during submission to fail.  
-* Fields that are **not obligatory and not used** by a module should be either deleted (preferable) or deactivated or "commented out" with \# (as placeholders for later use).  
+* Fields that are **not obligatory and not used** by a module should be deactivated or "commented out" with `\#`, as placeholders for later use, or else deleted.  
 * Make sure that **indentation** of each line expresses the correct level in the hierarchy. A value or subfield written in a new line should always be one indentation right from the level of the parent field. For example:  
   ```
   # incorrect version
@@ -868,23 +868,23 @@ The "crossed swords" emoticon (⚔️) used as cover image was sourced at [Twitt
 
 ### Other documentation files
 
-Although not a strict requirement for acceptance, module should aspire to include a minimal set of files dedicated to documentation. Modules offering more documentation materials will be significantly more visible and usable by the community.
+Although not a strict requirement for acceptance, a module should aspire to include a minimal set of files dedicated to documentation. Modules offering more documentation materials will be significantly more visible and usable by the community.
 
-Because modules are both program specifications and implementations, we recommend that documentation is prepared at two levels:
+Because modules are both program specifications and implementations, we recommend that documentation be prepared at two levels:
 
-- A generic understanding of what the program does and its entities, variables, parameters, etc., as well as any reference or scientific argument to contextualise its design. General documentation will typically involve infographics, diagrams, equations, or text descriptions. We recommend storing the files holding this type of documentation inside a subdirectory directly in the module's root directory (e.g., `1870-Schliemann-001/documentation/`). However, these materials can also be displayed in `## Further information` in the README file.
+- A generic understanding of what the program does and its entities, variables, parameters, etc., as well as any reference or scientific argument to contextualise its design. General documentation typically involves infographics, diagrams, equations, or text descriptions. We recommend storing the files holding this type of documentation inside a subdirectory directly in the module's root directory (e.g., `1870-Schliemann-001/documentation/`). However, these materials can also be displayed in `## Further information` in the README file.
 
 - A description of the terms and design of a single implementation, including practical instructions and specific terminology. This should also include instructions on compiling and running the respective code, if necessary. We recommend storing these files inside the subdirectory with the corresponding implementation (e.g., `1870-Schliemann-001/python_implementation/documentation/`). Some examples of language-specific documentation materials are:  
   - **Set up instructions**. Instructions on compiling and running the code. This is more relevant when using general-purpose programming languages or relying on specific libraries or external software. 
   - **User reference manual**. Variable and methods/functions lists, entity definitions, etc.  
-  - **Screenshots** of graphical interface or output.  
+  - **Screenshots** of the graphical interface or output.  
   - **Pseudocode**. Representation of code as a sequence of logic steps (i.e., algorithm), using free-text or mathematical notation, or using graphical resources, be it formal (e.g., UML) or informal (e.g., infographics).  
-  - **ODD or similar**, when submitting modules of the type "submodel". To know more about ODD, see Grimm et al. 2013.  
-  - **Demostrations**. A step-by-step demonstration of the module use and outputs, combining explanations in text and code fragments, typically in a interactive notebook format (e.g., .ipynb, .rmd).
+  - **ODD or similar**, when submitting modules of the type "submodel". To learn more about ODD, see Grimm et al. (2013).  
+  - **Demonstrations**. A step-by-step demonstration of the module use and outputs, combining explanations in text and code fragments, typically in an interactive notebook format (e.g., .ipynb, .rmd).
 
 >Grimm, V., Polhill, G., & Touza, J. (2013). Documenting Social Simulation Models: The ODD Protocol as a Standard. In B. Edmonds & R. Meyer (Eds.), Simulating Social Complexity: A Handbook (pp. 117–133). Springer. https://doi.org/10.1007/978-3-540-93813-2_7
 
-To boost the visibility of documentation files, we recommend authors create a markdown file at both general and implementation levels to present a list of the documentation files (e.g., tableOfContents.md), with brief descriptions and links (relative paths) to the respective files. Such a file can then be linked from README.md.
+To boost the visibility of documentation files, we recommend that authors create a markdown file at both the general and implementation levels to present a list of the documentation files (e.g., tableOfContents.md), with brief descriptions and links (relative paths) to the respective files. Such a file can then be linked from README.md.
 
 See examples of how to do it in the templates offered in the library.
 
@@ -967,11 +967,11 @@ TroyDestroy (DUMMY EXAMPLE)
 
 ```
 
-The golden rules in preparing documentation files here are "nothing is trivial enough to be mentioned" and "do not fear repeating yourself". The point is to facilitate the understanding of the module at different levels and for different backgrounds.
+The golden rules in preparing documentation files are "**nothing is trivial enough to be mentioned**" and "**do not fear repeating yourself**". The point is to facilitate the understanding of the module at different levels and for different backgrounds.
 
 ### Validation (workflow B)
 
-If you are operating over a local copy of the library, you have the option of checking the integrity of your module, that is, if it has all files and metadata necessary for being processed in submission. This check will occur in GitHub after you create the Pull Request with your module (i.e. module submission), but performing the test locally before submission might save you time later on.
+If you are operating over a local copy of the library, you have the option of checking the integrity of your module, that is, if it has all the files and metadata necessary for being processed in submission. This check will occur in GitHub after you create the Pull Request with your module (i.e. module submission), but performing the test locally before submission might save you time later.
 
 To perform the check, go to [nassa-hs repository](https://github.com/Archaeology-ABM/nassa-hs) and follow the instructions in "README.md".
 
@@ -990,17 +990,17 @@ Remember to publish the branch if you haven't done so already (GitHub Desktop wi
 
 Once all module files have been committed to your branch, you can create a Pull Request. To facilitate the review and checking of modules, **do NOT commit more than one module per Pull Request**. If you want to work on two or more submissions at a time, do it by containing each in a separate branch of your fork. 
 
-In GitHub Web interface, any number of commits to your branch/fork will trigger a reminder with a green button "Compare & pull request". Alternatively, navigate to Pull requests tab on the top menu area and then "New pull request".
+In the GitHub Web interface, any number of commits to your branch/fork will trigger a reminder with a green button "Compare & pull request". Alternatively, navigate to the Pull requests tab on the top menu area and then "New pull request".
 
 When working locally (**_Workflow B_**), GitHub Desktop will also remember you with a suggestion in the main area of the interface.
 
-The next screen will allow you to name the Pull Request and write a description. If a single commit was done, the title of the Pull Request will be "module submission" with any description text you have added. If not, make sure the title is "module submission: moduleID" (e.g. "module submission: 1870-Schliemann-001").
+The next screen will allow you to name the Pull Request and write a description. If a single commit is made, the title of the Pull Request will be "module submission" with any description text you have added. If not, make sure the title is "module submission: moduleID" (e.g. "module submission: 1870-Schliemann-001").
 
 ![](/assets/images/guide/pull-request-dummy.png)
 
-Lower on this page, it will list all new changes of your branch/fork compared to the main branch of the original NASSA library repository ("Archaeology-ABM/NASSA-modules").
+Further down this page, it will list all new changes of your branch/fork compared to the main branch of the original NASSA library repository ("Archaeology-ABM/NASSA-modules").
 
-On the right sidebar, you may also request reviewers among colleagues, including anyone in the NASSA community or GitHub users you know. By default, the Pull Request will be revised by at least one [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
+On the right sidebar, you may also request reviewers among colleagues, including anyone in the NASSA community or GitHub users you know. By default, the Pull Request will be reviewed by at least one [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
 
 You can submit the Pull Request with the green button on the right, "Create Pull Request", or save it as a draft (down arrow symbol in the same button).
 
@@ -1014,7 +1014,7 @@ Do not panic if the check fails!
 
 ![](/assets/images/guide/check-fail.png)
 
-In most cases, the problem has an easy solution. When having a fail test, click on "Details". The next screen will show you in "Validation" the console printout of nassa-hs execution and accuse what was found missing.
+In most cases, the problem has an easy solution. When having a failed test, click on "Details". The next screen will show you, in "Validation", the console printout of the nassa-hs execution and indicate what was found missing.
 
 ![](/assets/images/guide/check-fail-2.png)
 
@@ -1032,19 +1032,19 @@ One or more NASSA members will then review your module submission (Pull Request)
 
 ![](assets/images/guide/pending-reviewer.png)
 
-Both you and the reviewers can add comments to your Pull Request regarding each file that has been changed/added. You may want to add a comment in advance to explain a possible issue, anticipating a reviewer who might raise the point. To do this, go to the "Files changed" tab in your Pull Request, search for the file in the list, and click on "Comment on this file" (the speech bubble on the right side).
+Both you and the reviewers can add comments to your Pull Request regarding each file that has been changed/added. You should add a comment in advance to explain a possible issue, anticipating a reviewer who might raise the point. To do this, go to the "Files changed" tab in your Pull Request, search for the file in the list, and click on "Comment on this file" (the speech bubble on the right side).
 
 ![](assets/images/guide/commenting-on-pr-file.png)
 
 With this, you may also start a review on your own submission, which is profound yet completely unnecessary.
 
-Reviewers will use this tool to add comments and change suggestions during the review process. We expect everyone in the community to be fair and polite when reviewing modules. Modules do not need to be perfect, and we expect many submissions to be revised or expanded later by the original authors or other new contributors. If you are in a dispute with a reviewer or think that a reviewer has been unfair, don't hesitate to contact our [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
+Reviewers will use this tool to add comments and make suggestions during the review process. We expect everyone in the community to be fair and polite when reviewing modules. Modules do not need to be perfect, and we expect many submissions to be revised or expanded later by the original authors or other new contributors. If you are in a dispute with a reviewer or think that a reviewer has been unfair, don't hesitate to contact our [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
 
 As the submission author (who created the Pull Request), you should read and reply when necessary while also deciding if there are any suggested changes. For more information, see the [GitHub documentation]([#reviewing-a-module](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)).
 
 Notice that every change made during the review process triggers the automatic check or validation. You need to address any new errors before merging.
 
-Alternatively, if there are many hard or structural problems, you may want to cancel the Pull Request and prepare a new, revised one. To do this, click on "Close Pull Request" at the bottom of your Pull Request page. After the Pull Request is closed, you may make more drastic changes and repeat the steps for creating a new submission (Pull Request).
+Alternatively, if there are many challenging or structural problems, you should cancel the Pull Request and prepare a new, revised one. To do this, click on "Close Pull Request" at the bottom of your Pull Request page. After the Pull Request is closed, you may make more drastic changes and repeat the steps for creating a new submission (Pull Request).
 
 A satisfied reviewer will leave an approval that will be part of your Pull Request history. 
 
@@ -1052,7 +1052,7 @@ A satisfied reviewer will leave an approval that will be part of your Pull Reque
 
 Once one reviewer is satisfied, the Pull Request will be unblocked and available for merging into the library's main branch.
 
-You can wait further for other pending reviewers or merge it by clicking on the green button at the bottom of the Conversation tab. If left unattended too long, a Pull Request with a full green light will be merged eventually by a core member.
+You'll be able to wait further for other pending reviewers or merge it by clicking on the green button at the bottom of the Conversation tab. If left unattended for too long, a Pull Request with a full green light will eventually be merged by a core member.
 
 ![](assets/images/guide/merge-unblocked.png)
 
@@ -1064,6 +1064,6 @@ After merging the Pull Request, your module will become part of the NASSA librar
 
 After processing through GitHub Actions, your module will appear at the [NASSA Library Web App](https://archaeology-abm.github.io/NASSA-modules/) linked to a dedicated webpage ("view") displaying most of its metadata and README. See the one generated for [1870-Schliemann-001](https://archaeology-abm.github.io/NASSA-modules/1870-Schliemann-001.html).
 
-At this point, you might re-think some details of the metadata and documentation, once you preview them in the website. Unlike papers and other publications, NASSA modules remain open indefinitely for new changes by the original authors as well as others in the community. We do ask that each change is submitted through the same process explained here, no matter what it is, from the correction of a typo to major changes in the code. However, take care of raising the module version and noting new contributors accordingly.
+At this point, you might rethink some details of the metadata and documentation, once you preview them on the website. Unlike papers and other publications, NASSA modules remain open indefinitely for new changes by the original authors and others in the community. We ask that each change be submitted through the same process explained here, no matter what, from the correction of a typo to major changes in the code. However, take care of raising the module version and noting new contributors accordingly.
 
  It is time to promote your module and cite it! 
