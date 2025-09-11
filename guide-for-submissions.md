@@ -508,7 +508,7 @@ moduleVersion: 1.1.0
   - **<b style="color: orange">roles</b>**: How this author contributed to the module (see "Authorship" below).
   - **<b style="color: orange">name</b>**: Full name of a contributor.
   - **<b style="color: orange">email</b>**: Stable email of a contributor.
-  - **<b style="color: orange">orcid</b>**: ORCID number of a contributor.
+  - **<b>orcid</b>**: ORCID number of a contributor.
 
 Authors are considered in relation to their roles (Author, Compiler, Contributor, Copyright Holder, Creator, Thesis Advisor, Translator; see definitions [here](https://journal.r-project.org/archive/2012-1/RJournal_2012-1_Hornik~et~al.pdf)). A module must have at least one person listed as an "Author", "Copyright Holder" and "Creator", typically the person preparing and managing the submission, whose surname is represented in the module ID. A submission author, who is not directly responsible for the implementation code, should retain the abovementioned roles and name at least one additional author with an "Author" and "Copyright Holder" role. Later code and documentation modifications can be acknowledged under the "Contributor" role. Individuals involved in formulating the algorithm but not creating the module may be acknowledged as "Author" and "Copyright Holder".
 
@@ -1010,27 +1010,66 @@ The NASSA library repository will execute the nassa-hs application for every new
 
 If you followed all required specifications in the [NASSA schema](https://github.com/Archaeology-ABM/NASSA-schema), particularly regarding the content of "NASSA.yml", your Pull Request should pass.
 
-Do not panic if the check fails!
+In our case here, we notice that Schliemann, not known for his digital proficiency, has committed a few last-minute changes. Ah, I am sure we should not worry... 
 
 ![](/assets/images/guide/check-fail.png)
 
-In most cases, the problem has an easy solution. When having a failed test, click on "Details". The next screen will show you, in "Validation", the console printout of the nassa-hs execution and indicate what was found missing.
+Do not panic if the check fails! In most cases, the problem has an easy solution. When having a failed test, click on the "..." button on the right and select "View details" (you may also try the "Explain error" option with Copilot). The next screen will show you, in "Validation", the console printout of the nassa-hs execution and indicate what was found missing.
+
+![](/assets/images/guide/check-fail-1.png)
+
+In this case, something went wrong with the YAML format of "NASSA.yml". The error message might seem sometimes rather cryptic: here, we missed something related to the `-` (the bullet point operator to define lists in YAML). However, we do have a clue in the line and column numbers (line 24, column 2). 
+
+ To solve the problem following Workflow A, return to your Pull Request page and select the "Files changed" tab. Click the three dots in the top right corner of the editor and select "Edit this file".
+
+If we open a local copy of the module in an IDE (Workflow B), we can check line 24:
+
+![](/assets/images/guide/check-fail-1-1.png)
+
+We now see that we are missing a important detail: the `regions` subcategory within the `domainKeywords` section. Note how an IDE such as Visual Studio Code helps us quickly identify this kind of issues in YAML files (see red flags). Correcting such mistakes will also clearly show in IDEs:
+
+![](/assets/images/guide/check-fail-1-2.png)
+
+Make the changes and commit. For Workflow A, click on "Refresh", highlighted at the top, to see the changes integrated in the Pull Request. When using Workflow B, push the changes to your fork/branch.
+
+After committing the changes to our branch, we can now return to the "Conversation" tab in the Pull Request page. The new commit will automatically trigger a new check. Another error is found:
 
 ![](/assets/images/guide/check-fail-2.png)
 
- In this case, we are missing the `orcid` field for the first author (i.e. `.contributors[0]`). Schliemann, as a man of his time, does not have a valid ORCID and decided to skip this mandatory field. *Shame!*
+Having a new error is good news because it means that the previous one was fixed. Now, the problem is strictly related to NASSA schema specifications: the text in `description` is too long. Strange, because our text was not that long. It seems that Schliemann replaced our concise description with a long excerpt of his long lost diary. 
 
- Despite the wake-up call, he decided to use a dummy ORCID (0000-0002-1825-0097) instead of creating one. *Double shame!*
+```
+description: >
+  As I, Heinrich Schliemann, stood before the windswept ruins of Troy, I conceived of a method by which to render the great sieges of the Bronze Age not only in story, but in number. In my imagination, the clash of armies could be distilled into a model: the attackers bring forth their strength, the defenders theirs, and the destruction of the city is measured not in vague tales but in proportion to these opposing forces. I introduced a constant rate of devastation for every unit of aggressor strength that meets its match upon the walls, so that the outcome of a siege might be calculated, not merely told. In this way, the legendary sack of Troy, and indeed the fate of any ancient citadel, could be reenacted as a balance of strength, a numerical echo of what once transpired in blood and flame.
+```
 
- To solve the problem, return to your Pull Request page and select the "Files changed" tab. Click the three dots in the top right corner of the editor and select "Edit this file". Make the changes and commit. Click on "Refresh", highlighted at the top, to see the changes integrated in the Pull Request. Return to the "Conversation" tab and see if the automatic test is passing. Repeat this process until it does.
- 
- If you have any doubts in this stage or the problem is not clear from the printout of nassa-hs, write to one of our [core team or to the community (Google Group)](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
+We can remedy this by recovering the previous text and moving his text to "Further Information" in README.md. Committing our changes, we see that the check moves forward but finds yet another problem:
+
+![](/assets/images/guide/check-fail-3.png)
+
+This time, the problem is a simple typo in the `implementations` field: NetLogo was misspelled as "NetLog". This was probably a keyboard accident by Schliemann, who is not used to modern technology. 
+
+After correcting the typo and committing the change, we see that the check moves forward again but stumbles upon a forth and hopefully last problem:
+
+![](/assets/images/guide/check-fail-4.png)
+
+Again a typo, but in this case the error is giving as a confusion related to the relative path given for the documentation directory. Schliemann had an bilingual lapsus and "corrected" it using the German spelling, including using an upper case "D". Notice that this is flagged because the actual directory is spelled in English and in lower case. 
+
+Fixing this, we see that the check finally passes:
+
+![](assets/images/guide/pending-reviewer.png)
+
+The automatic check only verifies the integrity of the module files and metadata. It does not check if the module code works or if the documentation is sufficient. This will be part of the review process by NASSA members. Only the library maintainers can merge the Pull Request after at least one reviewer approves it (you should not have the check box shown in the screenshot).
+
+ If you have any doubts in this stage or the problem is not clear from the printout of nassa-hs, write to one of our [core team or to the community (Google Group)](https://archaeology-abm.github.io/NASSA-hub/about-us.html) by email or through GitHub.
 
 ### Module review
 
-One or more NASSA members will then review your module submission (Pull Request) and possibly suggest changes by commenting on or modifying the files as they appear in the Pull Request. Until at least one reviewer approves, the submission pull request will not be able to merge into the library repository (i.e. become part of it). 
+One or more NASSA members will then review your module submission (Pull Request) and possibly suggest changes by commenting on or modifying the files as they appear in the Pull Request. 
 
-![](assets/images/guide/pending-reviewer.png)
+NOTE: The pull request will be notified to the library maintainers, but you may use the cog icon in the "Reviewers" section, on the right side, to request a particular NASSA member and GitHub user to review it.
+
+Until at least one reviewer approves, the submission pull request will not be able to merge into the library repository (i.e. become part of it). 
 
 Both you and the reviewers can add comments to your Pull Request regarding each file that has been changed/added. You should add a comment in advance to explain a possible issue, anticipating a reviewer who might raise the point. To do this, go to the "Files changed" tab in your Pull Request, search for the file in the list, and click on "Comment on this file" (the speech bubble on the right side).
 
@@ -1038,13 +1077,15 @@ Both you and the reviewers can add comments to your Pull Request regarding each 
 
 With this, you may also start a review on your own submission, which is profound yet completely unnecessary.
 
-Reviewers will use this tool to add comments and make suggestions during the review process. We expect everyone in the community to be fair and polite when reviewing modules. Modules do not need to be perfect, and we expect many submissions to be revised or expanded later by the original authors or other new contributors. If you are in a dispute with a reviewer or think that a reviewer has been unfair, don't hesitate to contact our [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html).
+Reviewers will use this tool to add comments and make suggestions during the review process. We expect everyone in the community to be fair and polite, if not friendly, when reviewing modules. Modules do not need to be perfect, and we expect many submissions to be revised or expanded later by the original authors or other new contributors. If you are in a dispute with a reviewer or think that a reviewer has been unfair, don't hesitate to contact our [core team](https://archaeology-abm.github.io/NASSA-hub/about-us.html). 
+
+NASSA maintainers will reserve the right to edit files in the Pull Request to fix minor issues or typos, improve metadata format and detail, and even refactor code. No change to the core functionality of the module will be made by reviewers or maintainers without the explicit consent of the original authors; if so, the person involved should be included as contributor with role "Contributor".
 
 As the submission author (who created the Pull Request), you should read and reply when necessary while also deciding if there are any suggested changes. For more information, see the [GitHub documentation]([#reviewing-a-module](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)).
 
 Notice that every change made during the review process triggers the automatic check or validation. You need to address any new errors before merging.
 
-Alternatively, if there are many challenging or structural problems, you should cancel the Pull Request and prepare a new, revised one. To do this, click on "Close Pull Request" at the bottom of your Pull Request page. After the Pull Request is closed, you may make more drastic changes and repeat the steps for creating a new submission (Pull Request).
+If there are many challenging or structural problems, like having typos in folders or file names, you can cancel the Pull Request and prepare a new, revised one. To do this, click on "Close Pull Request" at the bottom of your Pull Request page. After the Pull Request is closed, you may make more drastic changes and repeat the steps for creating a new submission (Pull Request).
 
 A satisfied reviewer will leave an approval that will be part of your Pull Request history. 
 
@@ -1052,7 +1093,7 @@ A satisfied reviewer will leave an approval that will be part of your Pull Reque
 
 Once one reviewer is satisfied, the Pull Request will be unblocked and available for merging into the library's main branch.
 
-You'll be able to wait further for other pending reviewers or merge it by clicking on the green button at the bottom of the Conversation tab. If left unattended for too long, a Pull Request with a full green light will eventually be merged by a core member.
+You'll be able to wait further for other pending reviewers or merge it by clicking on the green button at the bottom of the Conversation tab. If left unattended for too long, a Pull Request with a full green light will eventually be merged by a maintainer.
 
 ![](assets/images/guide/merge-unblocked.png)
 
@@ -1064,6 +1105,6 @@ After merging the Pull Request, your module will become part of the NASSA librar
 
 After processing through GitHub Actions, your module will appear at the [NASSA Library Web App](https://archaeology-abm.github.io/NASSA-modules/) linked to a dedicated webpage ("view") displaying most of its metadata and README. See the one generated for [1870-Schliemann-001](https://archaeology-abm.github.io/NASSA-modules/1870-Schliemann-001.html).
 
-At this point, you might rethink some details of the metadata and documentation, once you preview them on the website. Unlike papers and other publications, NASSA modules remain open indefinitely for new changes by the original authors and others in the community. We ask that each change be submitted through the same process explained here, no matter what, from the correction of a typo to major changes in the code. However, take care of raising the module version and noting new contributors accordingly.
+At this point, you might rethink some details of the metadata and documentation, once you preview them on the website. Unlike papers and other publications, NASSA modules remain open indefinitely for new changes by the original authors and others in the community. We ask that each change be submitted through the same process explained here, no matter what, from the correction of a typo to major changes in the code. However, **take care of raising the module version and noting new contributors accordingly**.
 
  It is time to promote your module and cite it! 
