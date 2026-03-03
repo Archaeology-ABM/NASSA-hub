@@ -1,0 +1,118 @@
+{% assign roles = include.roles | default: "coordinator,contributor,member" | split: "," %}
+{% assign display_photos = include.display_photos | default: "coordinators" %}
+{% assign default_photo = include.default_photo | default: "/assets/images/members/default.jpg" %}
+
+<div class="member-controls mb-4 text-center">
+
+  <button class="btn btn-sm btn-outline-secondary mr-2"
+          onclick="toggleAllBios(true)">
+    Show all bios
+  </button>
+
+  <button class="btn btn-sm btn-outline-secondary mr-3"
+          onclick="toggleAllBios(false)">
+    Hide all bios
+  </button>
+
+  <select class="form-control d-inline-block w-auto"
+          onchange="filterByInstitution(this.value)">
+    <option value="all">All institutions</option>
+    {% assign institutions = site.data.members | map: "affiliation" | uniq | sort %}
+    {% for inst in institutions %}
+      <option value="{{ inst | slugify }}">{{ inst }}</option>
+    {% endfor %}
+  </select>
+
+</div>
+
+<div>
+{% for role in roles %}
+
+  {% assign group = site.data.members | where: "role", role | sort: "name" %}
+
+  {% if group.size > 0 %}
+
+    <h3 class="mt-5">{{ role | capitalize }}s</h3>
+
+    {% assign current_letter = "" %}
+
+    <div class="container mt-4">
+      <div class="row">
+
+        {% for person in group %}
+
+          {% assign first_letter = person.name | slice: 0,1 | upcase %}
+
+          {% if role != "coordinator" and first_letter != current_letter %}
+            {% assign current_letter = first_letter %}
+            <div class="col-12">
+              <h4 class="alphabet-header mt-4">{{ current_letter }}</h4>
+            </div>
+          {% endif %}
+
+          <div class="col-md-4 mb-4 member-entry"
+               data-institution="{{ person.affiliation | slugify }}">
+
+            <div class="member-card text-center">
+
+              {% assign show_photo = false %}
+
+              {% if display_photos == "all" %}
+                {% assign show_photo = true %}
+              {% elsif display_photos == "coordinators" and role == "coordinator" %}
+                {% assign show_photo = true %}
+              {% endif %}
+
+              {% if show_photo %}
+                {% if person.image %}
+                  {% assign photo = person.image %}
+                {% else %}
+                  {% assign photo = default_photo %}
+                {% endif %}
+
+                <img src="{{ photo }}"
+                     class="member-photo mb-3"
+                     alt="{{ person.name }}">
+              {% endif %}
+
+              <h5>
+                {% if person.website %}
+                  <a href="{{ person.website }}" target="_blank">
+                    {{ person.name }}
+                  </a>
+                {% else %}
+                  {{ person.name }}
+                {% endif %}
+              </h5>
+
+              <p class="text-muted">{{ person.affiliation }}</p>
+
+              {% if person.bio %}
+                <p>
+                  <a class="btn btn-sm btn-outline-secondary"
+                     data-toggle="collapse"
+                     href="#bio-{{ role }}-{{ forloop.index }}"
+                     role="button">
+                    Short bio
+                  </a>
+                </p>
+
+                <div class="collapse bio-collapse"
+                     id="bio-{{ role }}-{{ forloop.index }}">
+                  <div class="card card-body text-left">
+                    {{ person.bio }}
+                  </div>
+                </div>
+              {% endif %}
+
+            </div>
+          </div>
+
+        {% endfor %}
+
+      </div>
+    </div>
+
+  {% endif %}
+{% endfor %}
+</div>

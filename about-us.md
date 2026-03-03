@@ -2,6 +2,8 @@
 layout: default
 title: "About"
 permalink: /about
+display_photos: coordinators   # all | coordinators | none
+default_photo: /assets/images/Logo_noText.png
 ---
 # Who are we?
 
@@ -16,6 +18,14 @@ The targets of this network are:
 5. create a structure for international collaboration resulting in joint publications within the network.
 
 Join us at nassaabm@googlegroups.com (Google Groups) or by contacting [Andreas Angourakis](andros.spica@gmail.com).
+
+## Coordination and membership
+
+{% include member-grid.html
+   display_photos=page.display_photos
+   default_photo=page.default_photo %}
+
+## Institutional memberships
 
 Research units currently active in NASSA are:
 
