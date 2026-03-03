@@ -13,6 +13,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
+  <script>
+  function toggleAllBios(show) {
+    var bios = document.querySelectorAll('.bio-collapse');
+    bios.forEach(function(bio) {
+      if (show) {
+        bio.classList.add('show');
+      } else {
+        bio.classList.remove('show');
+      }
+    });
+  }
+
+  function filterByInstitution(value) {
+    var entries = document.querySelectorAll('.member-entry');
+    entries.forEach(function(entry) {
+      if (value === "all") {
+        entry.style.display = "";
+      } else {
+        entry.style.display =
+          entry.dataset.institution === value ? "" : "none";
+      }
+    });
+  }
+  </script>
+
   <body>
 
     {% include header.html %}

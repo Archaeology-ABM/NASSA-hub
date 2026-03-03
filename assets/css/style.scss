@@ -278,3 +278,25 @@ nav ul li a .menu-title
 }
 
 #forkme_banner{ display: none !important; }
+
+.member-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.member-card {
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+}
+
+.alphabet-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}

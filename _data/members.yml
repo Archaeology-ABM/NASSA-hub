@@ -1,0 +1,39 @@
+- name: Andreas Angourakis
+  affiliation: Ruhr University Bochum and University of Cologne
+  role: coordinator
+  image: https://archaeologie.phil-fak.uni-koeln.de/sites/archaeologie/_processed_/8/c/csm_AngourakisAndreas_4154f9904d.jpg
+  website: https://orcid.org/0000-0002-9946-8142
+  bio: >
+    Computational archaeologist with a strong background in humanities and social sciences, specialising in simulating socioecological systems from the past. His main concern is to tackle meaningful theoretical questions about human behaviour and social institutions and their role in the biosphere, as documented by history and archaeology. His research focuses specifically on how social behaviour reflects long-term historical processes, especially those concerning food systems in past small-scale societies.
+
+- name: Dries Daems
+  affiliation: Vrije Universiteit Amsterdam
+  role: coordinator
+  image: https://www.driesdaems.com/author/dries-daems/avatar_hu3c610bb41e40063029d91f0079148825_78913_270x270_fill_q90_lanczos_center.jpg
+  website: https://www.driesdaems.com/
+  bio: >
+    Archaeologist specializing in the Iron Age to Hellenistic Mediterranean. His research interests include social complexity, urbanism, connectivity and information exchange, artisanal production, and human-environment interactions through computational modeling and pottery studies. He is currently Assistant Professor at VU Amsterdam and Visiting Professor at Helsinki University. He has held positions at KU Leuven, Koç University, and Middle East Technical University.
+
+- name: Philip Verhagen
+  affiliation: Vrije Universiteit Amsterdam
+  role: coordinator
+  image: https://research.vu.nl/files-asset/133529866/Philip_Verhagen_bw.jpg?w=160&f=webp
+  website: https://research.vu.nl/en/persons/philip-verhagen/
+  bio: >
+    associate professor at the Faculty of Social Science and Humanities, Vrije Universiteit Amsterdam, specialized in computer applications and quantitative methods in archaeology, with an emphasis on GIS, spatial analysis and modelling. He has been Publication Officer of Computer Applications and Quantitative Methods from 2011-2016, and is currently Managing Editor of the Journal of Computer Applications in Archaeology. Since 1 January 2018, dr. Verhagen is Scientific Director of ARCHON, the Dutch Research School for Archaeology.
+
+- name: Iza Romanowska
+  affiliation: Aarhus University
+  role: coordinator
+  image: https://ipure8.au.dk/current/photos/de64c8e8-dfc4-4769-a157-fdbf252a96d3-new.jpg
+  website: https://www.au.dk/en/iromanowska@cas.au.dk
+  bio: >
+    Associate Professor at the Social Resilience Lab, Center for Humanities Computing, Aarhus University.
+
+- name: Clemens Schmid
+  affiliation: Max Planck Institute for Evolutionary Anthropology
+  role: coordinator
+  image: https://www.eva.mpg.de/fileadmin/content_files/staff-images/clemens_schmid.jpg
+  website: https://archaeologie.phil-fak.uni-koeln.de/de/personen/schmid-clemens
+  bio: >
+    Researcher specialised on computational methods for the integrated, large-scale, and primarily spatio-temporal analysis of archaeological, ancient genomic, and linguistic data. He is currently working between the Departments of Archaeogenetics and Linguistic and Cultural Evolution at the Max Planck Institute for Evolutionary Anthropology in Leipzig (Germany).
