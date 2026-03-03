@@ -300,3 +300,18 @@ nav ul li a .menu-title
   border-bottom: 1px solid #ddd;
   padding-bottom: 0.3rem;
 }
+
+/* Smooth rotation for the icon */
+.transition-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Rotate icon 180 degrees when the button is NOT collapsed */
+[aria-expanded="true"] .transition-icon {
+  transform: rotate(180deg);
+}
+
+/* Optional: Ensure the collapse animation is smooth */
+.collapse.bio-collapse {
+  transition: height 0.35s ease;
+}
