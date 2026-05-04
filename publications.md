@@ -11,6 +11,10 @@ Members are welcome to join our Zotero group and help to compile and curate an e
 
 # Publications
 
+## 2026
+- Reschke J.-O., Cucart-Mora C., Lomborg K., Hertler C., Saqalli M., Grove M., Moncel M.-H. 2026. Subsistence Strategies in agent-based models of foraging hominins: State of the art and challenges. Journal of Computer Applications in Archaeology (IF 1.6) 9(1) :135-150. https://doi.org/10.5334/jcaa.211 
+- Lomborg K. L., Cucart-Mora C., Rescke J.-O., Hertler C., Grove M., Gaudou B., Saqalli M., Moncel M.-H. 2026. Changing movements in a changing world: Modelling Early Pleistocene and early Middle Pleistocene climatic and ecological environments and influences on Hominin dispersal in Eurasia. Journal of Computer Applications in Archaeology (IF 1.6), 9(1), 66 - 88. https://journal.caa-international.org/articles/10.5334/jcaa.212 
+
 ## 2024
 - Díaz de la Fuente, S., Ahedo, V., Alonso Abad, M.P., Santos, J.I., Galán, J.M. (2024). Analysing the Impact of Religious Pilgrimage Routes Through Twitter Sentiment Analysis: A Case Study. In: Bautista-Valhondo, J., Mateo-Doll, M., Lusa, A., Pastor-Moreno, R. (eds) Proceedings of the 17th International Conference on Industrial Engineering and Industrial Management (ICIEIM) – XXVII Congreso de Ingeniería de Organización (CIO2023). CIO 2023. Lecture Notes on Data Engineering and Communications Technologies, vol 206, pp. 183-188. Springer, Cham. [10.1007/978-3-031-57996-7_32](https://doi.org/10.1007/978-3-031-57996-7_32) 
 - Díaz de la Fuente, S., Ahedo, V., Alonso Abad, M.P., Galán, J.M. (2024). The Academic Influence of the Camino de Santiago: A Bibliometric Analysis of Doctoral Research and Indexed Manuscripts. International Journal of Religious Tourism and Pilgrimage, Vol. 12: Iss. 1, Article 3. <a href="https://arrow.tudublin.ie/ijrtp/vol12/iss1/3" target="_blank"><i class="fa fa-external-link"></i></a></p> 
