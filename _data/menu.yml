@@ -7,23 +7,8 @@
   link: /about
   icon: users
   initclass: ''
-
-- title: Blog
-  link: /blog
-  icon: newspaper-o
-  initclass: ''
-
-- title: Library 
-  link: /library
-  icon: database
-  initclass: ''
   
 - title: Guide for submissions
   link: /guide
-  icon: map
-  initclass: ''
-
-- title: Publications
-  link: /publications
-  icon: book
+  icon: book-open
   initclass: ''
