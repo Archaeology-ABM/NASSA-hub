@@ -125,3 +125,11 @@
   website: https://research.vu.nl/en/persons/laura-van-der-knaap/
   bio: >
     PhD researcher working on the Lower Germanic Limes, using simulation and network approaches. 
+
+- name: João Silva
+  affiliation: Vrije Universiteit Amsterdam
+  role: member
+  image: 
+  website: https://github.com/joaomessiah
+  bio: >
+    Researcher with a background in digital archaeology and data analysis. Current work focuses on using large language models (LLMs) to extract information from legacy archaeological records and ontologies to classify it consistently across sources.
